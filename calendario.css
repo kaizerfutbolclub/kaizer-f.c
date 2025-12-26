@@ -1,0 +1,123 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* COLORES */
+:root {
+    --negro: #000;
+    --blanco: #fff;
+    --dorado: #c9a227;
+    --gris: #f2f2f2;
+}
+
+/* GLOBAL */
+body {
+    background: var(--blanco);
+    color: #111;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADER */
+.header {
+    background: var(--negro);
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--blanco);
+    letter-spacing: 2px;
+}
+
+.nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav a:hover {
+    color: var(--dorado);
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8));
+    color: var(--blanco);
+    padding: 70px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 42px;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 0;
+}
+
+/* MES */
+.month {
+    margin-bottom: 50px;
+}
+
+.month h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    border-left: 6px solid var(--dorado);
+    padding-left: 15px;
+}
+
+/* PARTIDOS */
+.match {
+    background: var(--gris);
+    padding: 15px 20px;
+    display: grid;
+    grid-template-columns: 120px 160px 1fr;
+    align-items: center;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--dorado);
+}
+
+.day {
+    font-weight: bold;
+}
+
+.category {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.game {
+    font-size: 14px;
+}
+
+/* NOTA */
+.note {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* FOOTER */
+.footer {
+    background: var(--negro);
+    color: #aaa;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 14px;
+}
