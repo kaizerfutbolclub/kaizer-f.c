@@ -203,6 +203,23 @@ body {
     font-weight: bold;
 }
 
+/* CTA */
+.cta {
+    padding: 70px 0;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.cta-content p {
+    margin-bottom: 25px;
+}
+
 /* FOOTER */
 .footer {
     background: #000;
