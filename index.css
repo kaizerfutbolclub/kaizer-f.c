@@ -6,17 +6,18 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* VARIABLES */
+/* COLORES */
 :root {
-    --color-principal: #000000;
-    --color-secundario: #ffffff;
-    --color-acento: #c9a227;
-    --color-gris: #f2f2f2;
+    --negro: #000;
+    --blanco: #fff;
+    --dorado: #c9a227;
+    --gris: #f2f2f2;
+    --azul: #B2FFFF;
 }
 
 /* GLOBAL */
 body {
-    background-color: var(--color-secundario);
+    background: var(--blanco);
     color: #111;
 }
 
@@ -28,7 +29,7 @@ body {
 
 /* HEADER */
 .header {
-    background-color: var(--color-principal);
+    background: var(--negro);
     padding: 20px 0;
 }
 
@@ -39,35 +40,29 @@ body {
 }
 
 .logo {
-    color: var(--color-secundario);
-    font-size: 26px;
+    color: var(--blanco);
     letter-spacing: 2px;
 }
 
 .nav a {
-    color: var(--color-secundario);
+    color: var(--blanco);
     text-decoration: none;
     margin-left: 20px;
-    font-size: 15px;
 }
 
 .nav a:hover {
-    color: var(--color-acento);
+    color: var(--dorado);
 }
 
 /* HERO */
 .hero {
-    height: 70vh;
+    height: 65vh;
     background: #111;
-    position: relative;
 }
 
 .hero-overlay {
     height: 100%;
-    background: linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)
-    );
+    background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,83 +70,144 @@ body {
 
 .hero-content {
     text-align: center;
-    color: var(--color-secundario);
+    color: var(--blanco);
 }
 
 .hero-content h2 {
     font-size: 48px;
-    margin-bottom: 15px;
 }
 
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 25px;
+/* SECTION */
+.section {
+    padding: 70px 0;
 }
 
-/* BOTONES */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--color-acento);
+.bg-light {
+    background: var(--gris);
+}
+
+/* PARTIDOS */
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.match-card {
+    background: var(--blanco);
+    padding: 30px;
+    border-top: 5px solid var(--dorado);
+    text-align: center;
+}
+
+.teams {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.team {
+    text-align: center;
+}
+
+.team-logo {
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.score, .vs {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.match-info {
+    font-size: 14px;
+    color: #555;
+}
+
+/* PATROCINADORES */
+.center {
+    text-align: center;
+}
+
+.sponsors {
+    overflow: hidden;
+}
+
+.sponsor-slider {
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.sponsor-track {
+    display: flex;
+    gap: 40px;
+    animation: scroll 15s linear infinite;
+}
+
+.sponsor-logo {
+    min-width: 100px;
+    height: 40px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* REDES */
+.club-social {
+    background: var(--negro);
+    padding: 60px 0;
+}
+
+.social-content {
+    text-align: center;
+}
+
+.club-logo-big {
+    color: var(--blanco);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--azul);
     color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     font-weight: bold;
 }
 
-.btn:hover {
-    opacity: 0.85;
-}
-
-.btn-dark {
-    background-color: var(--color-principal);
-    color: var(--color-secundario);
-}
-
-/* INFO */
-.info {
-    padding: 70px 0;
-    background-color: var(--color-gris);
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.info-box {
-    background: var(--color-secundario);
-    padding: 30px;
-    border-left: 5px solid var(--color-acento);
-}
-
-.info-box h3 {
-    margin-bottom: 15px;
-    font-size: 20px;
-}
-
-/* CTA */
-.cta {
-    padding: 70px 0;
-    background-color: var(--color-principal);
-    color: var(--color-secundario);
-    text-align: center;
-}
-
-.cta-content h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-.cta-content p {
-    margin-bottom: 25px;
-}
-
 /* FOOTER */
 .footer {
-    background-color: #000;
+    background: #000;
     color: #aaa;
-    padding: 25px 0;
     text-align: center;
+    padding: 25px 0;
     font-size: 14px;
 }
