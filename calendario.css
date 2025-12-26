@@ -159,6 +159,104 @@ body {
 .category {
     font-weight: bold;
 }
+:root {
+    --negro: #000;
+    --blanco: #fff;
+    --dorado: #c9a227;
+    --gris: #f1f1f1;
+}
+
+/* SECCION */
+.fixture-section {
+    padding: 60px 0;
+    background: var(--blanco);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* TITULOS */
+.fixture-title {
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.fixture-subtitle {
+    font-size: 22px;
+    color: var(--dorado);
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.fixture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* TARJETA */
+.fixture-card {
+    background: var(--gris);
+    padding: 20px;
+    border-left: 5px solid var(--dorado);
+}
+
+/* FECHA */
+.fecha {
+    font-size: 13px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* PARTIDO */
+.match-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    margin: 15px 0;
+}
+
+/* EQUIPOS */
+.team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.team img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+/* VS */
+.vs {
+    text-align: center;
+}
+
+.vs strong {
+    font-size: 22px;
+    display: block;
+}
+
+.vs small {
+    font-size: 11px;
+    color: #555;
+}
+
+/* INFO */
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #333;
+}
+
 
 
 /* FOOTER */
