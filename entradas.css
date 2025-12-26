@@ -1,0 +1,139 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* COLORES */
+:root {
+    --negro: #000000;
+    --blanco: #ffffff;
+    --dorado: #c9a227;
+    --gris: #f2f2f2;
+}
+
+/* GLOBAL */
+body {
+    background: var(--blanco);
+    color: #111;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+.header {
+    background: var(--negro);
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--blanco);
+    letter-spacing: 2px;
+}
+
+.nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav a:hover {
+    color: var(--dorado);
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8));
+    padding: 80px 0;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 70px 0;
+}
+
+.bg-light {
+    background: var(--gris);
+}
+
+.bg-dark {
+    background: var(--negro);
+    color: var(--blanco);
+}
+
+/* TITULOS */
+.section-title {
+    font-size: 30px;
+    margin-bottom: 25px;
+    border-left: 6px solid var(--dorado);
+    padding-left: 15px;
+}
+
+/* BOLETAS / ABONOS */
+.grid-tickets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.ticket-card {
+    background: var(--blanco);
+    padding: 30px;
+    border-top: 5px solid var(--dorado);
+}
+
+.ticket-card h4 {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background: var(--dorado);
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-whatsapp:hover {
+    opacity: 0.85;
+}
+
+/* FOOTER */
+.footer {
+    background: var(--negro);
+    color: #aaa;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 14px;
+}
