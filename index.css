@@ -1,292 +1,46 @@
-/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
 
-/* COLORES */
-:root {
-    --negro: #000;
-    --blanco: #fff;
-    --dorado: #c9a227;
-    --gris: #f2f2f2;
-    --azul: #B2FFFF;
-}
+    .card {
+      background: #111;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+    }
 
-/* GLOBAL */
-body {
-    background: var(--blanco);
-    color: #111;
-}
+    .card:hover {
+      transform: translateY(-10px);
+      background: #1a1a1a;
+    }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+    .history {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      color: #ccc;
+    }
 
-/* HEADER */
-.header {
-    background: var(--negro);
-    padding: 20px 0;
-}
+    .cta {
+      text-align: center;
+      background: #111;
+      border-radius: 20px;
+      padding: 60px 20px;
+    }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    footer {
+      padding: 40px 10%;
+      text-align: center;
+      background: #000;
+      color: #777;
+    }
 
-.logo {
-    color: var(--blanco);
-    letter-spacing: 2px;
-}
-
-.nav a {
-    color: var(--blanco);
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.nav a:hover {
-    color: var(--dorado);
-}
-
-/* HERO */
-.hero {
-    height: 65vh;
-    background: #111;
-}
-
-.hero-overlay {
-    height: 100%;
-    background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content {
-    text-align: center;
-    color: var(--blanco);
-}
-
-.hero-content h2 {
-    font-size: 48px;
-}
-
-/* SECTION */
-.section {
-    padding: 70px 0;
-}
-
-.bg-light {
-    background: var(--gris);
-}
-
-/* PARTIDOS */
-.matches-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.match-card {
-    background: var(--blanco);
-    padding: 30px;
-    border-top: 5px solid var(--dorado);
-    text-align: center;
-}
-
-.teams {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.team {
-    text-align: center;
-}
-
-.team-logo {
-    width: 50px;
-    height: 50px;
-    background: #ccc;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-bottom: 5px;
-}
-
-.score, .vs {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.match-info {
-    font-size: 14px;
-    color: #555;
-}
-
-/* PATROCINADORES */
-.center {
-    text-align: center;
-}
-
-.sponsors {
-    overflow: hidden;
-}
-
-.sponsor-slider {
-    overflow: hidden;
-    margin-top: 30px;
-}
-
-.sponsor-track {
-    display: flex;
-    gap: 40px;
-    animation: scroll 15s linear infinite;
-}
-
-.sponsor-logo {
-    min-width: 100px;
-    height: 40px;
-    background: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-}
-
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-/* REDES */
-.club-social {
-    background: var(--negro);
-    padding: 60px 0;
-}
-
-.social-content {
-    text-align: center;
-}
-
-.club-logo-big {
-    color: var(--blanco);
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: var(--azul);
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* CTA */
-.cta {
-    padding: 70px 0;
-    background-color: var(--color-principal);
-    color: var(--color-secundario);
-    text-align: center;
-}
-
-.cta-content h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-.cta-content p {
-    margin-bottom: 25px;
-}
-
-/* NOTICIAS */
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-
-.news-card {
-    background: #f2f2f2;
-    padding: 20px;
-    border-top: 4px solid var(--dorado);
-}
-
-.news-img {
-    background: #ccc;
-    height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    margin-bottom: 15px;
-}
-
-.news-card h4 {
-    margin-bottom: 8px;
-}
-
-.news-date {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-/* CALENDARIO */
-.calendar {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.calendar-row {
-    background: #fff;
-    padding: 15px 20px;
-    display: grid;
-    grid-template-columns: 90px 1fr 180px;
-    align-items: center;
-    border-left: 5px solid var(--dorado);
-}
-
-.calendar-row .date {
-    font-weight: bold;
-}
-
-.calendar-row .place {
-    text-align: right;
-    font-size: 14px;
-    color: #555;
-}
-
-
-
-
-/* FOOTER */
-.footer {
-    background: #000;
-    color: #aaa;
-    text-align: center;
-    padding: 25px 0;
-    font-size: 14px;
-}
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
