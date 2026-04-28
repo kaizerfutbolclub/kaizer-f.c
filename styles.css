@@ -123,3 +123,41 @@ footer img {
 .redes a:hover {
   color: #B2FFFF;
 }
+
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: #111;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.submenu li {
+  list-style: none;
+}
+
+.submenu li a {
+  display: block;
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  color: #B2FFFF;
+}
+
+/* ACTIVA AL PASAR EL MOUSE */
+.dropdown:hover .submenu {
+  display: flex;
+}
