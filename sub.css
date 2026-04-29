@@ -30,31 +30,59 @@
   color: #ccc;
 }
 
-/* JUGADORES */
-.jugadores {
-  padding: 80px 10%;
-}
-
-.grid {
+/* GRID */
+.players-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
 }
 
-.player {
+/* CARD */
+.player-card {
+  position: relative;
   background: #111;
-  padding: 20px;
   border-radius: 15px;
-  text-align: center;
+  overflow: hidden;
   transition: 0.3s;
+  text-align: center;
+  border: 1px solid transparent;
 }
 
-.player:hover {
-  transform: translateY(-8px);
+.player-card:hover {
+  transform: translateY(-10px);
+  border: 1px solid #B2FFFF;
 }
 
-.player img {
+/* IMAGEN */
+.player-card img {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* NÚMERO (DORSAL) */
+.player-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #B2FFFF;
+  color: #000;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* INFO */
+.player-info {
+  padding: 15px;
+}
+
+.player-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.player-info span {
+  font-size: 14px;
+  color: #ccc;
 }
