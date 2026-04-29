@@ -1,31 +1,3 @@
-* {
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #B2FFFF;
-}
-
-.hero {
-  height: 70vh;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-              url('https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 80px;
-}
-
-.hero h2 {
-  font-size: 40px;
-}
-
-.hero p {
-  margin-top: 10px;
-  color: #ccc;
-}
-
 .contenido {
   padding: 80px 10%;
   text-align: center;
