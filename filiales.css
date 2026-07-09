@@ -8,6 +8,16 @@
   align-items: center;
   text-align: center;
 }
+:root{
+
+    --marfil:#F8F6F0;
+    --blanco:#FFFFFF;
+    --negro:#1A1A1A;
+    --dorado:#C9A227;
+    --gris:#ECECEC;
+    --azul:#B2FFFF;
+
+}
 
 .hero-filiales h1 {
   font-size: 45px;
