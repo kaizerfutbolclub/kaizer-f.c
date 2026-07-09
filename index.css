@@ -6,6 +6,17 @@
   font-family: 'Poppins', sans-serif;
 }
 
+:root{
+
+    --marfil:#F8F6F0;
+    --blanco:#FFFFFF;
+    --negro:#1A1A1A;
+    --dorado:#C9A227;
+    --gris:#ECECEC;
+    --azul:#B2FFFF;
+
+}
+
 /* BASE */
 body {
   background: #0a0a0a;
