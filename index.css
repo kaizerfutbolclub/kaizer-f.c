@@ -19,8 +19,8 @@
 
 /* BASE */
 body {
-  background: #0a0a0a;
-  color: #fff;
+  background:var(--marfil);
+    color:var(--negro);
 }
 
 /* HEADER */
