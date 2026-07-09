@@ -7,11 +7,15 @@
 }
 
 /* COLORES */
-:root {
-    --negro: #000000;
-    --blanco: #ffffff;
-    --dorado: #c9a227;
-    --gris: #f2f2f2;
+:root{
+
+    --marfil:#F8F6F0;
+    --blanco:#FFFFFF;
+    --negro:#1A1A1A;
+    --dorado:#C9A227;
+    --gris:#ECECEC;
+    --azul:#B2FFFF;
+
 }
 
 /* GLOBAL */
