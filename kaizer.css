@@ -284,3 +284,73 @@ CATEGORÍAS
     color:#666;
 
 }
+
+/*=========================
+FILOSOFÍA
+=========================*/
+
+.filosofia{
+
+    padding:90px 8%;
+
+}
+
+.filosofia-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:50px;
+
+}
+
+.filosofia-card{
+
+    background:#fff;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    border-top:5px solid var(--dorado);
+
+    transition:.35s;
+
+}
+
+.filosofia-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.emoji{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.filosofia-card h3{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+.filosofia-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
