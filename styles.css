@@ -383,7 +383,9 @@ footer img{
 
 }
 
-/* REDES */
+/*=========================
+REDES SOCIALES
+==========================*/
 
 .redes{
 
@@ -391,23 +393,23 @@ footer img{
 
     justify-content:center;
 
+    align-items:center;
+
     gap:18px;
 
-    margin:30px 0;
+    margin:35px 0;
 
 }
 
 .redes a{
 
-    width:50px;
+    width:55px;
 
-    height:50px;
+    height:55px;
 
     border-radius:50%;
 
-    background:var(--celeste);
-
-    color:var(--negro);
+    background:#B2FFFF;
 
     display:flex;
 
@@ -415,19 +417,23 @@ footer img{
 
     align-items:center;
 
-    font-weight:bold;
+    color:#1A1A1A;
 
-    font-size:18px;
+    font-size:24px;
+
+    transition:.35s;
 
 }
 
 .redes a:hover{
 
-    transform:scale(1.1);
+    transform:translateY(-6px);
 
     background:var(--dorado);
 
-    color:var(--blanco);
+    color:#FFFFFF;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
 
 }
 
