@@ -32,47 +32,94 @@
 
 }
 
-.hero-filiales h1 {
-  font-size: 45px;
+/*==============================
+FILIALES
+==============================*/
+
+.filiales{
+
+    padding:90px 8%;
+
 }
 
-.hero-filiales p {
-  color: #ccc;
-  margin-top: 10px;
+.filiales-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+    margin-top:50px;
+
 }
 
-/* SECCIÓN */
-.filiales {
-  padding: 80px 10%;
+/* TARJETA */
+
+.filial-card{
+
+    background:#FFFFFF;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    border-top:5px solid var(--dorado);
+
+    transition:.35s;
+
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 32px;
+.filial-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+
 }
 
-/* TARJETAS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+/* ETIQUETA */
+
+.categoria{
+
+    display:inline-block;
+
+    background:var(--dorado);
+
+    color:#FFF;
+
+    padding:8px 20px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
 }
 
-.card {
-  background: #111;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  transition: 0.3s;
-  border: 1px solid transparent;
+.filial-card h3{
+
+    color:var(--negro);
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  border: 1px solid #B2FFFF;
-}
+.filial-card p{
 
-.card h3 {
-  margin-bottom: 10px;
+    color:#666;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
 }
