@@ -1,0 +1,669 @@
+/*==================================================
+  KAIZER F.C.
+  PLANTILLA.CSS
+==================================================*/
+
+
+/*=========================================
+ HERO
+=========================================*/
+
+.hero-page{
+
+    position:relative;
+
+    height:65vh;
+
+    min-height:500px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:#fff;
+
+    background:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.65)),
+    url("../img/hero-plantilla.jpg") center center/cover no-repeat;
+
+}
+
+.hero-page-content{
+
+    max-width:850px;
+
+}
+
+.page-subtitle{
+
+    display:inline-block;
+
+    color:var(--primary);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.hero-page h1{
+
+    font-size:72px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+.hero-page p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#f2f2f2;
+
+}
+
+
+
+/*=========================================
+ SECCIONES
+=========================================*/
+
+.club-intro,
+.technical-staff,
+.players-section,
+.club-cta{
+
+    padding:110px 0;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-subtitle{
+
+    display:inline-block;
+
+    color:var(--primary);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+.section-header h2{
+
+    font-size:46px;
+
+    margin-bottom:20px;
+
+}
+
+.section-header p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    color:#666;
+
+}
+
+
+
+/*=========================================
+ CUERPO TÉCNICO
+=========================================*/
+
+.staff-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.staff-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.staff-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.staff-card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+.staff-card h3{
+
+    margin-top:25px;
+
+    font-size:24px;
+
+}
+
+.staff-card span{
+
+    display:block;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin:15px 0 30px;
+
+}
+
+
+
+/*=========================================
+ JUGADORES
+=========================================*/
+
+.players-section{
+
+    background:#fafafa;
+
+}
+
+.players-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:35px;
+
+}
+
+.player-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.player-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.player-image{
+
+    position:relative;
+
+}
+
+.player-image img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.player-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.player-number{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#111;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+    font-weight:800;
+
+}
+
+.player-info{
+
+    padding:30px;
+
+}
+
+.player-info h3{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+.position{
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.player-info ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.player-info li{
+
+    padding:10px 0;
+
+    border-bottom:1px solid #ececec;
+
+    color:#666;
+
+}
+/*=========================================
+ CTA
+=========================================*/
+
+.club-cta{
+
+    background:linear-gradient(135deg,#B2FFFF,#8CF5FF);
+
+    text-align:center;
+
+}
+
+.club-cta h2{
+
+    font-size:48px;
+
+    color:#111;
+
+    margin-bottom:20px;
+
+}
+
+.club-cta p{
+
+    max-width:750px;
+
+    margin:auto;
+
+    margin-bottom:35px;
+
+    color:#333;
+
+    line-height:2;
+
+}
+
+
+
+/*=========================================
+ BOTONES
+=========================================*/
+
+.btn-player{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:14px 30px;
+
+    border-radius:40px;
+
+    background:var(--primary);
+
+    color:#111;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+.btn-player:hover{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+
+
+/*=========================================
+ ANIMACIONES
+=========================================*/
+
+.player-card,
+.staff-card{
+
+    transition:all .35s ease;
+
+}
+
+.player-card:hover{
+
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+}
+
+.staff-card:hover{
+
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+}
+
+.player-card:hover .player-number{
+
+    transform:rotate(360deg);
+
+}
+
+.player-number{
+
+    transition:.6s;
+
+}
+
+
+
+/*=========================================
+ RESPONSIVE TABLET
+=========================================*/
+
+@media(max-width:1200px){
+
+.players-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+.staff-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+@media(max-width:992px){
+
+.hero-page{
+
+height:auto;
+
+padding:170px 20px 120px;
+
+}
+
+.hero-page h1{
+
+font-size:50px;
+
+}
+
+.players-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.section-header h2{
+
+font-size:38px;
+
+}
+
+.club-cta h2{
+
+font-size:38px;
+
+}
+
+}
+
+
+
+/*=========================================
+ RESPONSIVE MÓVIL
+=========================================*/
+
+@media(max-width:768px){
+
+.hero-page{
+
+min-height:420px;
+
+}
+
+.hero-page h1{
+
+font-size:36px;
+
+}
+
+.hero-page p{
+
+font-size:17px;
+
+}
+
+.staff-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.players-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.staff-card img{
+
+height:300px;
+
+}
+
+.player-image img{
+
+height:320px;
+
+}
+
+.player-info{
+
+padding:25px;
+
+}
+
+.player-info h3{
+
+font-size:24px;
+
+}
+
+.section-header h2{
+
+font-size:30px;
+
+}
+
+.club-cta h2{
+
+font-size:32px;
+
+}
+
+.club-cta p{
+
+font-size:16px;
+
+}
+
+}
+
+
+
+/*=========================================
+ PANTALLAS GRANDES
+=========================================*/
+
+@media(min-width:1400px){
+
+.container{
+
+max-width:1320px;
+
+}
+
+.hero-page h1{
+
+font-size:82px;
+
+}
+
+.section-header h2{
+
+font-size:52px;
+
+}
+
+.player-image img{
+
+height:380px;
+
+}
+
+}
+
+
+
+/*=========================================
+ EFECTOS EXTRA
+=========================================*/
+
+.players-section:nth-child(even){
+
+background:#ffffff;
+
+}
+
+.players-section:nth-child(odd){
+
+background:#f8f8f8;
+
+}
+
+.player-card{
+
+border-top:4px solid transparent;
+
+}
+
+.player-card:hover{
+
+border-top:4px solid var(--primary);
+
+}
+
+.staff-card{
+
+border-top:4px solid transparent;
+
+}
+
+.staff-card:hover{
+
+border-top:4px solid var(--primary);
+
+}
