@@ -1,35 +1,49 @@
-/* ===================================================
-   KAIZER F.C.
-   ESTILOS GENERALES
-=================================================== */
+/*==================================================
+  KAIZER F.C.
+  STYLES.CSS
+  Estilos Globales
+==================================================*/
 
-/* GOOGLE FONT */
+/*==============================
+  GOOGLE FONT
+==============================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/* RESET */
+/*==============================
+  VARIABLES
+==============================*/
+:root{
+
+    --primary:#B2FFFF;
+    --secondary:#F3CA4C;
+
+    --black:#111111;
+    --dark:#1b1b1b;
+
+    --white:#ffffff;
+    --light:#f8f8f8;
+
+    --gray:#707070;
+
+    --radius:16px;
+
+    --shadow:0 10px 35px rgba(0,0,0,.08);
+
+    --transition:.35s;
+
+    --container:1200px;
+
+}
+
+/*==============================
+ RESET
+==============================*/
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
-
-/* VARIABLES */
-
-:root{
-
-    --marfil:#F8F6F0;
-    --blanco:#FFFFFF;
-    --negro:#1A1A1A;
-    --dorado:#C9A227;
-    --gris:#ECECEC;
-    --celeste:#B2FFFF;
-
-    --sombra:0 10px 30px rgba(0,0,0,.08);
-
-}
-
-/* GENERAL */
 
 html{
     scroll-behavior:smooth;
@@ -39,53 +53,92 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    background:var(--marfil);
+    background:var(--white);
 
-    color:var(--negro);
+    color:var(--black);
 
-    line-height:1.7;
-
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-a{
-    text-decoration:none;
-    transition:.3s;
-}
-
-section{
-
-    padding:90px 8%;
+    overflow-x:hidden;
 
 }
+
+/*==============================
+ CONTAINER
+==============================*/
 
 .container{
 
-    width:90%;
-    max-width:1300px;
+    width:min(92%,1200px);
+
     margin:auto;
 
 }
 
-/*=========================
-HEADER
-==========================*/
+/*==============================
+ LINKS
+==============================*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/*==============================
+ IMAGES
+==============================*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/*==============================
+ LISTAS
+==============================*/
+
+ul{
+
+    list-style:none;
+
+}
+/*====================================
+ HEADER
+====================================*/
 
 header{
 
     position:fixed;
 
-    width:100%;
-
     top:0;
 
     left:0;
 
-    padding:18px 8%;
+    width:100%;
+
+    height:90px;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 2px 15px rgba(0,0,0,.05);
+
+    z-index:9999;
+
+}
+
+.header-container{
+
+    max-width:1200px;
+
+    height:100%;
+
+    margin:auto;
 
     display:flex;
 
@@ -93,17 +146,11 @@ header{
 
     align-items:center;
 
-    background:rgba(255,255,255,.96);
-
-    backdrop-filter:blur(15px);
-
-    border-bottom:2px solid var(--dorado);
-
-    z-index:999;
-
 }
 
-/* LOGO */
+/*==============================
+ LOGO
+==============================*/
 
 .logo{
 
@@ -111,17 +158,13 @@ header{
 
     align-items:center;
 
-    gap:15px;
+    gap:12px;
 
 }
 
 .logo img{
 
-    width:60px;
-
-    height:60px;
-
-    object-fit:contain;
+    width:55px;
 
 }
 
@@ -131,23 +174,18 @@ header{
 
     font-weight:700;
 
-    color:var(--negro);
-
-    letter-spacing:1px;
-
 }
-
-/*=========================
-MENU
-==========================*/
+/*====================================
+ NAV
+====================================*/
 
 nav ul{
 
     display:flex;
 
-    list-style:none;
-
     align-items:center;
+
+    gap:35px;
 
 }
 
@@ -159,67 +197,84 @@ nav ul li{
 
 nav ul li a{
 
-    color:var(--negro);
+    font-weight:600;
 
-    font-weight:500;
+    transition:.3s;
 
-    padding:12px 15px;
-
-}
-
-nav ul li a:hover{
-
-    color:var(--dorado);
+    position:relative;
 
 }
 
-/*=========================
-SUBMENU
-==========================*/
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+
+}
+/*====================================
+ DROPDOWN
+====================================*/
+
+.dropdown{
+
+    position:relative;
+
+}
 
 .submenu{
 
     position:absolute;
 
-    top:55px;
+    top:40px;
 
     left:0;
 
-    background:var(--blanco);
+    background:#fff;
+
+    min-width:220px;
 
     border-radius:12px;
 
-    box-shadow:var(--sombra);
+    box-shadow:var(--shadow);
 
     display:none;
 
     flex-direction:column;
 
-    min-width:200px;
-
     overflow:hidden;
-
-}
-
-.submenu li{
-
-    list-style:none;
 
 }
 
 .submenu li a{
 
-    padding:15px;
+    display:block;
 
-    color:var(--negro);
+    padding:14px 18px;
 
 }
 
 .submenu li a:hover{
 
-    background:var(--gris);
-
-    color:var(--dorado);
+    background:var(--primary);
 
 }
 
@@ -228,188 +283,106 @@ SUBMENU
     display:flex;
 
 }
-
-/*=========================
-HERO
-==========================*/
-
-.hero{
-
-    padding-top:120px;
-
-    min-height:90vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    background:linear-gradient(
-    rgba(248,246,240,.90),
-    rgba(248,246,240,.90));
-
-}
-
-.hero h1{
-
-    font-size:58px;
-
-    margin-bottom:20px;
-
-}
-
-.hero h2{
-
-    font-size:46px;
-
-    margin-bottom:15px;
-
-}
-
-.hero p{
-
-    max-width:700px;
-
-    margin:auto;
-
-    font-size:18px;
-
-}
-
-/*=========================
-BOTONES
-==========================*/
+/*====================================
+ BOTONES
+====================================*/
 
 .btn{
 
     display:inline-block;
 
-    margin-top:30px;
+    padding:14px 30px;
 
-    padding:14px 35px;
-
-    background:var(--dorado);
-
-    color:var(--blanco);
+    border-radius:50px;
 
     font-weight:600;
-
-    border-radius:40px;
 
     transition:.3s;
 
 }
 
-.btn:hover{
+.btn-primary{
 
-    transform:translateY(-3px);
-
-    background:var(--negro);
+    background:var(--primary);
 
 }
 
-/*=========================
-TARJETAS
-==========================*/
+.btn-primary:hover{
 
-.card{
-
-    background:var(--blanco);
-
-    border-radius:18px;
-
-    box-shadow:var(--sombra);
-
-    padding:30px;
+    transform:translateY(-4px);
 
 }
 
-/*=========================
-TITULOS
-==========================*/
+.btn-outline{
 
-.section-title{
-
-    font-size:36px;
-
-    margin-bottom:40px;
-
-    position:relative;
+    border:2px solid var(--black);
 
 }
 
-.section-title::after{
+.btn-outline:hover{
 
-    content:"";
+    background:var(--black);
 
-    width:80px;
-
-    height:4px;
-
-    background:var(--dorado);
-
-    display:block;
-
-    margin-top:12px;
+    color:#fff;
 
 }
-
-/*=========================
-FOOTER
-==========================*/
+/*====================================
+ FOOTER
+====================================*/
 
 footer{
 
-    background:var(--negro);
+    margin-top:100px;
 
-    color:#DDD;
+    background:#111;
 
-    padding:70px 8% 30px;
+    color:#fff;
+
+    padding:70px 0;
+
+}
+
+.footer-container{
+
+    max-width:1200px;
+
+    margin:auto;
 
     text-align:center;
 
 }
 
-footer img{
+.footer-logo{
 
     width:90px;
 
     margin:auto;
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 
 }
 
-/*=========================
-REDES SOCIALES
-==========================*/
-
-.redes{
+.social{
 
     display:flex;
 
     justify-content:center;
 
-    align-items:center;
+    gap:20px;
 
-    gap:18px;
-
-    margin:35px 0;
+    margin:30px 0;
 
 }
 
-.redes a{
+.social a{
 
-    width:55px;
+    width:45px;
 
-    height:55px;
+    height:45px;
 
     border-radius:50%;
 
-    background:#B2FFFF;
+    background:var(--primary);
 
     display:flex;
 
@@ -417,66 +390,20 @@ REDES SOCIALES
 
     align-items:center;
 
-    color:#1A1A1A;
+    color:#111;
 
-    font-size:24px;
-
-    transition:.35s;
+    transition:.3s;
 
 }
 
-.redes a:hover{
+.social a:hover{
 
-    transform:translateY(-6px);
-
-    background:var(--dorado);
-
-    color:#FFFFFF;
-
-    box-shadow:0 10px 20px rgba(0,0,0,.25);
+    transform:translateY(-5px);
 
 }
 
-/*=========================
-RESPONSIVE
-==========================*/
+.copy{
 
-@media(max-width:900px){
-
-header{
-
-flex-direction:column;
-
-padding:20px;
-
-}
-
-nav ul{
-
-margin-top:20px;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-.hero h1{
-
-font-size:40px;
-
-}
-
-.hero h2{
-
-font-size:34px;
-
-}
-
-section{
-
-padding:70px 5%;
-
-}
+    color:#999;
 
 }
