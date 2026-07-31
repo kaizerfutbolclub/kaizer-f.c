@@ -1,13 +1,20 @@
-/* HERO FILIALES */
+/*==================================================
+  KAIZER F.C.
+  FILIALES.CSS
+==================================================*/
 
-.hero{
 
-    background:linear-gradient(
-        rgba(248,246,240,.95),
-        rgba(248,246,240,.95)
-    );
+/*=========================================
+ HERO
+=========================================*/
 
-    min-height:380px;
+.hero-page{
+
+    position:relative;
+
+    height:65vh;
+
+    min-height:500px;
 
     display:flex;
 
@@ -15,111 +22,594 @@
 
     align-items:center;
 
-    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+    url("../img/hero-filiales.jpg") center center/cover no-repeat;
 
-    border-bottom:2px solid var(--dorado);
-
-}
-
-:root{
-
-    --marfil:#F8F6F0;
-    --blanco:#FFFFFF;
-    --negro:#1A1A1A;
-    --dorado:#C9A227;
-    --gris:#ECECEC;
-    --azul:#B2FFFF;
-
-}
-
-/*==============================
-FILIALES
-==============================*/
-
-.filiales{
-
-    padding:90px 8%;
-
-}
-
-.filiales-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-    gap:35px;
-
-    margin-top:50px;
-
-}
-
-/* TARJETA */
-
-.filial-card{
-
-    background:#FFFFFF;
-
-    border-radius:20px;
-
-    padding:35px;
+    color:#fff;
 
     text-align:center;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
 
-    border-top:5px solid var(--dorado);
+.hero-page-content{
 
-    transition:.35s;
+    max-width:850px;
 
 }
 
-.filial-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 18px 35px rgba(0,0,0,.18);
-
-}
-
-/* ETIQUETA */
-
-.categoria{
+.page-subtitle{
 
     display:inline-block;
 
-    background:var(--dorado);
+    color:var(--primary);
 
-    color:#FFF;
-
-    padding:8px 20px;
-
-    border-radius:30px;
-
-    font-size:14px;
-
-    margin-bottom:20px;
+    font-size:15px;
 
     font-weight:600;
 
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
 }
 
-.filial-card h3{
+.hero-page h1{
 
-    color:var(--negro);
+    font-size:72px;
 
-    font-size:30px;
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+.hero-page p{
+
+    font-size:20px;
+
+    color:#eee;
+
+    line-height:1.8;
+
+}
+
+
+
+/*=========================================
+ SECCIONES
+=========================================*/
+
+.club-intro,
+.team-category,
+.club-journey,
+.club-cta{
+
+    padding:110px 0;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-subtitle{
+
+    display:inline-block;
+
+    color:var(--primary);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-weight:600;
 
     margin-bottom:15px;
 
 }
 
-.filial-card p{
+.section-header h2{
+
+    font-size:46px;
+
+    margin-bottom:20px;
+
+}
+
+.section-header p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    line-height:1.9;
 
     color:#666;
 
-    line-height:1.7;
+}
+
+
+
+/*=========================================
+ PRIMER EQUIPO
+=========================================*/
+
+.category-card{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.category-image img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.category-content span{
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+.category-content h2{
+
+    font-size:48px;
+
+    margin:20px 0;
+
+}
+
+.category-content p{
+
+    color:#666;
+
+    line-height:2;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/*=========================================
+ TARJETAS
+=========================================*/
+
+.teams-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.team-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.team-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.team-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+.team-info{
+
+    padding:30px;
+
+}
+
+.category-label{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:#111;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.team-info h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.team-info p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:30px;
+
+}
+/*=========================================
+ KAIZER ACADEMY
+=========================================*/
+
+.academy-section{
+
+    background:#f8f8f8;
+
+}
+
+
+
+/*=========================================
+ EL CAMINO KAIZER
+=========================================*/
+
+.club-journey{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+.club-journey .section-header h2,
+
+.club-journey .section-header p{
+
+    color:#fff;
+
+}
+
+.journey-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.journey-item{
+
+    background:#1d1d1d;
+
+    padding:40px 30px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:var(--transition);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.journey-item:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--primary);
+
+}
+
+.journey-number{
+
+    width:75px;
+
+    height:75px;
+
+    margin:auto;
 
     margin-bottom:25px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#111;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.journey-item h3{
+
+    font-size:26px;
+
+    margin-bottom:18px;
+
+    color:#fff;
+
+}
+
+.journey-item p{
+
+    color:#d7d7d7;
+
+    line-height:1.9;
+
+}
+
+
+
+/*=========================================
+ CTA
+=========================================*/
+
+.club-cta{
+
+    background:linear-gradient(135deg,#B2FFFF,#89F7FF);
+
+    text-align:center;
+
+}
+
+.club-cta h2{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+    color:#111;
+
+}
+
+.club-cta p{
+
+    max-width:750px;
+
+    margin:auto;
+
+    margin-bottom:35px;
+
+    line-height:2;
+
+    color:#333;
+
+}
+
+
+
+/*=========================================
+ ANIMACIONES
+=========================================*/
+
+.team-card,
+.category-card,
+.journey-item{
+
+    transition:all .35s ease;
+
+}
+
+.team-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.team-card img{
+
+    transition:.4s;
+
+}
+
+
+
+/*=========================================
+ RESPONSIVE TABLET
+=========================================*/
+
+@media(max-width:992px){
+
+.hero-page{
+
+height:auto;
+
+padding:170px 20px 120px;
+
+}
+
+.hero-page h1{
+
+font-size:50px;
+
+}
+
+.category-card{
+
+grid-template-columns:1fr;
+
+}
+
+.teams-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.journey-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.section-header h2{
+
+font-size:38px;
+
+}
+
+.category-content h2{
+
+font-size:38px;
+
+}
+
+}
+
+
+
+/*=========================================
+ RESPONSIVE MÓVIL
+=========================================*/
+
+@media(max-width:768px){
+
+.hero-page{
+
+min-height:420px;
+
+}
+
+.hero-page h1{
+
+font-size:36px;
+
+}
+
+.hero-page p{
+
+font-size:17px;
+
+}
+
+.section-header h2{
+
+font-size:30px;
+
+}
+
+.category-content h2{
+
+font-size:30px;
+
+}
+
+.teams-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.journey-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.team-card img{
+
+height:220px;
+
+}
+
+.category-content{
+
+text-align:center;
+
+}
+
+.club-cta h2{
+
+font-size:34px;
+
+}
+
+.club-cta p{
+
+font-size:16px;
+
+}
+
+}
+
+
+
+/*=========================================
+ PANTALLAS GRANDES
+=========================================*/
+
+@media(min-width:1400px){
+
+.container{
+
+max-width:1300px;
+
+}
+
+.hero-page h1{
+
+font-size:82px;
+
+}
+
+.section-header h2{
+
+font-size:52px;
+
+}
 
 }
