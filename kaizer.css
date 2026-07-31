@@ -1,377 +1,608 @@
-.hero-kaizer{
-    height:60vh;
+/*==================================================
+  KAIZER F.C.
+  KAIZER.CSS
+  Página: Kaizer F.C.
+==================================================*/
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+
+/*=========================================
+ HERO
+=========================================*/
+
+.hero-page{
+
+    position: relative;
+
+    width: 100%;
+
+    height: 70vh;
+
+    min-height: 550px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 
     background:
-        linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-        url("../img/hero-kaizer.jpg");
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+    url("../img/hero-kaizer.jpg") center center/cover no-repeat;
 
-    background-size:cover;
-    background-position:center;
-
-    padding:120px 10% 60px;
-}
-
-.hero-kaizer h1{
-
-    font-size:56px;
-    font-weight:700;
-    letter-spacing:2px;
+    overflow: hidden;
 
 }
 
-.hero-kaizer p{
-
-    margin-top:15px;
-    font-size:18px;
-    color:#d6d6d6;
-
-}
-
-
-/* ========================================
-   CONTENIDO
-======================================== */
-
-.kaizer-container{
-
-    width:min(1200px,90%);
-    margin:auto;
-    padding:90px 0;
-     text-align:center;
-
-}
-
-
-/* ========================================
-   INTRODUCCIÓN
-======================================== */
-
-.club-intro{
-
-    display:grid;
-    grid-template-columns:420px 1fr;
-    gap:60px;
-    align-items:center;
-
-}
-
-.club-intro img{
-
-    width:100%;
-    max-width:350px;
-    display:block;
-    margin:auto;
-
-}
-
-.club-text h2{
-
-    font-size:36px;
-    margin-bottom:25px;
-
-}
-
-.club-text p{
-
-    color:#cfcfcf;
-    line-height:1.9;
-    margin-bottom:18px;
-    text-align:center;
-
-}
-
-
-/* ========================================
-   TARJETAS
-======================================== */
-
-.club-cards{
-
-    margin-top:90px;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(260px,1fr));
-
-    gap:30px;
-
-}
-
-.club-card{
-
-    background:#111;
-
-    border-radius:18px;
-
-    padding:35px;
-
-    transition:.35s;
-
-    border:1px solid transparent;
-
-}
-
-.club-card:hover{
-
-    transform:translateY(-10px);
-
-    border-color:#B2FFFF;
-
-}
-
-.club-card h3{
-
-    margin-bottom:15px;
-
-    font-size:24px;
-
-}
-
-.club-card p{
-
-    color:#c9c9c9;
-
-    line-height:1.8;
-
-}
-
-
-/* ========================================
-   FRASE
-======================================== */
-
-.club-quote{
-
-    margin-top:90px;
+.hero-page-content{
 
     text-align:center;
 
-    padding:70px 40px;
+    color:#fff;
 
-    background:#111;
+    max-width:850px;
 
-    border-radius:20px;
-
-}
-
-.club-quote h2{
-
-    font-size:34px;
+    z-index:2;
 
 }
 
-.club-quote p{
+.page-subtitle{
 
-    margin-top:20px;
+    display:inline-block;
 
-    color:#ccc;
+    color:var(--primary);
 
-    font-size:18px;
+    font-size:15px;
 
-}
+    font-weight:600;
 
+    text-transform:uppercase;
 
-/* ========================================
-   RESPONSIVE
-======================================== */
-
-@media(max-width:900px){
-
-.club-intro{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-.hero-kaizer h1{
-
-font-size:38px;
-
-}
-
-.hero-kaizer{
-
-height:50vh;
-
-}
-
-}
-
-/*=========================
-CATEGORÍAS
-=========================*/
-
-.categorias{
-
-    padding:90px 8%;
-
-}
-
-.categorias-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-    margin-top:50px;
-
-}
-
-.categoria-card{
-
-    background:#fff;
-
-    padding:35px;
-
-    border-radius:20px;
-
-    text-align:center;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-    border-top:5px solid var(--dorado);
-
-    transition:.35s;
-
-}
-
-.categoria-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.icono{
-
-    font-size:45px;
-
-    margin-bottom:15px;
-
-}
-
-.categoria-card h3{
-
-    font-size:28px;
-
-    margin-bottom:10px;
-
-}
-
-.categoria-card span{
-
-    color:var(--dorado);
-
-    font-weight:700;
-
-    display:block;
-
-    margin-bottom:15px;
-
-}
-
-.categoria-card p{
-
-    color:#666;
-
-}
-
-/*=========================
-FILOSOFÍA
-=========================*/
-
-.filosofia{
-
-    padding:90px 8%;
-
-}
-
-.filosofia-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:35px;
-
-    margin-top:50px;
-
-}
-
-.filosofia-card{
-
-    background:#fff;
-
-    padding:40px;
-
-    text-align:center;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-    border-top:5px solid var(--dorado);
-
-    transition:.35s;
-
-}
-
-.filosofia-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.emoji{
-
-    font-size:55px;
+    letter-spacing:4px;
 
     margin-bottom:20px;
 
 }
 
-.filosofia-card h3{
+.hero-page h1{
 
-    font-size:30px;
+    font-size:72px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+.hero-page p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#f5f5f5;
+
+}
+
+
+
+/*=========================================
+ SECCIONES
+=========================================*/
+
+.club-history,
+.club-values,
+.club-adn,
+.club-philosophy,
+.club-objectives{
+
+    padding:110px 0;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-subtitle{
+
+    display:inline-block;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
 
     margin-bottom:15px;
 
 }
 
-.filosofia-card p{
+.section-header h2{
+
+    font-size:46px;
+
+    margin-bottom:15px;
+
+}
+
+.section-header p{
+
+    max-width:700px;
+
+    margin:auto;
 
     color:#666;
 
     line-height:1.8;
 
 }
-@media (max-width: 992px){
 
-    .categorias-grid,
-    .filosofia-grid{
 
-        grid-template-columns:repeat(2,1fr);
 
-    }
+/*=========================================
+ HISTORIA
+=========================================*/
+
+.history-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
 
 }
 
-@media (max-width:768px){
+.history-image img{
 
-    .categorias-grid,
-    .filosofia-grid{
+    width:100%;
 
-        grid-template-columns:1fr;
+    border-radius:18px;
 
-    }
+    box-shadow:var(--shadow);
+
+}
+
+.history-content h2{
+
+    font-size:46px;
+
+    margin:20px 0;
+
+}
+
+.history-content p{
+
+    color:#666;
+
+    line-height:2;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/*=========================================
+ MISIÓN - VISIÓN - VALORES
+=========================================*/
+
+.values-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.value-card{
+
+    background:#fff;
+
+    padding:45px 35px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+    transition:var(--transition);
+
+    border-top:5px solid transparent;
+
+}
+
+.value-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--primary);
+
+}
+
+.value-card .icon{
+
+    font-size:50px;
+
+    margin-bottom:25px;
+
+}
+
+.value-card h3{
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+}
+
+.value-card p{
+
+    line-height:1.9;
+
+    color:#666;
+
+}
+
+
+
+/*=========================================
+ ADN KAIZER
+=========================================*/
+
+.club-adn{
+
+    background:#f7f7f7;
+
+}
+
+.adn-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.adn-image img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.adn-content h2{
+
+    font-size:44px;
+
+    margin-bottom:25px;
+
+}
+
+.adn-content p{
+
+    line-height:2;
+
+    color:#666;
+
+    margin-bottom:20px;
+
+}
+/*=========================================
+ FILOSOFÍA
+=========================================*/
+
+.club-philosophy{
+
+    background:#ffffff;
+
+}
+
+.philosophy-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+.philosophy-card{
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.philosophy-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.philosophy-card h3{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.philosophy-card p{
+
+    color:#666;
+
+    line-height:2;
+
+}
+
+
+/*=========================================
+ OBJETIVOS
+=========================================*/
+
+.club-objectives{
+
+    background:#f8f8f8;
+
+}
+
+.objectives-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.objective-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.objective-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.objective-card i{
+
+    font-size:55px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.objective-card h3{
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.objective-card p{
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+
+/*=========================================
+ ESTADÍSTICAS
+=========================================*/
+
+.club-stats{
+
+    padding:100px 0;
+
+    background:var(--black);
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat-box{
+
+    text-align:center;
+
+    color:#fff;
+
+}
+
+.stat-box h2{
+
+    font-size:60px;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.stat-box p{
+
+    color:#ddd;
+
+    letter-spacing:1px;
+
+}
+
+
+/*=========================================
+ CTA
+=========================================*/
+
+.club-cta{
+
+    padding:120px 0;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,var(--primary),#8ef4ff);
+
+}
+
+.club-cta h2{
+
+    font-size:46px;
+
+    margin-bottom:20px;
+
+}
+
+.club-cta p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    margin-bottom:35px;
+
+    line-height:2;
+
+    color:#333;
+
+}
+
+
+/*=========================================
+ RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+.hero-page{
+
+height:auto;
+
+padding:180px 20px 120px;
+
+}
+
+.hero-page h1{
+
+font-size:48px;
+
+}
+
+.history-grid,
+
+.adn-grid,
+
+.philosophy-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.values-grid,
+
+.objectives-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+.hero-page h1{
+
+font-size:38px;
+
+}
+
+.hero-page p{
+
+font-size:17px;
+
+}
+
+.section-header h2,
+
+.history-content h2,
+
+.adn-content h2,
+
+.club-cta h2{
+
+font-size:34px;
+
+}
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.stat-box h2{
+
+font-size:48px;
+
+}
 
 }
