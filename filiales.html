@@ -1,653 +1,307 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filiales | KAIZER F.C.</title>
-    <meta name="description" content="Conoce la estructura deportiva de Kaizer F.C.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Equipos | KAIZER F.C.</title>
+    <meta name="description" content="Conoce los equipos y las categorías deportivas de Kaizer F.C.">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="filiales.css">
 </head>
 
 <body>
 
-<!-- ==========================================
-     HEADER
-========================================== -->
-
-<header>
-
-    <div class="header-container">
-
-        <a href="index.html" class="logo">
-
-            <img src="img/logo.png" alt="Kaizer F.C.">
-
-            <span>KAIZER F.C.</span>
-
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="brand">
+            <img src="LOGO KAIZER F.C.png" alt="Escudo oficial de Kaizer F.C.">
+            <span>KAIZER <strong>F.C.</strong></span>
         </a>
 
-        <nav>
+        <button class="menu-toggle"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="main-nav">☰</button>
 
-            <ul>
-
-                <li><a href="index.html">Inicio</a></li>
-
-                <li><a href="kaizer.html">Kaizer F.C.</a></li>
-
-                <li><a href="filiales.html" class="active">Filiales</a></li>
-
-                <li><a href="noticias.html">Noticias</a></li>
-
-                <li><a href="galeria.html">Galería</a></li>
-
-                <li><a href="tienda.html">Tienda</a></li>
-
-                <li><a href="contacto.html">Contacto</a></li>
-
-            </ul>
-
+        <nav class="main-nav" id="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="kaizer.html">El club</a>
+            <a href="filiales.html" class="active">Equipos</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="calendario.html">Calendario</a>
         </nav>
-
     </div>
-
 </header>
 
-<!-- ==========================================
-     HERO
-========================================== -->
+<main>
 
-<section class="hero-page">
-
-    <div class="container">
-
-        <div class="hero-page-content">
-
-            <span class="page-subtitle">
-
-                ESTRUCTURA DEPORTIVA
-
-            </span>
-
-            <h1>FILIALES</h1>
-
+    <section class="teams-hero">
+        <div class="teams-hero-content">
+            <span class="section-kicker">NUESTRA ESTRUCTURA DEPORTIVA</span>
+            <h1>UNA MANADA.<br><span>UN MISMO ESCUDO.</span></h1>
             <p>
-
-                Desde Baby Kaizer hasta el Primer Equipo,
-                cada categoría representa un paso más en el
-                desarrollo deportivo de nuestros jugadores.
-
+                Desde el primer equipo hasta las categorías de iniciación,
+                cada grupo forma parte de la identidad y el crecimiento
+                de KAIZER F.C.
             </p>
-
         </div>
 
-    </div>
-
-</section>
-
-<!-- ==========================================
-     INTRODUCCIÓN
-========================================== -->
-
-<section class="club-intro">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-subtitle">
-
-                Formación Deportiva
-
-            </span>
-
-            <h2>Nuestra Estructura</h2>
-
-            <p>
-
-                Kaizer F.C. cuenta con una estructura deportiva diseñada para
-                acompañar el crecimiento de cada futbolista desde sus primeros
-                pasos hasta el fútbol competitivo.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==========================================
-     PRIMER EQUIPO
-========================================== -->
-
-<section class="team-category">
-
-    <div class="container">
-
-        <div class="category-card">
-
-            <div class="category-image">
-
-                <img src="img/primer-equipo.jpg" alt="Primer Equipo">
-
-            </div>
-
-            <div class="category-content">
-
-                <span>🏆 PRIMER EQUIPO</span>
-
-                <h2>KAIZER F.C.</h2>
-
-                <p>
-
-                    Representa la máxima categoría del club y reúne a los
-                    jugadores encargados de competir oficialmente y defender
-                    los colores de Kaizer F.C.
-
-                </p>
-
-                <a href="#" class="btn btn-primary">
-
-                    Ver Plantilla
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ==========================================
-     FILIALES
-========================================== -->
-
-<section class="team-category">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-subtitle">
-
-                Equipos Filiales
-
-            </span>
-
-            <h2>El Camino hacia el Primer Equipo</h2>
-
-            <p>
-
-                Los equipos filiales representan el último paso antes de llegar
-                al Primer Equipo. Aquí los jugadores continúan su crecimiento
-                deportivo en un entorno competitivo y profesional.
-
-            </p>
-
-        </div>
-
-        <div class="teams-grid">
-
-            <!-- KAIZER B -->
-
-            <article class="team-card">
-
-                <img src="img/kaizer-b.jpg" alt="Kaizer B">
-
-                <div class="team-info">
-
-                    <span class="category-label">FILIAL</span>
-
-                    <h3>KAIZER F.C. B</h3>
-
-                    <p>
-
-                        Equipo filial conformado por jugadores jóvenes con
-                        proyección al Primer Equipo.
-
-                    </p>
-
-                    <a href="#" class="btn btn-primary">
-
-                        Ver Plantilla
-
-                    </a>
-
-                </div>
-
-            </article>
-
-            <!-- KAIZER C -->
-
-            <article class="team-card">
-
-                <img src="img/kaizer-c.jpg" alt="Kaizer C">
-
-                <div class="team-info">
-
-                    <span class="category-label">FILIAL</span>
-
-                    <h3>KAIZER F.C. C</h3>
-
-                    <p>
-
-                        Categoría enfocada en fortalecer el desarrollo técnico,
-                        táctico y físico de nuestros futbolistas.
-
-                    </p>
-
-                    <a href="#" class="btn btn-primary">
-
-                        Ver Plantilla
-
-                    </a>
-
-                </div>
-
-            </article>
-
-            <!-- KAIZER D -->
-
-            <article class="team-card">
-
-                <img src="img/kaizer-d.jpg" alt="Kaizer D">
-
-                <div class="team-info">
-
-                    <span class="category-label">FILIAL</span>
-
-                    <h3>KAIZER F.C. D</h3>
-
-                    <p>
-
-                        Último equipo de desarrollo antes de competir en las
-                        categorías superiores del club.
-
-                    </p>
-
-                    <a href="#" class="btn btn-primary">
-
-                        Ver Plantilla
-
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ==========================================
-     KAIZER ACADEMY
-========================================== -->
-
-<section class="team-category academy-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-subtitle">
-
-                Formación
-
-            </span>
-
-            <h2>KAIZER ACADEMY</h2>
-
-            <p>
-
-                La Academy representa el proceso de formación integral de los
-                jóvenes futbolistas, potenciando sus habilidades técnicas,
-                tácticas y personales antes de dar el salto a las categorías
-                competitivas.
-
-            </p>
-
-        </div>
-
-        <div class="teams-grid">
-
-            <!-- Academy A -->
-
-            <article class="team-card">
-
-                <img src="img/academy-a.jpg" alt="Kaizer Academy A">
-
-                <div class="team-info">
-
-                    <span class="category-label">ACADEMY</span>
-
-                    <h3>KAIZER F.C. ACADEMY A</h3>
-
-                    <p>
-
-                        Categoría principal de formación para jugadores menores
-                        de 15 años con un alto nivel de proyección deportiva.
-
-                    </p>
-
-                    <a href="#" class="btn btn-primary">
-
-                        Ver Plantilla
-
-                    </a>
-
-                </div>
-
-            </article>
-
-            <!-- Academy B -->
-
-            <article class="team-card">
-
-                <img src="img/academy-b.jpg" alt="Kaizer Academy B">
-
-                <div class="team-info">
-
-                    <span class="category-label">ACADEMY</span>
-
-                    <h3>KAIZER F.C. ACADEMY B</h3>
-
-                    <p>
-
-                        Grupo de desarrollo enfocado en fortalecer los
-                        fundamentos técnicos y el crecimiento deportivo de los
-                        jugadores más jóvenes.
-
-                    </p>
-
-                    <a href="#" class="btn btn-primary">
-
-                        Ver Plantilla
-
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ==========================================
-     BABY KAIZER
-========================================== -->
-
-<section class="team-category">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-subtitle">
-
-                Escuela de Iniciación
-
-            </span>
-
-            <h2>BABY KAIZER</h2>
-
-            <p>
-
-                El primer contacto con el fútbol. Un espacio donde los niños
-                aprenden jugando, desarrollan valores y comienzan a vivir la
-                pasión por Kaizer F.C.
-
-            </p>
-
-        </div>
-
-        <div class="teams-grid">
-
-            <!-- Baby A -->
-
-            <article class="team-card">
-
-                <img src="img/baby-a.jpg" alt="Baby Kaizer A">
-
-                <div class="team-info">
-
-                    <span class="category-label">BABY</span>
-
-                    <h3>KAIZER F.C. BABY A</h3>
-
-                    <p>
-
-                        Formación para los más pequeños, enfocada en la
-                        coordinación, la diversión y el aprendizaje mediante el
-                        juego.
-
-                    </p>
-
-                    <a href="#" class="btn btn-primary">
-
-                        Ver Plantilla
-
-                    </a>
-
-                </div>
-
-            </article>
-
-            <!-- Baby B -->
-
-            <article class="team-card">
-
-                <img src="img/baby-b.jpg" alt="Baby Kaizer B">
-
-                <div class="team-info">
-
-                    <span class="category-label">BABY</span>
-
-                    <h3>KAIZER F.C. BABY B</h3>
-
-                    <p>
-
-                        Categoría diseñada para continuar el proceso formativo
-                        y preparar a los jugadores para ingresar a la Academy.
-
-                    </p>
-
-                    <a href="#" class="btn btn-primary">
-
-                        Ver Plantilla
-
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ==========================================
-     EL CAMINO KAIZER
-========================================== -->
-
-<section class="club-journey">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-subtitle">
-
-                Nuestro Proyecto Deportivo
-
-            </span>
-
-            <h2>El Camino de un Jugador Kaizer</h2>
-
-            <p>
-
-                Cada futbolista inicia un recorrido diseñado para desarrollar
-                su talento, fortalecer sus valores y prepararlo para representar
-                con orgullo el escudo de Kaizer F.C.
-
-            </p>
-
-        </div>
-
-        <div class="journey-grid">
-
-            <div class="journey-item">
-
-                <div class="journey-number">01</div>
-
-                <h3>Baby Kaizer</h3>
-
-                <p>
-
-                    Primer contacto con el fútbol, fomentando el aprendizaje,
-                    la diversión y el trabajo en equipo.
-
-                </p>
-
-            </div>
-
-            <div class="journey-item">
-
-                <div class="journey-number">02</div>
-
-                <h3>Kaizer Academy</h3>
-
-                <p>
-
-                    Formación técnica y táctica con una metodología enfocada
-                    en el crecimiento integral del jugador.
-
-                </p>
-
-            </div>
-
-            <div class="journey-item">
-
-                <div class="journey-number">03</div>
-
-                <h3>Filiales</h3>
-
-                <p>
-
-                    Desarrollo competitivo para preparar a los futbolistas
-                    hacia el máximo nivel del club.
-
-                </p>
-
-            </div>
-
-            <div class="journey-item">
-
-                <div class="journey-number">04</div>
-
-                <h3>Primer Equipo</h3>
-
-                <p>
-
-                    El objetivo final de nuestro proyecto deportivo:
-                    representar oficialmente a Kaizer F.C.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ==========================================
-     CTA
-========================================== -->
-
-<section class="club-cta">
-
-    <div class="container">
-
-        <h2>Forma Parte de Kaizer F.C.</h2>
-
+        <img class="teams-hero-crest"
+             src="LOGO KAIZER F.C.png"
+             alt="Escudo oficial de Kaizer F.C.">
+    </section>
+
+
+    <section class="teams-intro">
+        <span class="section-kicker">FAMILIA KAIZER</span>
+        <h2>Conoce nuestros <span>equipos</span></h2>
         <p>
-
-            Descubre nuestras categorías y comienza a vivir la experiencia
-            de pertenecer a una institución comprometida con el desarrollo
-            deportivo y humano.
-
+            Una estructura deportiva organizada para competir,
+            aprender y crecer juntos.
         </p>
+    </section>
 
-        <a href="contacto.html" class="btn btn-primary">
 
-            Contáctanos
+    <!-- PRIMER EQUIPO -->
+    <section class="team-category first-team" id="primer-equipo">
+        <div class="category-heading">
+            <div>
+                <span class="category-index">01 / EQUIPO PRINCIPAL</span>
+                <h2>Primer Equipo</h2>
+                <p>La máxima representación de KAIZER F.C.</p>
+            </div>
+            <span class="category-symbol">🏆</span>
+        </div>
 
+        <article class="team-card team-card-featured">
+            <div class="team-card-crest">
+                <img src="LOGO KAIZER F.C.png"
+                     alt="Escudo oficial de Kaizer F.C.">
+            </div>
+
+            <div class="team-card-info">
+                <span class="team-tag">PRIMER EQUIPO</span>
+                <h3>KAIZER F.C.</h3>
+                <p>
+                    Nuestro equipo principal representa los colores,
+                    los valores y la ambición competitiva del club.
+                    Cada partido es una oportunidad para defender
+                    nuestra identidad.
+                </p>
+                <a href="plantilla.html" class="team-link">
+                    Ver plantilla <span>↗</span>
+                </a>
+            </div>
+        </article>
+    </section>
+
+
+    <!-- FILIALES -->
+    <section class="team-category" id="filiales">
+        <div class="category-heading">
+            <div>
+                <span class="category-index">02 / ESTRUCTURA COMPETITIVA</span>
+                <h2>Equipos Filiales</h2>
+                <p>Más equipos, más oportunidades para crecer.</p>
+            </div>
+            <span class="category-symbol">⚽</span>
+        </div>
+
+        <div class="teams-grid">
+
+            <article class="team-card">
+                <div class="team-card-crest">
+                    <img src="LOGO KAIZER F.C.png" alt="Escudo de KAIZER F.C. B">
+                </div>
+                <div class="team-card-info">
+                    <span class="team-tag">FILIAL</span>
+                    <h3>KAIZER F.C. B</h3>
+                    <p>Un equipo de la estructura filial del club.</p>
+                    <a href="plantilla.html?equipo=b" class="team-link">
+                        Ver equipo <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="team-card">
+                <div class="team-card-crest">
+                    <img src="LOGO KAIZER F.C.png" alt="Escudo de KAIZER F.C. C">
+                </div>
+                <div class="team-card-info">
+                    <span class="team-tag">FILIAL</span>
+                    <h3>KAIZER F.C. C</h3>
+                    <p>Un espacio para continuar el desarrollo competitivo.</p>
+                    <a href="plantilla.html?equipo=c" class="team-link">
+                        Ver equipo <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="team-card">
+                <div class="team-card-crest">
+                    <img src="LOGO KAIZER F.C.png" alt="Escudo de KAIZER F.C. D">
+                </div>
+                <div class="team-card-info">
+                    <span class="team-tag">FILIAL</span>
+                    <h3>KAIZER F.C. D</h3>
+                    <p>Otra vía para formar parte de la familia Kaizer.</p>
+                    <a href="plantilla.html?equipo=d" class="team-link">
+                        Ver equipo <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- ACADEMY -->
+    <section class="team-category academy-category" id="academy">
+        <div class="category-heading">
+            <div>
+                <span class="category-index">03 / FORMACIÓN</span>
+                <h2>Kaizer Academy</h2>
+                <p>Aprendizaje, fundamentos y crecimiento futbolístico.</p>
+            </div>
+            <span class="category-symbol">🎓</span>
+        </div>
+
+        <div class="teams-grid">
+
+            <article class="team-card">
+                <div class="team-card-crest">
+                    <img src="LOGO KAIZER ACADEMY.png"
+                         alt="Escudo oficial de Kaizer Academy">
+                </div>
+                <div class="team-card-info">
+                    <span class="team-tag">ACADEMY</span>
+                    <h3>KAIZER F.C. Academy A</h3>
+                    <p>Formación y desarrollo de jóvenes futbolistas.</p>
+                    <a href="plantilla.html?equipo=academy-a" class="team-link">
+                        Ver equipo <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="team-card">
+                <div class="team-card-crest">
+                    <img src="LOGO KAIZER ACADEMY.png"
+                         alt="Escudo oficial de Kaizer Academy">
+                </div>
+                <div class="team-card-info">
+                    <span class="team-tag">ACADEMY</span>
+                    <h3>KAIZER F.C. Academy B</h3>
+                    <p>Aprender, mejorar y disfrutar del fútbol.</p>
+                    <a href="plantilla.html?equipo=academy-b" class="team-link">
+                        Ver equipo <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- BABY KAIZER -->
+    <section class="team-category baby-category" id="baby-kaizer">
+        <div class="category-heading">
+            <div>
+                <span class="category-index">04 / INICIACIÓN DEPORTIVA</span>
+                <h2>Baby Kaizer</h2>
+                <p>Los primeros pasos de una gran pasión.</p>
+            </div>
+            <span class="category-symbol">⚽</span>
+        </div>
+
+        <div class="teams-grid">
+
+            <article class="team-card">
+                <div class="team-card-crest">
+                    <img src="LOGO KAIZER BABY.png"
+                         alt="Escudo oficial de Baby Kaizer">
+                </div>
+                <div class="team-card-info">
+                    <span class="team-tag">BABY</span>
+                    <h3>KAIZER F.C. Baby A</h3>
+                    <p>Primeros aprendizajes a través del fútbol.</p>
+                    <a href="plantilla.html?equipo=baby-a" class="team-link">
+                        Ver equipo <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="team-card">
+                <div class="team-card-crest">
+                    <img src="LOGO KAIZER BABY.png"
+                         alt="Escudo oficial de Baby Kaizer">
+                </div>
+                <div class="team-card-info">
+                    <span class="team-tag">BABY</span>
+                    <h3>KAIZER F.C. Baby B</h3>
+                    <p>Juego, compañerismo y formación inicial.</p>
+                    <a href="plantilla.html?equipo=baby-b" class="team-link">
+                        Ver equipo <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <section class="teams-manifesto">
+        <span class="section-kicker">EL ORGULLO DE PERTENECER</span>
+        <h2>MÁS QUE UN CLUB,<br><span>SOMOS UNA MANADA.</span></h2>
+        <p>KAIZER F.C. · Cúcuta, Norte de Santander</p>
+        <a href="index.html" class="btn btn-light">VOLVER AL INICIO</a>
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="footer-main">
+        <a href="index.html" class="footer-brand">
+            <img src="LOGO KAIZER F.C.png" alt="Escudo oficial de Kaizer F.C.">
+            <span>KAIZER <strong>F.C.</strong></span>
         </a>
 
+        <p class="footer-slogan">Más que un club, somos una manada.</p>
+
+        <nav class="footer-links" aria-label="Navegación del pie de página">
+            <a href="index.html">Inicio</a>
+            <a href="kaizer.html">El club</a>
+            <a href="filiales.html">Equipos</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="calendario.html">Calendario</a>
+        </nav>
     </div>
 
-</section>
-
-
-
-<!-- ==========================================
-     FOOTER
-========================================== -->
-
-<footer>
-
-    <div class="footer-container">
-
-        <img src="img/logo.png" alt="Kaizer F.C." class="footer-logo">
-
-        <h2>KAIZER F.C.</h2>
-
-        <p>
-
-            Formando personas, desarrollando talento y construyendo el futuro
-            del fútbol.
-
-        </p>
-
-        <div class="social">
-
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-
-            <a href="#"><i class="fab fa-instagram"></i></a>
-
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-
-            <a href="#"><i class="fab fa-youtube"></i></a>
-
-        </div>
-
-        <p class="copy">
-
-            © 2026 KAIZER F.C. | Todos los derechos reservados.
-
-        </p>
-
+    <div class="footer-bottom">
+        <p>© 2027 KAIZER F.C. Todos los derechos reservados.</p>
+        <span>Cúcuta, Colombia</span>
     </div>
-
 </footer>
 
-</body>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
 
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('is-open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.setAttribute(
+                'aria-label',
+                isOpen ? 'Cerrar menú' : 'Abrir menú'
+            );
+        });
+    }
+</script>
+
+</body>
 </html>
+```
