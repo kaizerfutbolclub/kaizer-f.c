@@ -1,246 +1,416 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaizer F.C. | El Club</title>
-    <meta name="description" content="Conoce la historia, misión y valores de Kaizer F.C.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- CSS -->
+
+    <title>El Club | KAIZER F.C.</title>
+
+    <meta name="description" content="Conoce la historia, identidad, misión, visión y valores de Kaizer F.C. Más que un club, somos una manada.">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="kaizer.css">
-
 </head>
 
 <body>
-  <!-- ==========================================
-     HEADER
-========================================== -->
 
-<header>
+    <!-- CABECERA -->
+    <header class="site-header">
+        <div class="header-inner">
 
-    <div class="header-container">
+            <a href="index.html" class="brand">
+                <img src="LOGO KAIZER F.C.png" alt="Escudo oficial de Kaizer F.C.">
+                <span>KAIZER <strong>F.C.</strong></span>
+            </a>
 
-        <a href="index.html" class="logo">
+            <button class="menu-toggle"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                    aria-controls="main-nav">
+                ☰
+            </button>
 
-            <img src="img/logo.png" alt="Kaizer F.C.">
-
-            <span>KAIZER F.C.</span>
-
-        </a>
-
-        <nav>
-
-            <ul>
-
-                <li><a href="index.html">Inicio</a></li>
-
-                <li><a href="kaizer.html" class="active">Kaizer F.C.</a></li>
-
-                <li><a href="filiales.html">Filiales</a></li>
-
-                <li><a href="noticias.html">Noticias</a></li>
-
-                <li><a href="galeria.html">Galería</a></li>
-
-                <li><a href="tienda.html">Tienda</a></li>
-
-                <li><a href="contacto.html">Contacto</a></li>
-
-            </ul>
-
-        </nav>
-
-    </div>
-
-</header>
-<!-- ==========================================
-     HERO
-=========================================== -->
-
-<section class="hero-page">
-
-    <div class="hero-overlay"></div>
-
-    <div class="container">
-
-        <div class="hero-page-content">
-
-            <span class="page-subtitle">
-                CONOCE NUESTRA HISTORIA
-            </span>
-
-            <h1>KAIZER F.C.</h1>
-
-            <p>
-                Un club comprometido con la formación de personas,
-                el desarrollo deportivo y la pasión por el fútbol.
-            </p>
+            <nav class="main-nav" id="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="kaizer.html" class="active">El club</a>
+                <a href="filiales.html">Equipos</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="calendario.html">Calendario</a>
+            </nav>
 
         </div>
+    </header>
 
-    </div>
 
-</section>
-<!-- ==========================================
-     HISTORIA
-=========================================== -->
+    <main>
 
-<section class="club-history">
+        <!-- PORTADA DEL CLUB -->
+        <section class="club-hero">
+            <div class="club-hero-content">
+                <span class="section-kicker">NUESTRA IDENTIDAD</span>
 
-    <div class="container history-grid">
-
-        <div class="history-image">
-
-            <img src="img/historia-club.jpg" alt="Historia Kaizer F.C.">
-
-        </div>
-
-        <div class="history-content">
-
-            <span class="section-subtitle">
-                Nuestra Historia
-            </span>
-
-            <h2>Más que un equipo de fútbol.</h2>
-
-            <p>
-                Kaizer F.C. nace con la ilusión de construir una institución
-                deportiva donde el respeto, la disciplina y el compromiso sean
-                los pilares fundamentales para el crecimiento de nuestros
-                jugadores.
-            </p>
-
-            <p>
-                Nuestro objetivo no es únicamente competir, sino también formar
-                personas íntegras capaces de representar con orgullo nuestros
-                colores dentro y fuera del campo.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ==========================================
-     MISIÓN - VISIÓN - VALORES
-=========================================== -->
-
-<section class="club-values">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-subtitle">
-
-                Nuestra Institución
-
-            </span>
-
-            <h2>Misión, Visión y Valores</h2>
-
-        </div>
-
-        <div class="values-grid">
-
-            <article class="value-card">
-
-                <div class="icon">🎯</div>
-
-                <h3>Misión</h3>
+                <h1>UN CLUB.<br><span>UNA MANADA.</span></h1>
 
                 <p>
-                    Formar futbolistas y personas mediante un proceso deportivo
-                    basado en disciplina, respeto y excelencia.
+                    Somos KAIZER F.C., un proyecto futbolístico que nace
+                    de la pasión, la disciplina y el deseo de crecer
+                    dentro y fuera del terreno de juego.
                 </p>
 
-            </article>
+                <a href="#historia" class="btn btn-primary">
+                    CONOCE NUESTRA HISTORIA
+                </a>
+            </div>
 
-            <article class="value-card">
+            <div class="club-hero-mark">
+                <img src="LOGO KAIZER F.C.png"
+                     alt="Escudo oficial de Kaizer F.C.">
+            </div>
+        </section>
 
-                <div class="icon">👁️</div>
 
-                <h3>Visión</h3>
+        <!-- HISTORIA -->
+        <section class="club-section history-section" id="historia">
+            <div class="section-heading">
+                <span class="section-kicker">NUESTROS ORÍGENES</span>
+                <h2>La historia de <span>Kaizer</span></h2>
+                <p>
+                    Cada gran proyecto comienza con una idea,
+                    una identidad y la decisión de no rendirse.
+                </p>
+            </div>
+
+            <div class="history-layout">
+                <div class="history-number">
+                    <span>KAIZER</span>
+                    <strong>F.C.</strong>
+                    <div class="gold-line"></div>
+                    <p>Una pasión que nos une</p>
+                </div>
+
+                <div class="history-copy">
+                    <h3>El comienzo de una manada</h3>
+
+                    <p>
+                        KAIZER F.C. nace como un proyecto deportivo
+                        impulsado por la pasión por el fútbol y la
+                        ambición de construir un club con identidad propia.
+                    </p>
+
+                    <p>
+                        Desde Cúcuta, Norte de Santander, trabajamos
+                        para desarrollar una institución que represente
+                        el compromiso, el respeto, el esfuerzo colectivo
+                        y la formación de nuevos talentos.
+                    </p>
+
+                    <p>
+                        Nuestro camino se construye paso a paso,
+                        con la convicción de que cada entrenamiento,
+                        cada jugador y cada desafío forman parte de
+                        una misma historia.
+                    </p>
+
+                    <blockquote>
+                        “Más que un club, somos una manada”.
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MISIÓN, VISIÓN Y VALORES -->
+        <section class="club-section identity-section">
+            <div class="section-heading">
+                <span class="section-kicker">LO QUE NOS DEFINE</span>
+                <h2>Nuestra <span>identidad</span></h2>
+                <p>
+                    Los principios que orientan nuestro proyecto
+                    deportivo y nuestra forma de representar al club.
+                </p>
+            </div>
+
+            <div class="identity-grid">
+
+                <article class="identity-card">
+                    <div class="identity-icon">🎯</div>
+                    <span class="card-number">01</span>
+                    <h3>Misión</h3>
+                    <p>
+                        Impulsar un proyecto futbolístico que promueva
+                        la formación deportiva, la disciplina y el
+                        crecimiento personal, fomentando el respeto,
+                        el trabajo en equipo y el amor por el fútbol.
+                    </p>
+                </article>
+
+                <article class="identity-card featured">
+                    <div class="identity-icon">🚀</div>
+                    <span class="card-number">02</span>
+                    <h3>Visión</h3>
+                    <p>
+                        Consolidarnos como un club reconocido por su
+                        identidad, organización y compromiso con el
+                        desarrollo de jugadores, construyendo
+                        progresivamente nuevas oportunidades deportivas.
+                    </p>
+                </article>
+
+                <article class="identity-card">
+                    <div class="identity-icon">🛡️</div>
+                    <span class="card-number">03</span>
+                    <h3>Valores</h3>
+                    <p>
+                        Disciplina, respeto, humildad, lealtad,
+                        responsabilidad, perseverancia y unidad.
+                        Valores que defendemos dentro y fuera
+                        del campo de juego.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ADN KAIZER -->
+        <section class="club-section dna-section">
+            <div class="dna-heading">
+                <span class="section-kicker">NUESTRO ADN</span>
+                <h2>El espíritu de la <span>manada</span></h2>
+                <p>
+                    Una identidad que se demuestra con acciones,
+                    no solamente con palabras.
+                </p>
+            </div>
+
+            <div class="dna-grid">
+
+                <article class="dna-item">
+                    <span>01</span>
+                    <h3>Unidad</h3>
+                    <p>Avanzamos juntos y trabajamos por un objetivo común.</p>
+                </article>
+
+                <article class="dna-item">
+                    <span>02</span>
+                    <h3>Disciplina</h3>
+                    <p>La constancia convierte el esfuerzo en progreso.</p>
+                </article>
+
+                <article class="dna-item">
+                    <span>03</span>
+                    <h3>Carácter</h3>
+                    <p>Competimos con determinación y respeto.</p>
+                </article>
+
+                <article class="dna-item">
+                    <span>04</span>
+                    <h3>Ambición</h3>
+                    <p>Buscamos mejorar cada día y superar nuestros límites.</p>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- SIGNIFICADO DEL ESCUDO -->
+        <section class="club-section crest-section">
+            <div class="crest-image">
+                <img src="LOGO KAIZER F.C.png"
+                     alt="Escudo oficial de Kaizer F.C.">
+            </div>
+
+            <div class="crest-copy">
+                <span class="section-kicker">NUESTRO SÍMBOLO</span>
+                <h2>Un escudo.<br><span>Una identidad.</span></h2>
 
                 <p>
-                    Ser un club referente en la formación deportiva y humana,
-                    reconocido por su profesionalismo y compromiso.
+                    Nuestro escudo representa la identidad y el sentido
+                    de pertenencia de todos los que forman parte de
+                    KAIZER F.C.
                 </p>
-
-            </article>
-
-            <article class="value-card">
-
-                <div class="icon">❤️</div>
-
-                <h3>Valores</h3>
 
                 <p>
-                    Respeto, disciplina, humildad, trabajo en equipo,
-                    responsabilidad y pasión por el fútbol.
+                    El lobo simboliza la unión, la fortaleza y el espíritu
+                    de manada: cualidades que buscamos representar
+                    en cada entrenamiento y competición.
                 </p>
 
-            </article>
+                <p>
+                    Nuestros colores y símbolos conforman una imagen
+                    propia que debe mantenerse coherente en camisetas,
+                    comunicaciones y espacios oficiales del club.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- COLORES OFICIALES -->
+        <section class="club-section colors-section">
+            <div class="section-heading">
+                <span class="section-kicker">IDENTIDAD VISUAL</span>
+                <h2>Los colores de <span>Kaizer</span></h2>
+                <p>
+                    Una identidad sobria, reconocible y fiel
+                    al espíritu de nuestro club.
+                </p>
+            </div>
+
+            <div class="colors-grid">
+
+                <article class="color-card">
+                    <div class="color-swatch color-white"></div>
+                    <h3>Blanco</h3>
+                    <p>Claridad, elegancia y juego limpio.</p>
+                    <span>#FFFFFF</span>
+                </article>
+
+                <article class="color-card">
+                    <div class="color-swatch color-black"></div>
+                    <h3>Negro</h3>
+                    <p>Carácter, fuerza y personalidad.</p>
+                    <span>#000000</span>
+                </article>
+
+                <article class="color-card">
+                    <div class="color-swatch color-gold"></div>
+                    <h3>Dorado</h3>
+                    <p>Ambición, distinción y excelencia.</p>
+                    <span>#F3CA4C</span>
+                </article>
+
+                <article class="color-card">
+                    <div class="color-swatch color-cyan"></div>
+                    <h3>Celeste</h3>
+                    <p>Identidad visual y energía.</p>
+                    <span>#B2FFFF</span>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- CATEGORÍAS -->
+        <section class="club-section structure-section">
+            <div class="section-heading">
+                <span class="section-kicker">NUESTRO PROYECTO DEPORTIVO</span>
+                <h2>Una manada, <span>varios caminos</span></h2>
+                <p>
+                    Una estructura pensada para organizar el crecimiento
+                    deportivo del club y sus diferentes categorías.
+                </p>
+            </div>
+
+            <div class="structure-grid">
+
+                <article class="structure-card">
+                    <span class="structure-icon">🏆</span>
+                    <span class="structure-label">PRIMER EQUIPO</span>
+                    <h3>KAIZER F.C.</h3>
+                    <p>
+                        El equipo principal y la máxima representación
+                        deportiva de nuestra identidad.
+                    </p>
+                    <a href="filiales.html">Conocer los equipos ↗</a>
+                </article>
+
+                <article class="structure-card">
+                    <span class="structure-icon">⚽</span>
+                    <span class="structure-label">EQUIPOS FILIALES</span>
+                    <h3>KAIZER F.C. B, C y D</h3>
+                    <p>
+                        Equipos secundarios que forman parte
+                        de la estructura competitiva del club.
+                    </p>
+                    <a href="filiales.html">Conocer los equipos ↗</a>
+                </article>
+
+                <article class="structure-card">
+                    <span class="structure-icon">🎓</span>
+                    <span class="structure-label">FORMACIÓN</span>
+                    <h3>Kaizer Academy</h3>
+                    <p>
+                        Categorías orientadas al desarrollo y aprendizaje
+                        de futbolistas menores de 15 años.
+                    </p>
+                    <a href="filiales.html">Conocer los equipos ↗</a>
+                </article>
+
+                <article class="structure-card">
+                    <span class="structure-icon">👶</span>
+                    <span class="structure-label">INICIACIÓN</span>
+                    <h3>Baby Kaizer</h3>
+                    <p>
+                        Un espacio de iniciación futbolística para
+                        niños de hasta 10 años.
+                    </p>
+                    <a href="filiales.html">Conocer los equipos ↗</a>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- CIERRE -->
+        <section class="club-manifesto">
+            <span class="section-kicker">ESTE ES NUESTRO CAMINO</span>
+            <h2>MÁS QUE UN CLUB,<br><span>SOMOS UNA MANADA.</span></h2>
+            <p>KAIZER F.C. · Cúcuta, Norte de Santander</p>
+            <a href="index.html" class="btn btn-light">
+                VOLVER AL INICIO
+            </a>
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="site-footer">
+        <div class="footer-main">
+
+            <a href="index.html" class="footer-brand">
+                <img src="LOGO KAIZER F.C.png"
+                     alt="Escudo oficial de Kaizer F.C.">
+                <span>KAIZER <strong>F.C.</strong></span>
+            </a>
+
+            <p class="footer-slogan">
+                Más que un club, somos una manada.
+            </p>
+
+            <nav class="footer-links" aria-label="Navegación del pie de página">
+                <a href="index.html">Inicio</a>
+                <a href="kaizer.html">El club</a>
+                <a href="filiales.html">Equipos</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="calendario.html">Calendario</a>
+            </nav>
 
         </div>
 
-    </div>
-
-</section>
-<!-- ==========================================
-     FOOTER
-========================================== -->
-
-<footer>
-
-    <div class="footer-container">
-
-        <img src="img/logo.png"
-             class="footer-logo"
-             alt="Kaizer F.C.">
-
-        <h2>KAIZER F.C.</h2>
-
-        <p>
-            Formando personas, construyendo futuro.
-        </p>
-
-        <div class="social">
-
-            <a href="#">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <a href="#">
-                <i class="fab fa-instagram"></i>
-            </a>
-
-            <a href="#">
-                <i class="fab fa-tiktok"></i>
-            </a>
-
-            <a href="#">
-                <i class="fab fa-youtube"></i>
-            </a>
-
+        <div class="footer-bottom">
+            <p>© 2027 KAIZER F.C. Todos los derechos reservados.</p>
+            <span>Cúcuta, Colombia</span>
         </div>
+    </footer>
 
-        <p class="copy">
 
-            © 2026 KAIZER F.C.
-            Todos los derechos reservados.
+    <!-- MENÚ MÓVIL -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
 
-        </p>
-
-    </div>
-
-</footer>
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = mainNav.classList.toggle('is-open');
+                menuToggle.setAttribute('aria-expanded', isOpen);
+                menuToggle.setAttribute(
+                    'aria-label',
+                    isOpen ? 'Cerrar menú' : 'Abrir menú'
+                );
+            });
+        }
+    </script>
 
 </body>
-
 </html>
