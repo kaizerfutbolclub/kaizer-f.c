@@ -1,608 +1,663 @@
-/*==================================================
-  KAIZER F.C.
-  KAIZER.CSS
-  Página: Kaizer F.C.
-==================================================*/
+/* =========================================
+   KAIZER F.C. — PÁGINA EL CLUB
+   Archivo: kaizer.css
+========================================= */
+
+:root {
+    --club-gold: #F3CA4C;
+    --club-cyan: #B2FFFF;
+    --club-black: #000000;
+    --club-ivory: #FAF9F6;
+    --club-gray: #6B6B6B;
+    --club-border: #E8E5DD;
+}
 
 
-/*=========================================
- HERO
-=========================================*/
+/* PORTADA */
 
-.hero-page{
-
-    position: relative;
-
-    width: 100%;
-
-    height: 70vh;
-
-    min-height: 550px;
-
-    display: flex;
-
+.club-hero {
+    min-height: 560px;
+    padding: 90px max(7%, calc((100% - 1200px) / 2));
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
-
-    justify-content: center;
-
-    background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
-    url("../img/hero-kaizer.jpg") center center/cover no-repeat;
-
+    gap: 50px;
     overflow: hidden;
-
+    background:
+        radial-gradient(circle at 80% 50%, rgba(243, 202, 76, 0.12), transparent 35%),
+        var(--club-ivory);
+    border-bottom: 1px solid var(--club-border);
 }
 
-.hero-page-content{
-
-    text-align:center;
-
-    color:#fff;
-
-    max-width:850px;
-
-    z-index:2;
-
+.club-hero-content {
+    max-width: 660px;
 }
 
-.page-subtitle{
-
-    display:inline-block;
-
-    color:var(--primary);
-
-    font-size:15px;
-
-    font-weight:600;
-
-    text-transform:uppercase;
-
-    letter-spacing:4px;
-
-    margin-bottom:20px;
-
+.section-kicker {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #8B6B14;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 3px;
 }
 
-.hero-page h1{
-
-    font-size:72px;
-
-    font-weight:800;
-
-    margin-bottom:20px;
-
+.club-hero h1 {
+    margin: 0 0 24px;
+    color: var(--club-black);
+    font-size: clamp(3rem, 6vw, 5.8rem);
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -3px;
 }
 
-.hero-page p{
-
-    font-size:20px;
-
-    line-height:1.8;
-
-    color:#f5f5f5;
-
+.club-hero h1 span,
+.section-heading h2 span,
+.dna-heading h2 span,
+.crest-copy h2 span,
+.club-manifesto h2 span {
+    color: #A78219;
 }
 
-
-
-/*=========================================
- SECCIONES
-=========================================*/
-
-.club-history,
-.club-values,
-.club-adn,
-.club-philosophy,
-.club-objectives{
-
-    padding:110px 0;
-
+.club-hero-content > p {
+    max-width: 570px;
+    margin-bottom: 30px;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.9;
 }
 
-.section-header{
-
-    text-align:center;
-
-    margin-bottom:70px;
-
+.club-hero-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.section-subtitle{
-
-    display:inline-block;
-
-    color:var(--primary);
-
-    font-weight:600;
-
-    text-transform:uppercase;
-
-    letter-spacing:3px;
-
-    margin-bottom:15px;
-
-}
-
-.section-header h2{
-
-    font-size:46px;
-
-    margin-bottom:15px;
-
-}
-
-.section-header p{
-
-    max-width:700px;
-
-    margin:auto;
-
-    color:#666;
-
-    line-height:1.8;
-
+.club-hero-mark img {
+    display: block;
+    width: min(100%, 340px);
+    max-height: 370px;
+    object-fit: contain;
 }
 
 
+/* BOTONES */
 
-/*=========================================
- HISTORIA
-=========================================*/
-
-.history-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 14px 24px;
+    border: 1px solid transparent;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.history-image img{
-
-    width:100%;
-
-    border-radius:18px;
-
-    box-shadow:var(--shadow);
-
+.btn:hover {
+    transform: translateY(-3px);
 }
 
-.history-content h2{
-
-    font-size:46px;
-
-    margin:20px 0;
-
+.btn-primary {
+    background: var(--club-black);
+    color: #fff;
 }
 
-.history-content p{
+.btn-primary:hover {
+    background: #292929;
+}
 
-    color:#666;
+.btn-light {
+    background: #fff;
+    color: #111;
+}
 
-    line-height:2;
-
-    margin-bottom:20px;
-
+.btn-light:hover {
+    background: var(--club-gold);
 }
 
 
+/* SECCIONES GENERALES */
 
-/*=========================================
- MISIÓN - VISIÓN - VALORES
-=========================================*/
-
-.values-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
+.club-section {
+    padding: 100px max(7%, calc((100% - 1200px) / 2));
 }
 
-.value-card{
-
-    background:#fff;
-
-    padding:45px 35px;
-
-    border-radius:18px;
-
-    box-shadow:var(--shadow);
-
-    text-align:center;
-
-    transition:var(--transition);
-
-    border-top:5px solid transparent;
-
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
 }
 
-.value-card:hover{
-
-    transform:translateY(-10px);
-
-    border-color:var(--primary);
-
+.section-heading h2,
+.dna-heading h2,
+.crest-copy h2 {
+    margin: 0 0 18px;
+    font-size: clamp(2.1rem, 4vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
 }
 
-.value-card .icon{
-
-    font-size:50px;
-
-    margin-bottom:25px;
-
-}
-
-.value-card h3{
-
-    margin-bottom:20px;
-
-    font-size:28px;
-
-}
-
-.value-card p{
-
-    line-height:1.9;
-
-    color:#666;
-
+.section-heading > p,
+.dna-heading > p {
+    margin: 0;
+    color: var(--club-gray);
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 
+/* HISTORIA */
 
-/*=========================================
- ADN KAIZER
-=========================================*/
-
-.club-adn{
-
-    background:#f7f7f7;
-
+.history-section {
+    background: #fff;
 }
 
-.adn-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
+.history-layout {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    align-items: start;
+    gap: 80px;
 }
 
-.adn-image img{
-
-    width:100%;
-
-    border-radius:18px;
-
-    box-shadow:var(--shadow);
-
+.history-number {
+    position: relative;
+    min-height: 320px;
+    padding: 45px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--club-black);
+    color: #fff;
 }
 
-.adn-content h2{
-
-    font-size:44px;
-
-    margin-bottom:25px;
-
+.history-number::after {
+    position: absolute;
+    right: -40px;
+    bottom: -65px;
+    width: 210px;
+    height: 210px;
+    border: 1px solid rgba(243, 202, 76, 0.35);
+    border-radius: 50%;
+    content: "";
 }
 
-.adn-content p{
-
-    line-height:2;
-
-    color:#666;
-
-    margin-bottom:20px;
-
-}
-/*=========================================
- FILOSOFÍA
-=========================================*/
-
-.club-philosophy{
-
-    background:#ffffff;
-
+.history-number > span {
+    color: var(--club-gold);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 5px;
 }
 
-.philosophy-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:40px;
-
-    align-items:center;
-
+.history-number > strong {
+    font-size: 5rem;
+    line-height: 1;
+    letter-spacing: -4px;
 }
 
-.philosophy-card{
-
-    background:#fff;
-
-    padding:40px;
-
-    border-radius:18px;
-
-    box-shadow:var(--shadow);
-
-    transition:var(--transition);
-
+.gold-line {
+    width: 65px;
+    height: 4px;
+    margin: 25px 0 12px;
+    background: var(--club-gold);
 }
 
-.philosophy-card:hover{
-
-    transform:translateY(-8px);
-
+.history-number > p {
+    margin: 0;
+    color: #ccc;
+    font-size: 0.9rem;
 }
 
-.philosophy-card h3{
-
-    font-size:28px;
-
-    margin-bottom:20px;
-
+.history-copy h3 {
+    margin: 0 0 20px;
+    font-size: 1.7rem;
+    font-weight: 800;
 }
 
-.philosophy-card p{
+.history-copy p,
+.crest-copy p {
+    margin: 0 0 18px;
+    color: #595959;
+    font-size: 0.98rem;
+    line-height: 1.95;
+}
 
-    color:#666;
-
-    line-height:2;
-
+.history-copy blockquote {
+    margin: 30px 0 0;
+    padding: 5px 0 5px 22px;
+    border-left: 4px solid var(--club-gold);
+    color: #111;
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.6;
 }
 
 
-/*=========================================
- OBJETIVOS
-=========================================*/
+/* MISIÓN, VISIÓN Y VALORES */
 
-.club-objectives{
-
-    background:#f8f8f8;
-
+.identity-section {
+    background: var(--club-ivory);
 }
 
-.objectives-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
+.identity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
 }
 
-.objective-card{
-
-    background:#fff;
-
-    border-radius:18px;
-
-    padding:40px 30px;
-
-    text-align:center;
-
-    box-shadow:var(--shadow);
-
-    transition:var(--transition);
-
+.identity-card {
+    position: relative;
+    padding: 35px 30px;
+    border: 1px solid var(--club-border);
+    background: #fff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.objective-card:hover{
-
-    transform:translateY(-10px);
-
+.identity-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
 }
 
-.objective-card i{
-
-    font-size:55px;
-
-    color:var(--primary);
-
-    margin-bottom:20px;
-
+.identity-card.featured {
+    border-top: 4px solid var(--club-gold);
 }
 
-.objective-card h3{
-
-    margin-bottom:20px;
-
-    font-size:24px;
-
+.identity-icon {
+    margin-bottom: 25px;
+    font-size: 2.1rem;
 }
 
-.objective-card p{
+.card-number {
+    position: absolute;
+    top: 28px;
+    right: 25px;
+    color: #D4D0C7;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
 
-    color:#666;
+.identity-card h3 {
+    margin: 0 0 15px;
+    font-size: 1.55rem;
+    font-weight: 850;
+}
 
-    line-height:1.9;
-
+.identity-card p {
+    margin: 0;
+    color: var(--club-gray);
+    font-size: 0.94rem;
+    line-height: 1.85;
 }
 
 
-/*=========================================
- ESTADÍSTICAS
-=========================================*/
+/* ADN KAIZER */
 
-.club-stats{
-
-    padding:100px 0;
-
-    background:var(--black);
-
+.dna-section {
+    background: #111;
+    color: #fff;
 }
 
-.stats-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
-
+.dna-heading {
+    max-width: 720px;
+    margin-bottom: 50px;
 }
 
-.stat-box{
-
-    text-align:center;
-
-    color:#fff;
-
+.dna-heading .section-kicker {
+    color: var(--club-gold);
 }
 
-.stat-box h2{
-
-    font-size:60px;
-
-    color:var(--primary);
-
-    margin-bottom:10px;
-
+.dna-heading h2 {
+    color: #fff;
 }
 
-.stat-box p{
-
-    color:#ddd;
-
-    letter-spacing:1px;
-
+.dna-heading > p {
+    color: #BDBDBD;
 }
 
-
-/*=========================================
- CTA
-=========================================*/
-
-.club-cta{
-
-    padding:120px 0;
-
-    text-align:center;
-
-    background:linear-gradient(135deg,var(--primary),#8ef4ff);
-
+.dna-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
 }
 
-.club-cta h2{
-
-    font-size:46px;
-
-    margin-bottom:20px;
-
+.dna-item {
+    padding-top: 25px;
+    border-top: 1px solid #444;
 }
 
-.club-cta p{
+.dna-item > span {
+    color: var(--club-gold);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
 
-    max-width:700px;
+.dna-item h3 {
+    margin: 18px 0 12px;
+    font-size: 1.3rem;
+}
 
-    margin:auto;
-
-    margin-bottom:35px;
-
-    line-height:2;
-
-    color:#333;
-
+.dna-item p {
+    margin: 0;
+    color: #BDBDBD;
+    font-size: 0.92rem;
+    line-height: 1.8;
 }
 
 
-/*=========================================
- RESPONSIVE
-=========================================*/
+/* ESCUDO */
 
-@media(max-width:992px){
-
-.hero-page{
-
-height:auto;
-
-padding:180px 20px 120px;
-
+.crest-section {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 85px;
+    background: #fff;
 }
 
-.hero-page h1{
-
-font-size:48px;
-
+.crest-image {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--club-ivory);
 }
 
-.history-grid,
-
-.adn-grid,
-
-.philosophy-grid{
-
-grid-template-columns:1fr;
-
+.crest-image img {
+    display: block;
+    width: min(75%, 300px);
+    max-height: 340px;
+    object-fit: contain;
 }
 
-.values-grid,
-
-.objectives-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.stats-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
+.crest-copy h2 {
+    margin-bottom: 25px;
 }
 
 
-@media(max-width:768px){
+/* COLORES OFICIALES */
 
-.hero-page h1{
-
-font-size:38px;
-
+.colors-section {
+    background: var(--club-ivory);
 }
 
-.hero-page p{
-
-font-size:17px;
-
+.colors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
 }
 
-.section-header h2,
-
-.history-content h2,
-
-.adn-content h2,
-
-.club-cta h2{
-
-font-size:34px;
-
+.color-card {
+    padding: 15px 15px 25px;
+    border: 1px solid var(--club-border);
+    background: #fff;
 }
 
-.stats-grid{
-
-grid-template-columns:1fr;
-
+.color-swatch {
+    height: 125px;
+    margin-bottom: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.stat-box h2{
-
-font-size:48px;
-
+.color-white {
+    background: #FFFFFF;
 }
 
+.color-black {
+    background: #000000;
+}
+
+.color-gold {
+    background: #F3CA4C;
+}
+
+.color-cyan {
+    background: #B2FFFF;
+}
+
+.color-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.15rem;
+}
+
+.color-card p {
+    min-height: 45px;
+    margin: 0 0 15px;
+    color: var(--club-gray);
+    font-size: 0.87rem;
+    line-height: 1.6;
+}
+
+.color-card > span {
+    color: #777;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* ESTRUCTURA DEPORTIVA */
+
+.structure-section {
+    background: #fff;
+}
+
+.structure-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.structure-card {
+    position: relative;
+    padding: 35px;
+    border: 1px solid var(--club-border);
+    background: #fff;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.structure-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--club-gold);
+}
+
+.structure-icon {
+    display: block;
+    margin-bottom: 22px;
+    font-size: 1.8rem;
+}
+
+.structure-label {
+    color: #8B6B14;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.structure-card h3 {
+    margin: 12px 0;
+    font-size: 1.55rem;
+    font-weight: 900;
+}
+
+.structure-card p {
+    max-width: 470px;
+    margin: 0 0 25px;
+    color: var(--club-gray);
+    font-size: 0.94rem;
+    line-height: 1.8;
+}
+
+.structure-card a {
+    color: #111;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.structure-card a:hover {
+    color: #8B6B14;
+}
+
+
+/* MANIFIESTO FINAL */
+
+.club-manifesto {
+    padding: 95px 7%;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(243, 202, 76, 0.13), transparent 55%),
+        #101010;
+    color: #fff;
+    text-align: center;
+}
+
+.club-manifesto .section-kicker {
+    color: var(--club-gold);
+}
+
+.club-manifesto h2 {
+    margin: 0 0 25px;
+    font-size: clamp(2.3rem, 5vw, 4.6rem);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+
+.club-manifesto > p {
+    margin: 0 0 30px;
+    color: #C8C8C8;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .club-hero {
+        grid-template-columns: 1fr 0.65fr;
+        gap: 25px;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .club-hero-mark img {
+        width: 100%;
+    }
+
+    .history-layout,
+    .crest-section {
+        gap: 40px;
+    }
+
+    .identity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dna-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 35px;
+    }
+
+    .colors-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .club-hero {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+        text-align: center;
+    }
+
+    .club-hero h1 {
+        font-size: clamp(2.8rem, 12vw, 4.3rem);
+        letter-spacing: -2px;
+    }
+
+    .club-hero-content > p {
+        font-size: 0.96rem;
+    }
+
+    .club-hero-mark {
+        grid-row: 1;
+    }
+
+    .club-hero-mark img {
+        width: 175px;
+        max-height: 210px;
+    }
+
+    .section-kicker {
+        font-size: 0.68rem;
+        letter-spacing: 2px;
+    }
+
+    .club-section {
+        padding: 70px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .history-layout,
+    .crest-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .history-number {
+        min-height: 250px;
+    }
+
+    .history-number > strong {
+        font-size: 4rem;
+    }
+
+    .identity-card {
+        padding: 28px 25px;
+    }
+
+    .dna-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .crest-image {
+        min-height: 270px;
+    }
+
+    .crest-image img {
+        width: 200px;
+        max-height: 250px;
+    }
+
+    .colors-grid,
+    .structure-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .color-swatch {
+        height: 100px;
+    }
+
+    .color-card p {
+        min-height: 0;
+    }
+
+    .structure-card {
+        padding: 28px 24px;
+    }
+
+    .club-manifesto {
+        padding: 75px 6%;
+    }
 }
