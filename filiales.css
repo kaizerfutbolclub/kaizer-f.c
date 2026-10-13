@@ -389,3 +389,59 @@
         padding: 70px 6%;
     }
 }
+
+
+/* CORRECCIÓN: TAMAÑO DE LOGOS EN FILIALES */
+
+/* Escudo de la portada */
+.teams-hero .teams-hero-crest {
+    display: block !important;
+    width: 220px !important;
+    height: 240px !important;
+    max-width: 100% !important;
+    max-height: 240px !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+}
+
+/* Escudos de las tarjetas de equipos */
+.team-card .team-card-crest img {
+    display: block !important;
+    width: 135px !important;
+    height: 155px !important;
+    max-width: 100% !important;
+    max-height: 155px !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+}
+
+/* Escudo del Primer Equipo */
+.team-card-featured .team-card-crest img {
+    width: 150px !important;
+    height: 170px !important;
+    max-width: 100% !important;
+    max-height: 170px !important;
+    object-fit: contain !important;
+}
+
+/* Evita que las cajas se expandan */
+.teams-hero-crest,
+.team-card-crest {
+    min-width: 0;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .teams-hero .teams-hero-crest {
+        width: 150px !important;
+        height: 165px !important;
+        max-height: 165px !important;
+    }
+
+    .team-card .team-card-crest img,
+    .team-card-featured .team-card-crest img {
+        width: 120px !important;
+        height: 140px !important;
+        max-height: 140px !important;
+    }
+}
