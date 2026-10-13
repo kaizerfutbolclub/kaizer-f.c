@@ -426,3 +426,52 @@
         max-height: 140px !important;
     }
 }
+
+/* CORRECCIÓN DEL TÍTULO PRINCIPAL DE EQUIPOS */
+
+.teams-hero-content .section-kicker {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #927116;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.teams-hero-content h1 {
+    margin: 0 0 25px;
+    color: #080808;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    font-weight: 900;
+    line-height: 1.02;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+.teams-hero-content h1 span {
+    display: inline-block;
+    margin-top: 8px;
+    color: #A78219;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.teams-hero-content > p {
+    max-width: 570px;
+    margin: 0;
+    color: #606060;
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+@media (max-width: 600px) {
+    .teams-hero-content h1 {
+        font-size: clamp(2.3rem, 9vw, 3.2rem);
+        letter-spacing: -1px;
+    }
+
+    .teams-hero-content h1 span {
+        letter-spacing: -0.8px;
+    }
+}
