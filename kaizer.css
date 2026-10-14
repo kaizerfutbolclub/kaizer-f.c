@@ -1,767 +1,1133 @@
-/* =========================================
+
+/* ==================================================
    KAIZER F.C. — PÁGINA EL CLUB
    Archivo: kaizer.css
-========================================= */
+
+   Los elementos globales se encuentran en styles.css:
+   - Menú y navegación
+   - Tipografía y paleta global
+   - Frase institucional
+   - Footer
+================================================== */
+
+
+/* ==================================================
+   1. VARIABLES Y BASE DE LA PÁGINA
+================================================== */
 
 :root {
-    --club-gold: #F3CA4C;
-    --club-cyan: #B2FFFF;
-    --club-black: #000000;
-    --club-ivory: #FAF9F6;
-    --club-gray: #6B6B6B;
-    --club-border: #E8E5DD;
+  --club-ivory: #F7F5EF;
+  --club-white: #FFFFFF;
+  --club-black: #111111;
+  --club-gold: #F3CA4C;
+  --club-gold-dark: #B28B22;
+  --club-cyan: #B2FFFF;
+  --club-gray: #666666;
+  --club-light-gray: #E9E6DE;
+  --club-border: rgba(17, 17, 17, 0.10);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section-anchor {
+  scroll-margin-top: 100px;
+}
+
+.club-hero,
+.club-history,
+.club-purpose,
+.club-dna,
+.club-philosophy,
+.club-structure,
+.club-join {
+  position: relative;
+  overflow: hidden;
+}
+
+.club-hero *,
+.club-history *,
+.club-purpose *,
+.club-dna *,
+.club-philosophy *,
+.club-structure *,
+.club-join * {
+  box-sizing: border-box;
+}
+
+.club-hero a,
+.club-history a,
+.club-purpose a,
+.club-dna a,
+.club-philosophy a,
+.club-structure a,
+.club-join a {
+  text-decoration: none;
 }
 
 
-/* PORTADA */
+/* ==================================================
+   2. ELEMENTOS REUTILIZABLES DE ESTA PÁGINA
+================================================== */
+
+.club-eyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--club-gold-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 2.8px;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.club-section-heading {
+  max-width: 780px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.club-section-heading h2,
+.club-structure-heading h2,
+.club-dna-content h2,
+.club-join-content h2 {
+  margin: 0;
+  color: var(--club-black);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 850;
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+}
+
+.club-section-heading h2 span,
+.club-structure-heading h2 span,
+.club-dna-content h2 span,
+.club-join-content h2 span {
+  color: var(--club-gold-dark);
+}
+
+.club-section-heading > p {
+  max-width: 640px;
+  margin: 20px auto 0;
+  color: var(--club-gray);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+
+/* ==================================================
+   3. PORTADA — HERO
+================================================== */
 
 .club-hero {
-    min-height: 560px;
-    padding: 90px max(7%, calc((100% - 1200px) / 2));
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    align-items: center;
-    gap: 50px;
-    overflow: hidden;
-    background:
-        radial-gradient(circle at 80% 50%, rgba(243, 202, 76, 0.12), transparent 35%),
-        var(--club-ivory);
-    border-bottom: 1px solid var(--club-border);
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  align-items: center;
+  gap: 45px;
+  min-height: 610px;
+  padding: 90px max(7%, calc((100% - 1200px) / 2));
+  background: var(--club-ivory);
+  isolation: isolate;
 }
 
 .club-hero-content {
-    max-width: 660px;
+  position: relative;
+  z-index: 2;
+  max-width: 690px;
 }
 
-.section-kicker {
-    display: inline-block;
-    margin-bottom: 18px;
-    color: #8B6B14;
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 3px;
+.club-hero-content h1 {
+  margin: 0 0 26px;
+  color: var(--club-black);
+  font-size: clamp(2.7rem, 5.2vw, 5.2rem);
+  font-weight: 900;
+  line-height: 0.99;
+  letter-spacing: -3px;
 }
 
-.club-hero h1 {
-    margin: 0 0 24px;
-    color: var(--club-black);
-    font-size: clamp(3rem, 6vw, 5.8rem);
-    font-weight: 900;
-    line-height: 0.98;
-    letter-spacing: -3px;
-}
-
-.club-hero h1 span,
-.section-heading h2 span,
-.dna-heading h2 span,
-.crest-copy h2 span,
-.club-manifesto h2 span {
-    color: #A78219;
+.club-hero-content h1 span {
+  color: var(--club-gold-dark);
 }
 
 .club-hero-content > p {
-    max-width: 570px;
-    margin-bottom: 30px;
-    color: #555;
-    font-size: 1.05rem;
-    line-height: 1.9;
+  max-width: 570px;
+  margin: 0 0 32px;
+  color: #5D5D5D;
+  font-size: 1rem;
+  line-height: 1.9;
 }
 
-.club-hero-mark {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.club-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 52px;
+  padding: 15px 23px;
+  border: 1px solid var(--club-black);
+  background: var(--club-black);
+  color: var(--club-white);
+  font-size: 0.84rem;
+  font-weight: 750;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
-.club-hero-mark img {
-    display: block;
-    width: min(100%, 340px);
-    max-height: 370px;
-    object-fit: contain;
+.club-button span {
+  color: var(--club-gold);
+  font-size: 1.1rem;
 }
 
-
-/* BOTONES */
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    padding: 14px 24px;
-    border: 1px solid transparent;
-    font-size: 0.76rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-decoration: none;
-    transition: transform 0.2s ease, background 0.2s ease;
+.club-button:hover {
+  transform: translateY(-3px);
+  background: transparent;
+  color: var(--club-black);
 }
 
-.btn:hover {
-    transform: translateY(-3px);
+.club-hero-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 390px;
 }
 
-.btn-primary {
-    background: var(--club-black);
-    color: #fff;
+.club-hero-line {
+  position: absolute;
+  width: min(88%, 390px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(178, 139, 34, 0.32);
+  border-radius: 50%;
 }
 
-.btn-primary:hover {
-    background: #292929;
+.club-hero-line::before,
+.club-hero-line::after {
+  position: absolute;
+  inset: 24px;
+  border: 1px solid rgba(178, 139, 34, 0.20);
+  border-radius: 50%;
+  content: "";
 }
 
-.btn-light {
-    background: #fff;
-    color: #111;
+.club-hero-line::after {
+  inset: 48px;
+  border-color: rgba(17, 17, 17, 0.08);
 }
 
-.btn-light:hover {
-    background: var(--club-gold);
+.club-hero-crest {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: min(65%, 280px);
+  max-height: 330px;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.12));
 }
 
-
-/* SECCIONES GENERALES */
-
-.club-section {
-    padding: 100px max(7%, calc((100% - 1200px) / 2));
+.club-hero-year {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  color: #777064;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-align: center;
 }
 
-.section-heading {
-    max-width: 720px;
-    margin: 0 auto 55px;
-    text-align: center;
-}
-
-.section-heading h2,
-.dna-heading h2,
-.crest-copy h2 {
-    margin: 0 0 18px;
-    font-size: clamp(2.1rem, 4vw, 3.5rem);
-    font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -1.5px;
-}
-
-.section-heading > p,
-.dna-heading > p {
-    margin: 0;
-    color: var(--club-gray);
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-
-/* HISTORIA */
-
-.history-section {
-    background: #fff;
-}
-
-.history-layout {
-    display: grid;
-    grid-template-columns: 0.75fr 1.25fr;
-    align-items: start;
-    gap: 80px;
-}
-
-.history-number {
-    position: relative;
-    min-height: 320px;
-    padding: 45px 35px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    overflow: hidden;
-    background: var(--club-black);
-    color: #fff;
-}
-
-.history-number::after {
-    position: absolute;
-    right: -40px;
-    bottom: -65px;
-    width: 210px;
-    height: 210px;
-    border: 1px solid rgba(243, 202, 76, 0.35);
-    border-radius: 50%;
-    content: "";
-}
-
-.history-number > span {
-    color: var(--club-gold);
-    font-size: 1.2rem;
-    font-weight: 800;
-    letter-spacing: 5px;
-}
-
-.history-number > strong {
-    font-size: 5rem;
-    line-height: 1;
-    letter-spacing: -4px;
-}
-
-.gold-line {
-    width: 65px;
-    height: 4px;
-    margin: 25px 0 12px;
-    background: var(--club-gold);
-}
-
-.history-number > p {
-    margin: 0;
-    color: #ccc;
-    font-size: 0.9rem;
-}
-
-.history-copy h3 {
-    margin: 0 0 20px;
-    font-size: 1.7rem;
-    font-weight: 800;
-}
-
-.history-copy p,
-.crest-copy p {
-    margin: 0 0 18px;
-    color: #595959;
-    font-size: 0.98rem;
-    line-height: 1.95;
-}
-
-.history-copy blockquote {
-    margin: 30px 0 0;
-    padding: 5px 0 5px 22px;
-    border-left: 4px solid var(--club-gold);
-    color: #111;
-    font-size: 1.15rem;
-    font-weight: 800;
-    line-height: 1.6;
+.club-hero-watermark {
+  position: absolute;
+  z-index: -1;
+  right: -2%;
+  bottom: -58px;
+  color: rgba(17, 17, 17, 0.025);
+  font-size: clamp(7rem, 19vw, 18rem);
+  font-weight: 950;
+  letter-spacing: -10px;
+  line-height: 1;
+  pointer-events: none;
 }
 
 
-/* MISIÓN, VISIÓN Y VALORES */
+/* ==================================================
+   4. HISTORIA DEL CLUB
+================================================== */
 
-.identity-section {
-    background: var(--club-ivory);
+.club-history {
+  padding: 110px max(7%, calc((100% - 1120px) / 2));
+  background: var(--club-white);
 }
 
-.identity-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
+.club-history .club-section-heading {
+  margin-bottom: 65px;
 }
 
-.identity-card {
-    position: relative;
-    padding: 35px 30px;
-    border: 1px solid var(--club-border);
-    background: #fff;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+.club-history-grid {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 85px;
+  align-items: start;
 }
 
-.identity-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
+.club-history-number {
+  position: sticky;
+  top: 120px;
+  padding-top: 8px;
 }
 
-.identity-card.featured {
-    border-top: 4px solid var(--club-gold);
+.club-history-number > span {
+  display: block;
+  color: var(--club-gold-dark);
+  font-size: clamp(5rem, 10vw, 9rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -7px;
 }
 
-.identity-icon {
-    margin-bottom: 25px;
-    font-size: 2.1rem;
+.club-history-number-line {
+  width: 75px;
+  height: 4px;
+  margin: 28px 0;
+  background: var(--club-gold);
 }
 
-.card-number {
-    position: absolute;
-    top: 28px;
-    right: 25px;
-    color: #D4D0C7;
-    font-size: 0.8rem;
-    font-weight: 900;
+.club-history-number > p {
+  color: #777777;
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.8;
 }
 
-.identity-card h3 {
-    margin: 0 0 15px;
-    font-size: 1.55rem;
-    font-weight: 850;
+.club-history-copy h3 {
+  margin: 0 0 24px;
+  color: var(--club-black);
+  font-size: clamp(1.5rem, 2.7vw, 2.2rem);
+  font-weight: 850;
+  letter-spacing: -0.8px;
 }
 
-.identity-card p {
-    margin: 0;
-    color: var(--club-gray);
-    font-size: 0.94rem;
-    line-height: 1.85;
+.club-history-copy p {
+  margin: 0 0 20px;
+  color: #5D5D5D;
+  font-size: 0.98rem;
+  line-height: 1.95;
+}
+
+.club-history-copy p:last-child {
+  margin-bottom: 0;
 }
 
 
-/* ADN KAIZER */
+/* ==================================================
+   5. MISIÓN, VISIÓN Y VALORES
+================================================== */
 
-.dna-section {
-    background: #111;
-    color: #fff;
+.club-purpose {
+  padding: 105px max(6%, calc((100% - 1240px) / 2));
+  background: var(--club-black);
 }
 
-.dna-heading {
-    max-width: 720px;
-    margin-bottom: 50px;
+.club-section-heading-light h2 {
+  color: var(--club-white);
 }
 
-.dna-heading .section-kicker {
-    color: var(--club-gold);
+.club-section-heading-light h2 span {
+  color: var(--club-gold);
 }
 
-.dna-heading h2 {
-    color: #fff;
+.club-section-heading-light > p {
+  color: #BEBEBE;
 }
 
-.dna-heading > p {
-    color: #BDBDBD;
+.club-section-heading-light .club-eyebrow {
+  color: var(--club-gold);
 }
 
-.dna-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+.club-purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.club-purpose-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 390px;
+  padding: 34px 30px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: #191919;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.club-purpose-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(243, 202, 76, 0.65);
+}
+
+.club-purpose-card-featured {
+  border-color: rgba(243, 202, 76, 0.5);
+  background: #202019;
+}
+
+.club-card-number {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: rgba(255, 255, 255, 0.23);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.club-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(243, 202, 76, 0.45);
+  background: rgba(243, 202, 76, 0.08);
+  font-size: 1.65rem;
+}
+
+.club-purpose-card h3 {
+  margin: 0 0 17px;
+  color: var(--club-white);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.club-purpose-card > p,
+.club-purpose-card ul {
+  margin: 0 0 30px;
+  color: #C3C3C3;
+  font-size: 0.91rem;
+  line-height: 1.85;
+}
+
+.club-purpose-card ul {
+  padding-left: 19px;
+}
+
+.club-purpose-card li {
+  margin-bottom: 7px;
+}
+
+.club-purpose-card li::marker {
+  color: var(--club-gold);
+}
+
+.club-card-bottom {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--club-gold);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   6. ADN KAIZER
+================================================== */
+
+.club-dna {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 95px;
+  padding: 110px max(7%, calc((100% - 1150px) / 2));
+  background: var(--club-ivory);
+}
+
+.club-dna-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 430px;
+}
+
+.club-dna-orbit {
+  position: absolute;
+  width: min(100%, 370px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(178, 139, 34, 0.4);
+  border-radius: 50%;
+}
+
+.club-dna-orbit-one::before {
+  position: absolute;
+  top: 11%;
+  left: 11%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--club-gold);
+  content: "";
+}
+
+.club-dna-orbit-two {
+  width: min(80%, 300px);
+  border-color: rgba(17, 17, 17, 0.12);
+}
+
+.club-dna-crest {
+  position: relative;
+  z-index: 1;
+  width: min(58%, 245px);
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.club-dna-caption {
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+  color: #746B57;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-align: center;
+}
+
+.club-dna-content h2 {
+  margin-bottom: 25px;
+}
+
+.club-dna-content > p {
+  margin: 0 0 32px;
+  color: #5D5D5D;
+  font-size: 0.98rem;
+  line-height: 1.9;
+}
+
+.club-dna-list {
+  border-top: 1px solid var(--club-border);
+}
+
+.club-dna-item {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 18px;
+  padding: 23px 0;
+  border-bottom: 1px solid var(--club-border);
+}
+
+.club-dna-item > span {
+  padding-top: 3px;
+  color: var(--club-gold-dark);
+  font-size: 0.75rem;
+  font-weight: 850;
+}
+
+.club-dna-item h3 {
+  margin: 0 0 8px;
+  color: var(--club-black);
+  font-size: 1.08rem;
+  font-weight: 850;
+}
+
+.club-dna-item p {
+  margin: 0;
+  color: #656565;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   7. FILOSOFÍA DEPORTIVA
+================================================== */
+
+.club-philosophy {
+  padding: 105px max(7%, calc((100% - 1200px) / 2));
+  background: var(--club-white);
+}
+
+.club-philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--club-border);
+  border-bottom: 1px solid var(--club-border);
+}
+
+.club-philosophy-item {
+  min-height: 235px;
+  padding: 32px 24px;
+  border-right: 1px solid var(--club-border);
+}
+
+.club-philosophy-item:first-child {
+  padding-left: 0;
+}
+
+.club-philosophy-item:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.club-philosophy-item > span {
+  color: var(--club-gold-dark);
+  font-size: 0.65rem;
+  font-weight: 850;
+  letter-spacing: 1.7px;
+}
+
+.club-philosophy-item h3 {
+  margin: 24px 0 14px;
+  color: var(--club-black);
+  font-size: 1.25rem;
+  font-weight: 850;
+  line-height: 1.3;
+}
+
+.club-philosophy-item p {
+  margin: 0;
+  color: #656565;
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+
+/* ==================================================
+   8. ESTRUCTURA DEPORTIVA
+================================================== */
+
+.club-structure {
+  padding: 105px max(6%, calc((100% - 1240px) / 2));
+  background: var(--club-ivory);
+}
+
+.club-structure-heading {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: end;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.club-structure-heading h2 {
+  max-width: 650px;
+}
+
+.club-structure-heading > p {
+  max-width: 480px;
+  margin: 0 0 5px;
+  color: #646464;
+  font-size: 0.96rem;
+  line-height: 1.85;
+}
+
+.club-structure-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.club-structure-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 315px;
+  padding: 27px 23px;
+  border: 1px solid rgba(17, 17, 17, 0.09);
+  background: var(--club-white);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.club-structure-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(178, 139, 34, 0.55);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.06);
+}
+
+.club-structure-index {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  color: #A8A8A8;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.club-structure-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 53px;
+  height: 53px;
+  margin-bottom: 27px;
+  background: var(--club-ivory);
+  font-size: 1.55rem;
+}
+
+.club-structure-card h3 {
+  margin: 0 0 13px;
+  color: var(--club-black);
+  font-size: 1.25rem;
+  font-weight: 850;
+}
+
+.club-structure-card > p {
+  margin: 0 0 25px;
+  color: #646464;
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+.club-structure-link {
+  margin-top: auto;
+  padding-top: 17px;
+  border-top: 1px solid var(--club-border);
+  color: #725713;
+  font-size: 0.77rem;
+  font-weight: 800;
+}
+
+
+/* ==================================================
+   9. LLAMADO A LA ACCIÓN
+================================================== */
+
+.club-join {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  min-height: 360px;
+  padding: 80px max(7%, calc((100% - 1150px) / 2));
+  background: var(--club-gold);
+}
+
+.club-join-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.club-join .club-eyebrow {
+  color: #4C3A0A;
+}
+
+.club-join-content h2 {
+  max-width: 740px;
+  font-size: clamp(2.2rem, 4.6vw, 4rem);
+}
+
+.club-join-content h2 span {
+  color: #5A4510;
+}
+
+.club-join-content > p {
+  margin: 20px 0 28px;
+  color: #3E341B;
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.club-button-dark {
+  border-color: var(--club-black);
+  background: var(--club-black);
+  color: var(--club-white);
+}
+
+.club-button-dark:hover {
+  background: transparent;
+  color: var(--club-black);
+}
+
+.club-button-dark span {
+  color: var(--club-gold);
+}
+
+.club-join-mark {
+  flex: 0 0 auto;
+  color: rgba(17, 17, 17, 0.09);
+  font-size: clamp(8rem, 20vw, 18rem);
+  font-weight: 950;
+  line-height: 0.8;
+  letter-spacing: -15px;
+  pointer-events: none;
+}
+
+
+/* ==================================================
+   10. RESPONSIVE — TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+  .club-hero {
+    grid-template-columns: 1fr 0.75fr;
     gap: 25px;
-}
+    padding-right: 5%;
+    padding-left: 5%;
+  }
 
-.dna-item {
-    padding-top: 25px;
-    border-top: 1px solid #444;
-}
+  .club-hero-content h1 {
+    font-size: clamp(2.6rem, 5.4vw, 4.3rem);
+    letter-spacing: -2px;
+  }
 
-.dna-item > span {
-    color: var(--club-gold);
-    font-size: 0.8rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
+  .club-history,
+  .club-purpose,
+  .club-dna,
+  .club-philosophy,
+  .club-structure {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
 
-.dna-item h3 {
-    margin: 18px 0 12px;
-    font-size: 1.3rem;
-}
+  .club-history-grid {
+    gap: 45px;
+  }
 
-.dna-item p {
-    margin: 0;
-    color: #BDBDBD;
-    font-size: 0.92rem;
-    line-height: 1.8;
-}
+  .club-purpose-grid {
+    gap: 14px;
+  }
 
+  .club-purpose-card {
+    padding: 28px 22px 24px;
+  }
 
-/* ESCUDO */
+  .club-dna {
+    gap: 45px;
+  }
 
-.crest-section {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    align-items: center;
-    gap: 85px;
-    background: #fff;
-}
+  .club-philosophy-item {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
 
-.crest-image {
-    min-height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--club-ivory);
-}
-
-.crest-image img {
-    display: block;
-    width: min(75%, 300px);
-    max-height: 340px;
-    object-fit: contain;
-}
-
-.crest-copy h2 {
-    margin-bottom: 25px;
-}
-
-
-/* COLORES OFICIALES */
-
-.colors-section {
-    background: var(--club-ivory);
-}
-
-.colors-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
-}
-
-.color-card {
-    padding: 15px 15px 25px;
-    border: 1px solid var(--club-border);
-    background: #fff;
-}
-
-.color-swatch {
-    height: 125px;
-    margin-bottom: 22px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.color-white {
-    background: #FFFFFF;
-}
-
-.color-black {
-    background: #000000;
-}
-
-.color-gold {
-    background: #F3CA4C;
-}
-
-.color-cyan {
-    background: #B2FFFF;
-}
-
-.color-card h3 {
-    margin: 0 0 8px;
-    font-size: 1.15rem;
-}
-
-.color-card p {
-    min-height: 45px;
-    margin: 0 0 15px;
-    color: var(--club-gray);
-    font-size: 0.87rem;
-    line-height: 1.6;
-}
-
-.color-card > span {
-    color: #777;
-    font-size: 0.76rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-
-/* ESTRUCTURA DEPORTIVA */
-
-.structure-section {
-    background: #fff;
-}
-
-.structure-grid {
-    display: grid;
+  .club-structure-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+  }
+
+  .club-structure-card {
+    min-height: 275px;
+  }
 }
 
-.structure-card {
-    position: relative;
-    padding: 35px;
-    border: 1px solid var(--club-border);
-    background: #fff;
-    transition: border-color 0.2s ease, transform 0.2s ease;
-}
 
-.structure-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--club-gold);
-}
+/* ==================================================
+   11. RESPONSIVE — MÓVILES
+================================================== */
 
-.structure-icon {
-    display: block;
-    margin-bottom: 22px;
-    font-size: 1.8rem;
-}
-
-.structure-label {
-    color: #8B6B14;
-    font-size: 0.7rem;
-    font-weight: 900;
+@media (max-width: 700px) {
+  .club-eyebrow {
+    margin-bottom: 15px;
+    font-size: 0.65rem;
     letter-spacing: 2px;
-}
+  }
 
-.structure-card h3 {
-    margin: 12px 0;
-    font-size: 1.55rem;
-    font-weight: 900;
-}
+  .club-section-heading {
+    margin-bottom: 38px;
+    text-align: left;
+  }
 
-.structure-card p {
-    max-width: 470px;
-    margin: 0 0 25px;
-    color: var(--club-gray);
+  .club-section-heading h2,
+  .club-structure-heading h2,
+  .club-dna-content h2,
+  .club-join-content h2 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    letter-spacing: -1px;
+  }
+
+  .club-section-heading > p {
+    margin-top: 16px;
+    font-size: 0.92rem;
+  }
+
+  /* Portada */
+  .club-hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    min-height: auto;
+    padding: 65px 6% 45px;
+  }
+
+  .club-hero-content h1 {
+    font-size: clamp(2.55rem, 10vw, 4rem);
+    letter-spacing: -1.8px;
+  }
+
+  .club-hero-content > p {
     font-size: 0.94rem;
     line-height: 1.8;
-}
+  }
 
-.structure-card a {
-    color: #111;
-    font-size: 0.82rem;
-    font-weight: 800;
-    text-decoration: none;
-}
+  .club-hero-visual {
+    min-height: 285px;
+  }
 
-.structure-card a:hover {
-    color: #8B6B14;
-}
+  .club-hero-line {
+    width: min(80%, 290px);
+  }
 
+  .club-hero-crest {
+    width: min(55%, 205px);
+    max-height: 230px;
+  }
 
-/* MANIFIESTO FINAL */
+  .club-hero-watermark {
+    right: -5%;
+    bottom: 0;
+    font-size: 7rem;
+    letter-spacing: -5px;
+  }
 
-.club-manifesto {
-    padding: 95px 7%;
-    background:
-        radial-gradient(circle at 50% 0%, rgba(243, 202, 76, 0.13), transparent 55%),
-        #101010;
-    color: #fff;
-    text-align: center;
-}
+  /* Historia */
+  .club-history {
+    padding: 70px 6%;
+  }
 
-.club-manifesto .section-kicker {
-    color: var(--club-gold);
-}
+  .club-history .club-section-heading {
+    margin-bottom: 40px;
+  }
 
-.club-manifesto h2 {
-    margin: 0 0 25px;
-    font-size: clamp(2.3rem, 5vw, 4.6rem);
-    font-weight: 900;
-    line-height: 1.08;
-    letter-spacing: -1.5px;
-}
+  .club-history-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
 
-.club-manifesto > p {
-    margin: 0 0 30px;
-    color: #C8C8C8;
+  .club-history-number {
+    position: static;
+  }
+
+  .club-history-number > span {
+    font-size: 5rem;
+    letter-spacing: -4px;
+  }
+
+  .club-history-number-line {
+    margin: 18px 0;
+  }
+
+  .club-history-copy h3 {
+    font-size: 1.65rem;
+  }
+
+  .club-history-copy p {
+    font-size: 0.93rem;
+    line-height: 1.85;
+  }
+
+  /* Misión, visión y valores */
+  .club-purpose {
+    padding: 75px 6%;
+  }
+
+  .club-purpose-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .club-purpose-card {
+    min-height: auto;
+    padding: 29px 25px 25px;
+  }
+
+  .club-purpose-card > p,
+  .club-purpose-card ul {
     font-size: 0.9rem;
-    letter-spacing: 1px;
-}
+  }
 
+  /* ADN */
+  .club-dna {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 75px 6%;
+  }
 
-/* RESPONSIVE */
+  .club-dna-visual {
+    min-height: 315px;
+  }
 
-@media (max-width: 900px) {
-    .club-hero {
-        grid-template-columns: 1fr 0.65fr;
-        gap: 25px;
-        padding-top: 75px;
-        padding-bottom: 75px;
-    }
+  .club-dna-orbit {
+    width: min(82%, 300px);
+  }
 
-    .club-hero-mark img {
-        width: 100%;
-    }
+  .club-dna-orbit-two {
+    width: min(67%, 245px);
+  }
 
-    .history-layout,
-    .crest-section {
-        gap: 40px;
-    }
+  .club-dna-crest {
+    width: min(50%, 195px);
+    max-height: 220px;
+  }
 
-    .identity-grid {
-        grid-template-columns: 1fr;
-    }
+  .club-dna-content > p {
+    font-size: 0.93rem;
+  }
 
-    .dna-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        row-gap: 35px;
-    }
-
-    .colors-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 600px) {
-    .club-hero {
-        grid-template-columns: 1fr;
-        padding: 65px 6%;
-        text-align: center;
-    }
-
-    .club-hero h1 {
-        font-size: clamp(2.8rem, 12vw, 4.3rem);
-        letter-spacing: -2px;
-    }
-
-    .club-hero-content > p {
-        font-size: 0.96rem;
-    }
-
-    .club-hero-mark {
-        grid-row: 1;
-    }
-
-    .club-hero-mark img {
-        width: 175px;
-        max-height: 210px;
-    }
-
-    .section-kicker {
-        font-size: 0.68rem;
-        letter-spacing: 2px;
-    }
-
-    .club-section {
-        padding: 70px 6%;
-    }
-
-    .section-heading {
-        margin-bottom: 38px;
-    }
-
-    .history-layout,
-    .crest-section {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .history-number {
-        min-height: 250px;
-    }
-
-    .history-number > strong {
-        font-size: 4rem;
-    }
-
-    .identity-card {
-        padding: 28px 25px;
-    }
-
-    .dna-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .crest-image {
-        min-height: 270px;
-    }
-
-    .crest-image img {
-        width: 200px;
-        max-height: 250px;
-    }
-
-    .colors-grid,
-    .structure-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .color-swatch {
-        height: 100px;
-    }
-
-    .color-card p {
-        min-height: 0;
-    }
-
-    .structure-card {
-        padding: 28px 24px;
-    }
-
-    .club-manifesto {
-        padding: 75px 6%;
-    }
-}
-
-```css
-/* =========================================
-   CORRECCIÓN VISUAL — PÁGINA EL CLUB
-========================================= */
-
-/* Evita que las imágenes se expandan sin control */
-.club-hero-mark {
-    min-width: 0;
-    min-height: 0;
-    height: auto;
-    overflow: hidden;
-}
-
-.club-hero-mark img {
-    display: block;
-    width: 300px !important;
-    height: 340px !important;
-    max-width: 100%;
-    max-height: 340px;
-    object-fit: contain;
-    margin: 0 auto;
-}
-
-/* Ajusta la portada para que no ocupe demasiado espacio */
-.club-hero {
-    min-height: 0;
-    padding-top: 55px;
-    padding-bottom: 55px;
-    align-items: center;
-}
-
-/* Evita que el encabezado se desordene */
-.site-header {
-    position: relative;
-    z-index: 100;
-}
-
-.header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    min-width: 0;
-}
-
-.brand {
-    display: inline-flex;
-    flex-shrink: 0;
-    align-items: center;
+  .club-dna-item {
+    grid-template-columns: 32px minmax(0, 1fr);
     gap: 12px;
-    white-space: nowrap;
+  }
+
+  /* Filosofía */
+  .club-philosophy {
+    padding: 75px 6%;
+  }
+
+  .club-philosophy-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .club-philosophy-item,
+  .club-philosophy-item:first-child,
+  .club-philosophy-item:last-child {
+    min-height: 220px;
+    padding: 24px 16px;
+    border-right: 1px solid var(--club-border);
+    border-bottom: 1px solid var(--club-border);
+  }
+
+  .club-philosophy-item:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .club-philosophy-item:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .club-philosophy-item h3 {
+    margin-top: 18px;
+    font-size: 1.08rem;
+  }
+
+  .club-philosophy-item p {
+    font-size: 0.83rem;
+  }
+
+  /* Estructura deportiva */
+  .club-structure {
+    padding: 75px 6%;
+  }
+
+  .club-structure-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+
+  .club-structure-heading > p {
+    font-size: 0.92rem;
+  }
+
+  .club-structure-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .club-structure-card {
+    min-height: 275px;
+    padding: 22px 17px;
+  }
+
+  .club-structure-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .club-structure-card > p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+
+  .club-structure-link {
+    font-size: 0.7rem;
+  }
+
+  /* Llamado a la acción */
+  .club-join {
+    min-height: 0;
+    padding: 65px 6%;
+  }
+
+  .club-join-content > p {
+    font-size: 0.92rem;
+  }
+
+  .club-join-mark {
+    position: absolute;
+    right: 4%;
+    bottom: 20px;
+    font-size: 8rem;
+    letter-spacing: -7px;
+  }
+
+  .club-join .club-button {
+    position: relative;
+    z-index: 1;
+    gap: 13px;
+    padding: 14px 17px;
+    font-size: 0.78rem;
+  }
 }
 
-.brand img {
-    width: 48px !important;
-    height: 48px !important;
-    max-width: 48px;
-    object-fit: contain;
+
+/* ==================================================
+   12. RESPONSIVE — MÓVILES PEQUEÑOS
+================================================== */
+
+@media (max-width: 380px) {
+  .club-hero-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .club-structure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .club-structure-card {
+    min-height: 245px;
+  }
+
+  .club-philosophy-item,
+  .club-philosophy-item:first-child,
+  .club-philosophy-item:last-child {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .club-philosophy-item > span {
+    font-size: 0.58rem;
+    letter-spacing: 1px;
+  }
 }
 
-.brand span {
-    white-space: nowrap;
+
+/* ==================================================
+   13. ACCESIBILIDAD
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .club-hero *,
+  .club-history *,
+  .club-purpose *,
+  .club-dna *,
+  .club-philosophy *,
+  .club-structure *,
+  .club-join * {
+    scroll-behavior: auto;
+    transition: none !important;
+  }
 }
-
-.main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 24px;
-    flex-wrap: nowrap;
-}
-
-.main-nav a {
-    white-space: nowrap;
-}
-
-/* Ajustes para móviles */
-@media (max-width: 768px) {
-    .club-hero {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding: 45px 6%;
-    }
-
-    .club-hero-mark {
-        grid-row: auto;
-    }
-
-    .club-hero-mark img {
-        width: 190px !important;
-        height: 210px !important;
-    }
-
-    .header-inner {
-        flex-wrap: wrap;
-    }
-
-    .main-nav {
-        gap: 14px;
-        flex-wrap: wrap;
-    }
-}
-```
