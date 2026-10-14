@@ -3,6 +3,73 @@
    Archivo: filiales.css
 ========================================= */
 
+/* PORTADA DE EQUIPOS — DISEÑO Y PROPORCIONES */
+.teams-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+    align-items: center;
+    gap: 48px;
+    padding: 85px max(7%, calc((100% - 1200px) / 2));
+    background: #F7F5EF;
+    overflow: hidden;
+}
+.teams-hero-content {
+    min-width: 0;
+}
+.teams-hero-content .section-kicker {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #927116;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+.teams-hero-content h1 {
+    margin: 0 0 24px;
+    color: #171717;
+    font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.04;
+    letter-spacing: -2px;
+}
+.teams-hero-content h1 span {
+    display: inline;
+    color: #B28B22;
+}
+.teams-hero-content > p {
+    max-width: 570px;
+    margin: 0;
+    color: #626262;
+    font-size: 1rem;
+    line-height: 1.85;
+}
+.teams-hero img.teams-hero-crest {
+    display: block;
+    justify-self: center;
+    width: 230px;
+    height: 260px;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0;
+}
+@media (max-width: 760px) {
+    .teams-hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 55px 6%;
+    }
+.teams-hero-content h1 {
+        font-size: clamp(2.2rem, 8vw, 3.4rem);
+        letter-spacing: -1px;
+    }
+.teams-hero img.teams-hero-crest {
+        grid-row: 1;
+        width: 150px;
+        height: 170px;
+    }
+}
+
+
 .teams-hero img.teams-hero-crest {
     display: block;
     width: 220px;
