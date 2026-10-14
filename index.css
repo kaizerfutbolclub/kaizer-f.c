@@ -616,6 +616,16 @@
   pointer-events: none;
 }
 
+/* CONTRASTE DEL LEMA EN EL MANIFIESTO */
+.manifesto-section h2 {
+    color: #ffffff;
+}
+
+.manifesto-section h2 em {
+    color: #F3CA4C;
+    font-style: normal;
+}
+
 /* NOTICIAS / ACTUALIDAD */
 
 .news-section {
