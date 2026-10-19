@@ -1,733 +1,427 @@
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primer Equipo | KAIZER F.C.</title>
-    <meta name="description" content="Plantilla oficial del Primer Equipo de Kaizer F.C.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="plantilla.css">
+  <title>Plantilla | KAIZER F.C.</title>
+  <meta name="description" content="Conoce las plantillas y categorías de KAIZER F.C. Primer Equipo, Filiales, Academy y Baby Kaizer.">
 
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="plantilla.css">
 </head>
 
 <body>
 
-<!-- ==========================================
-     HEADER
-========================================== -->
+  <!-- CABECERA GLOBAL -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="KAIZER F.C. — Inicio">
+        <img src="LOGO KAIZER F.C.png"
+             alt="Escudo oficial de KAIZER F.C."
+             class="brand-logo">
+        <span class="brand-name">KAIZER <strong>F.C.</strong></span>
+      </a>
 
-<header>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle"
+             aria-label="Abrir o cerrar menú">
 
-    <div class="header-container">
+      <label for="menu-toggle" class="menu-button" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
 
-        <a href="index.html" class="logo">
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="kaizer.html" class="nav-link">El club</a>
+        <a href="filiales.html" class="nav-link">Categorías</a>
+        <a href="plantilla.html" class="nav-link active"
+           aria-current="page">Plantilla</a>
+        <a href="noticias.html" class="nav-link">Noticias</a>
+        <a href="calendario.html" class="nav-link">Calendario</a>
+        <a href="tienda.html" class="nav-cta">Equipación <span>↗</span></a>
+      </nav>
+    </div>
+  </header>
 
-            <img src="img/logo.png" alt="Kaizer F.C.">
+  <main class="squad-page">
 
+    <!-- PORTADA -->
+    <section class="squad-hero">
+      <div class="squad-hero__content">
+        <span class="squad-eyebrow">
+          <span class="squad-eyebrow__line"></span>
+          EL EQUIPO
+        </span>
+
+        <h1>NUESTRA <span>PLANTILLA</span></h1>
+
+        <p class="squad-hero__description">
+          Talento, disciplina y compromiso. Conoce a los jugadores que
+          forman parte de la manada KAIZER F.C.
+        </p>
+
+        <div class="squad-hero__meta">
+          <span><strong>08</strong> EQUIPOS</span>
+          <span class="squad-meta-divider"></span>
+          <span>UNA SOLA <strong>MANADA</strong></span>
+        </div>
+      </div>
+
+      <div class="squad-hero__visual" aria-hidden="true">
+        <div class="squad-hero__number">11</div>
+        <div class="squad-hero__circle squad-hero__circle--outer"></div>
+        <div class="squad-hero__circle squad-hero__circle--inner"></div>
+        <div class="squad-hero__cross"></div>
+        <div class="squad-hero__label">KAIZER F.C. / SQUAD</div>
+      </div>
+
+      <div class="squad-hero__bottom">
+        <span>FORMACIÓN</span>
+        <span>IDENTIDAD</span>
+        <span>FUTURO</span>
+      </div>
+    </section>
+
+    <!-- SELECTOR DE EQUIPO -->
+    <section class="squad-section" aria-labelledby="team-title">
+      <div class="squad-section__heading">
+        <div>
+          <span class="squad-kicker">NUESTROS EQUIPOS</span>
+          <h2 id="team-title">Elige tu <span>categoría</span></h2>
+        </div>
+
+        <p class="squad-section__intro">
+          Selecciona un equipo para consultar su plantilla.
+        </p>
+      </div>
+
+      <div class="team-selector">
+        <label for="team-select">EQUIPO</label>
+
+        <div class="team-selector__control">
+          <select id="team-select" aria-label="Seleccionar equipo">
+            <option value="primer">KAIZER F.C. — Primer Equipo</option>
+            <option value="filial-b">KAIZER F.C. B — Filial</option>
+            <option value="filial-c">KAIZER F.C. C — Filial</option>
+            <option value="filial-d">KAIZER F.C. D — Filial</option>
+            <option value="academy-a">KAIZER F.C. Academy A</option>
+            <option value="academy-b">KAIZER F.C. Academy B</option>
+            <option value="baby-a">KAIZER F.C. Baby A</option>
+            <option value="baby-b">KAIZER F.C. Baby B</option>
+          </select>
+          <span class="team-selector__arrow" aria-hidden="true">⌄</span>
+        </div>
+
+        <p class="team-selector__note">
+          Las tarjetas actuales son demostrativas y deben sustituirse
+          por los datos de los jugadores confirmados.
+        </p>
+      </div>
+
+      <!-- INFORMACIÓN DEL EQUIPO -->
+      <div class="team-overview">
+        <div class="team-overview__crest">
+          <img src="LOGO KAIZER F.C.png"
+               alt="Escudo de KAIZER F.C."
+               id="team-crest">
+        </div>
+
+        <div class="team-overview__text">
+          <span class="team-overview__eyebrow" id="team-category">
+            PRIMER EQUIPO
+          </span>
+          <h2 id="team-name">KAIZER F.C.</h2>
+          <p id="team-description">
+            La máxima representación deportiva del club.
+          </p>
+        </div>
+
+        <div class="team-overview__count">
+          <strong id="player-count">04</strong>
+          <span>JUGADORES<br>DE EJEMPLO</span>
+        </div>
+      </div>
+
+      <!-- FILTROS POR POSICIÓN -->
+      <div class="squad-filters" aria-label="Filtrar jugadores por posición">
+        <button class="position-filter is-active"
+                type="button" data-position="todos"
+                aria-pressed="true">Todos</button>
+        <button class="position-filter"
+                type="button" data-position="portero"
+                aria-pressed="false">Porteros</button>
+        <button class="position-filter"
+                type="button" data-position="defensa"
+                aria-pressed="false">Defensas</button>
+        <button class="position-filter"
+                type="button" data-position="centrocampista"
+                aria-pressed="false">Centrocampistas</button>
+        <button class="position-filter"
+                type="button" data-position="delantero"
+                aria-pressed="false">Delanteros</button>
+      </div>
+
+      <!-- TARJETAS DINÁMICAS -->
+      <div class="players-grid" id="players-grid" aria-live="polite">
+        <!-- JavaScript genera aquí las tarjetas -->
+      </div>
+
+      <p class="squad-empty" id="squad-empty" hidden>
+        No hay jugadores en esta posición para el equipo seleccionado.
+      </p>
+
+      <div class="squad-disclaimer">
+        <span class="squad-disclaimer__icon" aria-hidden="true">i</span>
+        <p>
+          <strong>Plantilla de demostración.</strong>
+          Los dorsales, nombres, edades y posiciones son ejemplos de diseño.
+          No representan información oficial de futbolistas de KAIZER F.C.
+        </p>
+      </div>
+    </section>
+
+    <!-- MENSAJE INSTITUCIONAL -->
+    <section class="squad-manifesto">
+      <div class="squad-manifesto__mark" aria-hidden="true">K</div>
+      <div class="squad-manifesto__content">
+        <span class="squad-kicker">NUESTRO ADN</span>
+        <h2>Una camiseta.<br><span>Una familia.</span></h2>
+        <p>
+          Cada jugador representa un compromiso con el escudo, el respeto
+          por el equipo y las ganas de crecer dentro y fuera del campo.
+        </p>
+      </div>
+      <div class="squad-manifesto__signature">
+        <span>KAIZER F.C.</span>
+        <strong>LA MANADA</strong>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER GLOBAL -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand__link"
+           aria-label="KAIZER F.C. — Inicio">
+          <img src="KAIZER F.C (LOGO PRIN).png"
+               alt="Escudo oficial de KAIZER F.C."
+               class="footer-logo">
+        </a>
+
+        <div class="footer-brand__text">
+          <strong>KAIZER F.C.</strong>
+          <span>FÚTBOL · FORMACIÓN · IDENTIDAD</span>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <a href="index.html">Inicio</a>
+        <a href="kaizer.html">El club</a>
+        <a href="filiales.html">Categorías</a>
+        <a href="plantilla.html">Plantilla</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="calendario.html">Calendario</a>
+      </nav>
+
+      <div class="footer-bottom">
+        <span>© <span id="current-year">2026</span> KAIZER F.C.</span>
+        <span class="footer-slogan">Más que un club, somos una manada.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /*
+      PLANTILLAS DE EJEMPLO
+      Sustituye estos datos por información real y autorizada.
+      Las edades también son ilustrativas.
+    */
+
+    const teamData = {
+      "primer": {
+        name: "KAIZER F.C.",
+        category: "PRIMER EQUIPO",
+        description: "La máxima representación deportiva del club.",
+        players: [
+          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
+          { number: "04", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
+          { number: "08", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
+          { number: "09", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
+        ]
+      },
+
+      "filial-b": {
+        name: "KAIZER F.C. B",
+        category: "FILIAL B",
+        description: "Un espacio para competir, crecer y dar el siguiente paso.",
+        players: [
+          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
+          { number: "03", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
+          { number: "06", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
+          { number: "11", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
+        ]
+      },
+
+      "filial-c": {
+        name: "KAIZER F.C. C",
+        category: "FILIAL C",
+        description: "Trabajo colectivo y evolución constante dentro de la manada.",
+        players: [
+          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
+          { number: "02", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
+          { number: "07", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
+          { number: "10", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
+        ]
+      },
+
+      "filial-d": {
+        name: "KAIZER F.C. D",
+        category: "FILIAL D",
+        description: "Más oportunidades para desarrollar el talento y competir.",
+        players: [
+          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
+          { number: "05", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
+          { number: "08", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
+          { number: "09", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
+        ]
+      },
+
+      "academy-a": {
+        name: "KAIZER F.C. Academy A",
+        category: "ACADEMY A",
+        description: "Formación futbolística y desarrollo de jóvenes talentos.",
+        players: [
+          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
+          { number: "02", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
+          { number: "06", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
+          { number: "09", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
+        ]
+      },
+
+      "academy-b": {
+        name: "KAIZER F.C. Academy B",
+        category: "ACADEMY B",
+        description: "Aprendizaje, técnica y valores desde las primeras etapas.",
+        players: [
+          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
+          { number: "03", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
+          { number: "07", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
+          { number: "10", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
+        ]
+      },
+
+      "baby-a": {
+        name: "KAIZER F.C. Baby A",
+        category: "BABY A",
+        description: "Primeros pasos en el fútbol, con diversión y compañerismo.",
+        players: [
+          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
+          { number: "02", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
+          { number: "06", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
+          { number: "09", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
+        ]
+      },
+
+      "baby-b": {
+        name: "KAIZER F.C. Baby B",
+        category: "BABY B",
+        description: "Una base de aprendizaje para descubrir y disfrutar el fútbol.",
+        players: [
+          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
+          { number: "04", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
+          { number: "08", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
+          { number: "10", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
+        ]
+      }
+    };
+
+    const teamSelect = document.getElementById("team-select");
+    const teamName = document.getElementById("team-name");
+    const teamCategory = document.getElementById("team-category");
+    const teamDescription = document.getElementById("team-description");
+    const playerCount = document.getElementById("player-count");
+    const playersGrid = document.getElementById("players-grid");
+    const squadEmpty = document.getElementById("squad-empty");
+    const positionButtons = document.querySelectorAll(".position-filter");
+
+    let activePosition = "todos";
+
+    function renderPlayers() {
+      const team = teamData[teamSelect.value];
+
+      teamName.textContent = team.name;
+      teamCategory.textContent = team.category;
+      teamDescription.textContent = team.description;
+
+      const filteredPlayers = team.players.filter(player =>
+        activePosition === "todos" || player.position === activePosition
+      );
+
+      playerCount.textContent = String(filteredPlayers.length).padStart(2, "0");
+
+      playersGrid.innerHTML = filteredPlayers.map(player => `
+        <article class="player-card">
+          <div class="player-card__top">
+            <span class="player-card__demo">EJEMPLO</span>
+            <span class="player-card__number">${player.number}</span>
+          </div>
+
+          <div class="player-card__portrait" aria-hidden="true">
+            <div class="player-card__portrait-ring"></div>
+            <div class="player-card__silhouette">
+              <div class="player-card__head"></div>
+              <div class="player-card__body"></div>
+            </div>
+            <span class="player-card__initial">K</span>
+            <span class="player-card__portrait-label">FOTO DEL JUGADOR</span>
+          </div>
+
+          <div class="player-card__info">
+            <span class="player-card__position">${player.label}</span>
+            <h3>${player.name}</h3>
+            <div class="player-card__details">
+              <span>DORSAL <strong>${player.number}</strong></span>
+              <span>${player.age}</span>
+            </div>
+          </div>
+
+          <div class="player-card__bottom">
             <span>KAIZER F.C.</span>
-
-        </a>
-
-        <nav>
-
-            <ul>
-
-                <li><a href="index.html">Inicio</a></li>
-
-                <li><a href="kaizer.html">Kaizer F.C.</a></li>
-
-                <li><a href="filiales.html">Filiales</a></li>
-
-                <li><a href="plantilla.html" class="active">Plantilla</a></li>
-
-                <li><a href="noticias.html">Noticias</a></li>
-
-                <li><a href="galeria.html">Galería</a></li>
-
-                <li><a href="tienda.html">Tienda</a></li>
-
-                <li><a href="contacto.html">Contacto</a></li>
-
-            </ul>
-
-        </nav>
-
-    </div>
-
-</header>
-
-<!-- ==========================================
-     HERO
-========================================== -->
-
-<section class="hero-page">
-
-    <div class="container">
-
-        <div class="hero-page-content">
-
-            <span class="page-subtitle">
-
-                TEMPORADA 2026
-
-            </span>
-
-            <h1>PRIMER EQUIPO</h1>
-
-            <p>
-
-                Conoce a los jugadores que representan a Kaizer F.C.
-                con compromiso, pasión y orgullo en cada partido.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==========================================
-     PRESENTACIÓN
-========================================== -->
-
-<section class="club-intro">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-subtitle">
-
-                Plantilla Oficial
-
-            </span>
-
-            <h2>KAIZER F.C.</h2>
-
-            <p>
-
-                Nuestra plantilla está formada por jugadores comprometidos con
-                el crecimiento del club y con la misión de competir al máximo
-                nivel representando los colores de Kaizer F.C.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==========================================
-     CUERPO TÉCNICO
-========================================== -->
-
-<section class="technical-staff">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-subtitle">
-
-                Dirección Deportiva
-
-            </span>
-
-            <h2>Cuerpo Técnico</h2>
-
-        </div>
-
-        <div class="staff-grid">
-
-            <article class="staff-card">
-
-                <img src="img/entrenador.png" alt="Entrenador">
-
-                <h3>Nombre Entrenador</h3>
-
-                <span>Director Técnico</span>
-
-            </article>
-
-            <article class="staff-card">
-
-                <img src="img/asistente.png" alt="Asistente">
-
-                <h3>Nombre Asistente</h3>
-
-                <span>Asistente Técnico</span>
-
-            </article>
-
-            <article class="staff-card">
-
-                <img src="img/preparador.png" alt="Preparador">
-
-                <h3>Nombre Preparador</h3>
-
-                <span>Preparador Físico</span>
-
-            </article>
-
-            <article class="staff-card">
-
-                <img src="img/arquero.png" alt="Entrenador Porteros">
-
-                <h3>Nombre Entrenador</h3>
-
-                <span>Entrenador de Porteros</span>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==========================================
-     PORTEROS
-========================================== -->
-
-<section class="players-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-subtitle">
-
-                Primer Equipo
-
-            </span>
-
-            <h2>Porteros</h2>
-
-        </div>
-
-        <div class="players-grid">
-            <!-- Jugador -->
-
-            <article class="player-card">
-
-                <div class="player-image">
-
-                    <img src="img/jugadores/jugador1.png" alt="Jugador">
-
-                    <span class="player-number">1</span>
-
-                </div>
-
-                <div class="player-info">
-
-                    <h3>Juan Pérez</h3>
-
-                    <p class="position">Portero</p>
-
-                    <ul>
-
-                        <li><strong>Edad:</strong> 20 años</li>
-
-                        <li><strong>Nacionalidad:</strong> Colombia</li>
-
-                        <li><strong>Altura:</strong> 1.84 m</li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-                <div class="player-image">
-
-                    <img src="img/jugadores/jugador2.png" alt="Jugador">
-
-                    <span class="player-number">13</span>
-
-                </div>
-
-                <div class="player-info">
-
-                    <h3>Carlos Gómez</h3>
-
-                    <p class="position">Portero</p>
-
-                    <ul>
-
-                        <li><strong>Edad:</strong> 22 años</li>
-
-                        <li><strong>Nacionalidad:</strong> Colombia</li>
-
-                        <li><strong>Altura:</strong> 1.88 m</li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ==========================================
-     DEFENSAS
-========================================== -->
-
-<section class="players-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-subtitle">
-
-                Primer Equipo
-
-            </span>
-
-            <h2>Defensas</h2>
-
-        </div>
-
-        <div class="players-grid">
-
-            <article class="player-card">
-
-                <div class="player-image">
-
-                    <img src="img/jugadores/jugador3.png" alt="Jugador">
-
-                    <span class="player-number">2</span>
-
-                </div>
-
-                <div class="player-info">
-
-                    <h3>David Torres</h3>
-
-                    <p class="position">
-
-                        Defensa Central
-
-                    </p>
-
-                    <ul>
-
-                        <li><strong>Edad:</strong> 21 años</li>
-
-                        <li><strong>Nacionalidad:</strong> Colombia</li>
-
-                        <li><strong>Altura:</strong> 1.83 m</li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-            <article class="player-card">
-
-                <div class="player-image">
-
-                    <img src="img/jugadores/jugador4.png" alt="Jugador">
-
-                    <span class="player-number">4</span>
-
-                </div>
-
-                <div class="player-info">
-
-                    <h3>Luis Ramírez</h3>
-
-                    <p class="position">
-
-                        Lateral Derecho
-
-                    </p>
-
-                    <ul>
-
-                        <li><strong>Edad:</strong> 19 años</li>
-
-                        <li><strong>Nacionalidad:</strong> Colombia</li>
-
-                        <li><strong>Altura:</strong> 1.76 m</li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-            <article class="player-card">
-
-                <div class="player-image">
-
-                    <img src="img/jugadores/jugador5.png" alt="Jugador">
-
-                    <span class="player-number">5</span>
-
-                </div>
-
-                <div class="player-info">
-
-                    <h3>Kevin Rojas</h3>
-
-                    <p class="position">
-
-                        Defensa Central
-
-                    </p>
-
-                    <ul>
-
-                        <li><strong>Edad:</strong> 23 años</li>
-
-                        <li><strong>Nacionalidad:</strong> Colombia</li>
-
-                        <li><strong>Altura:</strong> 1.87 m</li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-            <article class="player-card">
-
-                <div class="player-image">
-
-                    <img src="img/jugadores/jugador6.png" alt="Jugador">
-
-                    <span class="player-number">6</span>
-
-                </div>
-
-                <div class="player-info">
-
-                    <h3>Andrés Castro</h3>
-
-                    <p class="position">
-
-                        Lateral Izquierdo
-
-                    </p>
-
-                    <ul>
-
-                        <li><strong>Edad:</strong> 20 años</li>
-
-                        <li><strong>Nacionalidad:</strong> Colombia</li>
-
-                        <li><strong>Altura:</strong> 1.79 m</li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ==========================================
-     CENTROCAMPISTAS
-========================================== -->
-
-<section class="players-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-subtitle">
-
-                Primer Equipo
-
-            </span>
-
-            <h2>Centrocampistas</h2>
-
-        </div>
-
-        <div class="players-grid">
-
-            <article class="player-card">
-
-                <div class="player-image">
-
-                    <img src="img/jugadores/jugador7.png" alt="Jugador">
-
-                    <span class="player-number">8</span>
-
-                </div>
-
-                <div class="player-info">
-
-                    <h3>Sebastián Díaz</h3>
-
-                    <p class="position">Centrocampista</p>
-
-                    <ul>
-
-                        <li><strong>Edad:</strong> 22 años</li>
-
-                        <li><strong>Nacionalidad:</strong> Colombia</li>
-
-                        <li><strong>Altura:</strong> 1.78 m</li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-            <article class="player-card">
-
-                <div class="player-image">
-
-                    <img src="img/jugadores/jugador8.png" alt="Jugador">
-
-                    <span class="player-number">10</span>
-
-                </div>
-
-                <div class="player-info">
-
-                    <h3>Juan Martínez</h3>
-
-                    <p class="position">Mediapunta</p>
-
-                    <ul>
-
-                        <li><strong>Edad:</strong> 20 años</li>
-
-                        <li><strong>Nacionalidad:</strong> Colombia</li>
-
-                        <li><strong>Altura:</strong> 1.75 m</li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-            <article class="player-card">
-
-                <div class="player-image">
-
-                    <img src="img/jugadores/jugador9.png" alt="Jugador">
-
-                    <span class="player-number">14</span>
-
-                </div>
-
-                <div class="player-info">
-
-                    <h3>Mateo Rincón</h3>
-
-                    <p class="position">Volante</p>
-
-                    <ul>
-
-                        <li><strong>Edad:</strong> 19 años</li>
-
-                        <li><strong>Nacionalidad:</strong> Colombia</li>
-
-                        <li><strong>Altura:</strong> 1.80 m</li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ==========================================
-     DELANTEROS
-========================================== -->
-
-<section class="players-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-subtitle">
-
-                Primer Equipo
-
-            </span>
-
-            <h2>Delanteros</h2>
-
-        </div>
-
-        <div class="players-grid">
-
-            <article class="player-card">
-
-                <div class="player-image">
-
-                    <img src="img/jugadores/jugador10.png" alt="Jugador">
-
-                    <span class="player-number">9</span>
-
-                </div>
-
-                <div class="player-info">
-
-                    <h3>Daniel Moreno</h3>
-
-                    <p class="position">Delantero Centro</p>
-
-                    <ul>
-
-                        <li><strong>Edad:</strong> 21 años</li>
-
-                        <li><strong>Nacionalidad:</strong> Colombia</li>
-
-                        <li><strong>Altura:</strong> 1.82 m</li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-            <article class="player-card">
-
-                <div class="player-image">
-
-                    <img src="img/jugadores/jugador11.png" alt="Jugador">
-
-                    <span class="player-number">11</span>
-
-                </div>
-
-                <div class="player-info">
-
-                    <h3>Kevin Suárez</h3>
-
-                    <p class="position">Extremo</p>
-
-                    <ul>
-
-                        <li><strong>Edad:</strong> 20 años</li>
-
-                        <li><strong>Nacionalidad:</strong> Colombia</li>
-
-                        <li><strong>Altura:</strong> 1.74 m</li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ==========================================
-     CTA
-========================================== -->
-
-<section class="club-cta">
-
-    <div class="container">
-
-        <h2>Orgullo Kaizer F.C.</h2>
-
-        <p>
-
-            Cada jugador representa nuestros valores dentro y fuera del campo.
-            Disciplina, respeto y compromiso son la base de nuestro proyecto deportivo.
-
-        </p>
-
-        <a href="contacto.html" class="btn btn-primary">
-
-            Únete a Kaizer F.C.
-
-        </a>
-
-    </div>
-
-</section>
-
-
-
-<!-- ==========================================
-     FOOTER
-========================================== -->
-
-<footer>
-
-    <div class="footer-container">
-
-        <img src="img/logo.png" class="footer-logo" alt="Kaizer F.C.">
-
-        <h2>KAIZER F.C.</h2>
-
-        <p>
-
-            Formando personas, desarrollando talento y construyendo el futuro del fútbol.
-
-        </p>
-
-        <div class="social">
-
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-
-            <a href="#"><i class="fab fa-instagram"></i></a>
-
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-
-            <a href="#"><i class="fab fa-youtube"></i></a>
-
-        </div>
-
-        <p class="copy">
-
-            © 2026 KAIZER F.C. | Todos los derechos reservados.
-
-        </p>
-
-    </div>
-
-</footer>
+            <span class="player-card__arrow" aria-hidden="true">↗</span>
+          </div>
+        </article>
+      `).join("");
+
+      squadEmpty.hidden = filteredPlayers.length !== 0;
+      playersGrid.hidden = filteredPlayers.length === 0;
+    }
+
+    teamSelect.addEventListener("change", renderPlayers);
+
+    positionButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        activePosition = button.dataset.position;
+
+        positionButtons.forEach(item => {
+          const isActive = item === button;
+          item.classList.toggle("is-active", isActive);
+          item.setAttribute("aria-pressed", String(isActive));
+        });
+
+        renderPlayers();
+      });
+    });
+
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+
+    renderPlayers();
+  </script>
 
 </body>
-
 </html>
