@@ -1,125 +1,402 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tienda Oficial | Kaizer F.C.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tienda Oficial | KAIZER F.C.</title>
+    <meta name="description" content="Descubre la tienda oficial de KAIZER F.C. Equipaciones, ropa deportiva y productos del club. Viste nuestros colores.">
+
+    <meta name="theme-color" content="#000000">
+
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tienda.css">
-    <link rel="Icon" href="LOGO KAIZER F.C.png">
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">
-    <img src="LOGO 2026.png" alt="Kaizer F.C.">
-    <span>KAIZER F.C.</span>
-  </div>
+    <!-- ENCABEZADO COMPARTIDO -->
+    <!-- Se conserva el encabezado global de styles.css. -->
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="kaizer.html">KAIZER</a></li>
-      <li><a href="fiales.html">FIALES</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+    <main class="tienda">
 
-<!-- HERO -->
-<section class="hero">
-    <div class="container hero-content">
-        <h2>Tienda Oficial</h2>
-        <p>Viste los colores de Kaizer Fútbol Club</p>
-    </div>
-</section>
+        <!-- PORTADA -->
+        <section class="tienda-hero">
+            <div class="tienda-hero__contenido">
+                <span class="tienda-etiqueta">
+                    KAIZER F.C. / SHOP
+                </span>
 
-<!-- PRODUCTOS -->
-<section class="section">
-    <div class="container products-grid">
+                <h1>
+                    TIENDA <span>OFICIAL</span>
+                </h1>
 
-        <!-- PRODUCTO 1 -->
-        <div class="product-card">
-            <div class="images">
-                <div class="img-box">Frente</div>
-                <div class="img-box">Espalda</div>
-                <div class="img-box">Logo</div>
+                <p class="tienda-hero__lema">
+                    Más que un club, somos una manada.
+                </p>
+
+                <p class="tienda-hero__descripcion">
+                    Viste nuestros colores. Representa nuestro escudo.
+                    Forma parte de la identidad de KAIZER F.C.
+                </p>
+
+                <a href="#productos" class="tienda-boton">
+                    EXPLORAR PRODUCTOS
+                    <span aria-hidden="true">↘</span>
+                </a>
             </div>
-            <h3>Camiseta Oficial Local</h3>
-            <p class="price">$120.000 COP</p>
-            <p class="desc">
-                Camiseta oficial Kaizer F.C. colores negro, blanco y dorado.
-                Tela deportiva de alta calidad.
-            </p>
-            <a class="btn-whatsapp" href="https://wa.me/573000000000?text=Hola,%20quiero%20comprar%20la%20Camiseta%20Oficial%20Local%20de%20Kaizer%20F.C." target="_blank">
-                Comprar por WhatsApp
-            </a>
-        </div>
 
-        <!-- PRODUCTO 2 -->
-        <div class="product-card">
-            <div class="images">
-                <div class="img-box">Frente</div>
-                <div class="img-box">Espalda</div>
-                <div class="img-box">Logo</div>
+            <div class="tienda-hero__visual">
+                <div class="tienda-hero__marco">
+                    <span class="tienda-hero__numero">01</span>
+
+                    <img
+                        src="https://kaizerfutbolclub.github.io/kaizer-f.c/CAMISETA-OFICIAL-2027.png"
+                        alt="Camiseta oficial 2027 de KAIZER F.C."
+                        fetchpriority="high"
+                    >
+
+                    <div class="tienda-hero__pie">
+                        <span>KAIZER F.C.</span>
+                        <span>LOCAL · 2027</span>
+                    </div>
+                </div>
+
+                <span class="tienda-hero__decoracion" aria-hidden="true">
+                    K.
+                </span>
             </div>
-            <h3>Camiseta Oficial Visitante</h3>
-            <p class="price">$120.000 COP</p>
-            <p class="desc">
-                Diseño alternativo del club, ideal para partidos y uso diario.
-                Comodidad y estilo profesional.
-            </p>
-            <a class="btn-whatsapp" href="https://wa.me/573000000000?text=Hola,%20quiero%20comprar%20la%20Camiseta%20Oficial%20Visitante%20de%20Kaizer%20F.C." target="_blank">
-                Comprar por WhatsApp
-            </a>
-        </div>
 
-        <!-- PRODUCTO 3 -->
-        <div class="product-card">
-            <div class="images">
-                <div class="img-box">Frente</div>
-                <div class="img-box">Espalda</div>
-                <div class="img-box">Logo</div>
+            <div class="tienda-hero__inferior">
+                <span>IDENTIDAD</span>
+                <span class="tienda-punto"></span>
+                <span>ORGULLO</span>
+                <span class="tienda-punto"></span>
+                <span>UNIÓN</span>
             </div>
-            <h3>Sudadera Kaizer F.C.</h3>
-            <p class="price">$150.000 COP</p>
-            <p class="desc">
-                Sudadera oficial del club, ideal para entrenamientos
-                y uso casual.
-            </p>
-            <a class="btn-whatsapp" href="https://wa.me/573000000000?text=Hola,%20quiero%20comprar%20la%20Sudadera%20Kaizer%20F.C." target="_blank">
-                Comprar por WhatsApp
-            </a>
-        </div>
+        </section>
 
-        <!-- PRODUCTO 4 -->
-        <div class="product-card">
-            <div class="images">
-                <div class="img-box">Frente</div>
-                <div class="img-box">Espalda</div>
-                <div class="img-box">Logo</div>
+        <!-- INTRODUCCIÓN -->
+        <section class="tienda-intro">
+            <div>
+                <span class="tienda-sobretitulo">
+                    EL UNIVERSO KAIZER
+                </span>
+
+                <h2>
+                    Nuestros colores.<br>
+                    <span>Nuestra identidad.</span>
+                </h2>
             </div>
-            <h3>Gorra Oficial</h3>
-            <p class="price">$60.000 COP</p>
-            <p class="desc">
-                Gorra oficial Kaizer F.C. con bordado del logo.
-                Ajustable y cómoda.
+
+            <p>
+                Cada prenda representa lo que somos. Descubre las
+                equipaciones y los productos de KAIZER F.C. y lleva
+                contigo el orgullo de nuestra manada.
             </p>
-            <a class="btn-whatsapp" href="https://wa.me/573000000000?text=Hola,%20quiero%20comprar%20la%20Gorra%20Oficial%20Kaizer%20F.C." target="_blank">
-                Comprar por WhatsApp
+        </section>
+
+        <!-- CATEGORÍAS -->
+        <nav class="tienda-categorias" aria-label="Categorías de productos">
+            <a href="#equipaciones" class="tienda-categoria activa">
+                <span>01</span>
+                Equipaciones
+                <span aria-hidden="true">↗</span>
             </a>
-        </div>
 
-    </div>
-</section>
+            <a href="#entrenamiento" class="tienda-categoria">
+                <span>02</span>
+                Entrenamiento
+                <span aria-hidden="true">↗</span>
+            </a>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="container">
-        <p>© 2025 Kaizer Fútbol Club</p>
-        <p>Cúcuta, Norte de Santander – Colombia</p>
-    </div>
-</footer>
+            <a href="#accesorios" class="tienda-categoria">
+                <span>03</span>
+                Accesorios
+                <span aria-hidden="true">↗</span>
+            </a>
+        </nav>
+
+        <!-- PRODUCTOS -->
+        <section class="tienda-productos" id="productos">
+
+            <div class="tienda-seccion-titulo" id="equipaciones">
+                <div>
+                    <span class="tienda-sobretitulo">
+                        COLECCIÓN OFICIAL
+                    </span>
+                    <h2>Equipaciones</h2>
+                </div>
+
+                <span class="tienda-contador">01 — 02</span>
+            </div>
+
+            <div class="tienda-grid">
+
+                <!-- PRODUCTO 1 -->
+                <article class="producto">
+                    <div class="producto__imagen">
+                        <span class="producto__etiqueta">
+                            OFICIAL · 2027
+                        </span>
+
+                        <img
+                            src="https://kaizerfutbolclub.github.io/kaizer-f.c/CAMISETA-OFICIAL-2027.png"
+                            alt="Camiseta local oficial de KAIZER F.C. 2027"
+                            loading="lazy"
+                        >
+
+                        <span class="producto__indice">01</span>
+                    </div>
+
+                    <div class="producto__informacion">
+                        <div class="producto__categoria">
+                            PRIMERA EQUIPACIÓN
+                        </div>
+
+                        <h3>Camiseta oficial 2027</h3>
+
+                        <p class="producto__descripcion">
+                            La camiseta que representa nuestros colores
+                            y nuestra identidad.
+                        </p>
+
+                        <div class="producto__precio">
+                            <span>Precio</span>
+                            <strong>Por confirmar</strong>
+                        </div>
+
+                        <form class="producto__formulario"
+                              onsubmit="return realizarPedido(event, this)">
+
+                            <input type="hidden" name="producto"
+                                   value="Camiseta oficial 2027">
+
+                            <label>
+                                Talla
+                                <select name="talla" required>
+                                    <option value="">Seleccionar</option>
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Cantidad
+                                <input type="number" name="cantidad"
+                                       min="1" max="20" value="1" required>
+                            </label>
+
+                            <button type="submit" class="producto__boton">
+                                PEDIR POR WHATSAPP
+                                <span aria-hidden="true">↗</span>
+                            </button>
+                        </form>
+                    </div>
+                </article>
+
+                <!-- PRODUCTO 2 -->
+                <article class="producto">
+                    <div class="producto__imagen producto__imagen--alternativa">
+                        <span class="producto__etiqueta">
+                            CONJUNTO
+                        </span>
+
+                        <img
+                            src="https://kaizerfutbolclub.github.io/kaizer-f.c/CAMISETA-OFICIAL-2027.png"
+                            alt="Referencia de la equipación de KAIZER F.C."
+                            loading="lazy"
+                        >
+
+                        <span class="producto__indice">02</span>
+                    </div>
+
+                    <div class="producto__informacion">
+                        <div class="producto__categoria">
+                            EQUIPACIÓN COMPLETA
+                        </div>
+
+                        <h3>Conjunto oficial</h3>
+
+                        <p class="producto__descripcion">
+                            Una opción para vestir los colores del club
+                            de la camiseta a los pantalones.
+                        </p>
+
+                        <div class="producto__precio">
+                            <span>Precio</span>
+                            <strong>Por confirmar</strong>
+                        </div>
+
+                        <form class="producto__formulario"
+                              onsubmit="return realizarPedido(event, this)">
+
+                            <input type="hidden" name="producto"
+                                   value="Conjunto oficial">
+
+                            <label>
+                                Talla
+                                <select name="talla" required>
+                                    <option value="">Seleccionar</option>
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Cantidad
+                                <input type="number" name="cantidad"
+                                       min="1" max="20" value="1" required>
+                            </label>
+
+                            <button type="submit" class="producto__boton">
+                                PEDIR POR WHATSAPP
+                                <span aria-hidden="true">↗</span>
+                            </button>
+                        </form>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ENTRENAMIENTO -->
+        <section class="tienda-extra" id="entrenamiento">
+            <div class="tienda-extra__numero">02</div>
+
+            <div class="tienda-extra__contenido">
+                <span class="tienda-sobretitulo">
+                    DENTRO Y FUERA DEL CAMPO
+                </span>
+
+                <h2>Entrenamiento</h2>
+
+                <p>
+                    Ropa de entrenamiento y prendas para acompañar
+                    al equipo en cada sesión.
+                </p>
+
+                <span class="tienda-extra__estado">
+                    PRÓXIMAMENTE
+                </span>
+            </div>
+
+            <div class="tienda-extra__simbolo" aria-hidden="true">
+                K
+            </div>
+        </section>
+
+        <!-- ACCESORIOS -->
+        <section class="tienda-extra tienda-extra--celeste"
+                 id="accesorios">
+
+            <div class="tienda-extra__numero">03</div>
+
+            <div class="tienda-extra__contenido">
+                <span class="tienda-sobretitulo">
+                    LA MANADA, SIEMPRE CONTIGO
+                </span>
+
+                <h2>Accesorios</h2>
+
+                <p>
+                    Descubre próximamente los accesorios y artículos
+                    oficiales de KAIZER F.C.
+                </p>
+
+                <span class="tienda-extra__estado">
+                    PRÓXIMAMENTE
+                </span>
+            </div>
+
+            <div class="tienda-extra__simbolo" aria-hidden="true">
+                K.
+            </div>
+        </section>
+
+        <!-- BANNER FINAL -->
+        <section class="tienda-cierre">
+            <span class="tienda-sobretitulo">
+                UNA MISMA MANADA
+            </span>
+
+            <h2>
+                Más que un club,<br>
+                <span>somos una manada.</span>
+            </h2>
+
+            <p>
+                Gracias por apoyar el crecimiento de KAIZER F.C.
+            </p>
+
+            <a href="https://www.instagram.com/kaizer_f.c/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="tienda-cierre__boton">
+                SÍGUENOS EN INSTAGRAM ↗
+            </a>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA COMPARTIDO -->
+    <!-- Se conserva el footer global de styles.css. -->
+
+    <script>
+        /*
+         * CONFIGURACIÓN DE LA TIENDA
+         * Sustituye el valor por el número oficial de WhatsApp
+         * con código de país, solo números y sin el signo +.
+         * Ejemplo de formato para Colombia: 57XXXXXXXXXX
+         */
+        const WHATSAPP_TIENDA = "57XXXXXXXXXX";
+
+        function realizarPedido(event, formulario) {
+            event.preventDefault();
+
+            if (
+                !/^\d{10,15}$/.test(WHATSAPP_TIENDA) ||
+                WHATSAPP_TIENDA.includes("X")
+            ) {
+                alert(
+                    "La tienda todavía necesita configurar el número oficial de WhatsApp."
+                );
+                return false;
+            }
+
+            const datos = new FormData(formulario);
+            const producto = datos.get("producto");
+            const talla = datos.get("talla");
+            const cantidad = datos.get("cantidad");
+
+            const mensaje = [
+                "Hola, KAIZER F.C. Quiero consultar un pedido de la tienda oficial.",
+                "",
+                "Producto: " + producto,
+                "Talla: " + talla,
+                "Cantidad: " + cantidad,
+                "",
+                "¿Podrían confirmarme el precio, la disponibilidad y la entrega?"
+            ].join("\n");
+
+            const url =
+                "https://wa.me/" + WHATSAPP_TIENDA +
+                "?text=" + encodeURIComponent(mensaje);
+
+            window.open(url, "_blank", "noopener,noreferrer");
+            return false;
+        }
+    </script>
 
 </body>
 </html>
+
