@@ -1,329 +1,510 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Plantilla | KAIZER F.C.</title>
-  <meta name="description" content="Conoce las plantillas y categorías de KAIZER F.C. Primer Equipo, Filiales, Academy y Baby Kaizer.">
-
+  <meta name="description" content="Conoce las plantillas y categorías de KAIZER F.C.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="plantilla.css">
 </head>
-
 <body>
 
-  <!-- CABECERA GLOBAL -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="KAIZER F.C. — Inicio">
-        <img src="LOGO KAIZER F.C.png"
-             alt="Escudo oficial de KAIZER F.C."
-             class="brand-logo">
-        <span class="brand-name">KAIZER <strong>F.C.</strong></span>
-      </a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="KAIZER F.C. — Inicio">
+      <img src="LOGO KAIZER F.C.png" alt="Escudo oficial de KAIZER F.C." class="brand-logo">
+      <span class="brand-name">KAIZER <strong>F.C.</strong></span>
+    </a>
 
-      <input type="checkbox" id="menu-toggle" class="menu-toggle"
-             aria-label="Abrir o cerrar menú">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir o cerrar menú">
+    <label for="menu-toggle" class="menu-button" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
 
-      <label for="menu-toggle" class="menu-button" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="kaizer.html" class="nav-link">El club</a>
+      <a href="filiales.html" class="nav-link">Categorías</a>
+      <a href="plantilla.html" class="nav-link active" aria-current="page">Plantilla</a>
+      <a href="noticias.html" class="nav-link">Noticias</a>
+      <a href="calendario.html" class="nav-link">Calendario</a>
+      <a href="tienda.html" class="nav-cta">Equipación <span>↗</span></a>
+    </nav>
+  </div>
+</header>
 
-      <nav class="main-nav" aria-label="Navegación principal">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="kaizer.html" class="nav-link">El club</a>
-        <a href="filiales.html" class="nav-link">Categorías</a>
-        <a href="plantilla.html" class="nav-link active"
-           aria-current="page">Plantilla</a>
-        <a href="noticias.html" class="nav-link">Noticias</a>
-        <a href="calendario.html" class="nav-link">Calendario</a>
-        <a href="tienda.html" class="nav-cta">Equipación <span>↗</span></a>
-      </nav>
-    </div>
-  </header>
+<main class="squad-page">
 
-  <main class="squad-page">
+  <section class="squad-hero">
+    <div class="squad-hero__content">
+      <span class="squad-eyebrow">
+        <span class="squad-eyebrow__line"></span>
+        EL EQUIPO
+      </span>
 
-    <!-- PORTADA -->
-    <section class="squad-hero">
-      <div class="squad-hero__content">
-        <span class="squad-eyebrow">
-          <span class="squad-eyebrow__line"></span>
-          EL EQUIPO
-        </span>
+      <h1>NUESTRA <span>PLANTILLA</span></h1>
 
-        <h1>NUESTRA <span>PLANTILLA</span></h1>
-
-        <p class="squad-hero__description">
-          Talento, disciplina y compromiso. Conoce a los jugadores que
-          forman parte de la manada KAIZER F.C.
-        </p>
-
-        <div class="squad-hero__meta">
-          <span><strong>08</strong> EQUIPOS</span>
-          <span class="squad-meta-divider"></span>
-          <span>UNA SOLA <strong>MANADA</strong></span>
-        </div>
-      </div>
-
-      <div class="squad-hero__visual" aria-hidden="true">
-        <div class="squad-hero__number">11</div>
-        <div class="squad-hero__circle squad-hero__circle--outer"></div>
-        <div class="squad-hero__circle squad-hero__circle--inner"></div>
-        <div class="squad-hero__cross"></div>
-        <div class="squad-hero__label">KAIZER F.C. / SQUAD</div>
-      </div>
-
-      <div class="squad-hero__bottom">
-        <span>FORMACIÓN</span>
-        <span>IDENTIDAD</span>
-        <span>FUTURO</span>
-      </div>
-    </section>
-
-    <!-- SELECTOR DE EQUIPO -->
-    <section class="squad-section" aria-labelledby="team-title">
-      <div class="squad-section__heading">
-        <div>
-          <span class="squad-kicker">NUESTROS EQUIPOS</span>
-          <h2 id="team-title">Elige tu <span>categoría</span></h2>
-        </div>
-
-        <p class="squad-section__intro">
-          Selecciona un equipo para consultar su plantilla.
-        </p>
-      </div>
-
-      <div class="team-selector">
-        <label for="team-select">EQUIPO</label>
-
-        <div class="team-selector__control">
-          <select id="team-select" aria-label="Seleccionar equipo">
-            <option value="primer">KAIZER F.C. — Primer Equipo</option>
-            <option value="filial-b">KAIZER F.C. B — Filial</option>
-            <option value="filial-c">KAIZER F.C. C — Filial</option>
-            <option value="filial-d">KAIZER F.C. D — Filial</option>
-            <option value="academy-a">KAIZER F.C. Academy A</option>
-            <option value="academy-b">KAIZER F.C. Academy B</option>
-            <option value="baby-a">KAIZER F.C. Baby A</option>
-            <option value="baby-b">KAIZER F.C. Baby B</option>
-          </select>
-          <span class="team-selector__arrow" aria-hidden="true">⌄</span>
-        </div>
-
-        <p class="team-selector__note">
-          Las tarjetas actuales son demostrativas y deben sustituirse
-          por los datos de los jugadores confirmados.
-        </p>
-      </div>
-
-      <!-- INFORMACIÓN DEL EQUIPO -->
-      <div class="team-overview">
-        <div class="team-overview__crest">
-          <img src="LOGO KAIZER F.C.png"
-               alt="Escudo de KAIZER F.C."
-               id="team-crest">
-        </div>
-
-        <div class="team-overview__text">
-          <span class="team-overview__eyebrow" id="team-category">
-            PRIMER EQUIPO
-          </span>
-          <h2 id="team-name">KAIZER F.C.</h2>
-          <p id="team-description">
-            La máxima representación deportiva del club.
-          </p>
-        </div>
-
-        <div class="team-overview__count">
-          <strong id="player-count">04</strong>
-          <span>JUGADORES<br>DE EJEMPLO</span>
-        </div>
-      </div>
-
-      <!-- FILTROS POR POSICIÓN -->
-      <div class="squad-filters" aria-label="Filtrar jugadores por posición">
-        <button class="position-filter is-active"
-                type="button" data-position="todos"
-                aria-pressed="true">Todos</button>
-        <button class="position-filter"
-                type="button" data-position="portero"
-                aria-pressed="false">Porteros</button>
-        <button class="position-filter"
-                type="button" data-position="defensa"
-                aria-pressed="false">Defensas</button>
-        <button class="position-filter"
-                type="button" data-position="centrocampista"
-                aria-pressed="false">Centrocampistas</button>
-        <button class="position-filter"
-                type="button" data-position="delantero"
-                aria-pressed="false">Delanteros</button>
-      </div>
-
-      <!-- TARJETAS DINÁMICAS -->
-      <div class="players-grid" id="players-grid" aria-live="polite">
-        <!-- JavaScript genera aquí las tarjetas -->
-      </div>
-
-      <p class="squad-empty" id="squad-empty" hidden>
-        No hay jugadores en esta posición para el equipo seleccionado.
+      <p class="squad-hero__description">
+        Talento, disciplina y compromiso. Conoce a los jugadores que
+        forman parte de la manada KAIZER F.C.
       </p>
 
-      <div class="squad-disclaimer">
-        <span class="squad-disclaimer__icon" aria-hidden="true">i</span>
-        <p>
-          <strong>Plantilla de demostración.</strong>
-          Los dorsales, nombres, edades y posiciones son ejemplos de diseño.
-          No representan información oficial de futbolistas de KAIZER F.C.
-        </p>
-      </div>
-    </section>
-
-    <!-- MENSAJE INSTITUCIONAL -->
-    <section class="squad-manifesto">
-      <div class="squad-manifesto__mark" aria-hidden="true">K</div>
-      <div class="squad-manifesto__content">
-        <span class="squad-kicker">NUESTRO ADN</span>
-        <h2>Una camiseta.<br><span>Una familia.</span></h2>
-        <p>
-          Cada jugador representa un compromiso con el escudo, el respeto
-          por el equipo y las ganas de crecer dentro y fuera del campo.
-        </p>
-      </div>
-      <div class="squad-manifesto__signature">
-        <span>KAIZER F.C.</span>
-        <strong>LA MANADA</strong>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER GLOBAL -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="footer-brand__link"
-           aria-label="KAIZER F.C. — Inicio">
-          <img src="KAIZER F.C (LOGO PRIN).png"
-               alt="Escudo oficial de KAIZER F.C."
-               class="footer-logo">
-        </a>
-
-        <div class="footer-brand__text">
-          <strong>KAIZER F.C.</strong>
-          <span>FÚTBOL · FORMACIÓN · IDENTIDAD</span>
-        </div>
-      </div>
-
-      <nav class="footer-nav" aria-label="Navegación del pie de página">
-        <a href="index.html">Inicio</a>
-        <a href="kaizer.html">El club</a>
-        <a href="filiales.html">Categorías</a>
-        <a href="plantilla.html">Plantilla</a>
-        <a href="noticias.html">Noticias</a>
-        <a href="calendario.html">Calendario</a>
-      </nav>
-
-      <div class="footer-bottom">
-        <span>© <span id="current-year">2026</span> KAIZER F.C.</span>
-        <span class="footer-slogan">Más que un club, somos una manada.</span>
+      <div class="squad-hero__meta">
+        <span><strong>08</strong> EQUIPOS</span>
+        <span class="squad-meta-divider"></span>
+        <span>UNA SOLA <strong>MANADA</strong></span>
       </div>
     </div>
-  </footer>
 
-  <script>
-    /*
-      PLANTILLAS DE EJEMPLO
-      Sustituye estos datos por información real y autorizada.
-      Las edades también son ilustrativas.
-    */
+    <div class="squad-hero__visual" aria-hidden="true">
+      <div class="squad-hero__number">11</div>
+      <div class="squad-hero__circle squad-hero__circle--outer"></div>
+      <div class="squad-hero__circle squad-hero__circle--inner"></div>
+      <div class="squad-hero__cross"></div>
+      <div class="squad-hero__label">KAIZER F.C. / SQUAD</div>
+    </div>
 
+    <div class="squad-hero__bottom">
+      <span>FORMACIÓN</span>
+      <span>IDENTIDAD</span>
+      <span>FUTURO</span>
+    </div>
+  </section>
 
-const crearJugadores = (equipo) => [
-  ["Carlos Ejemplo", "portero", "1", "18", "imagenes/jugadores-1.jpg"],
-  ["Nombre del jugador 02", "portero", "12", "", ""],
-  ["Nombre del jugador 03", "defensa", "2", "", ""],
-  ["Nombre del jugador 04", "defensa", "3", "", ""],
-  ["Nombre del jugador 05", "defensa", "4", "", ""],
-  ["Nombre del jugador 06", "defensa", "5", "", ""],
-  ["Nombre del jugador 07", "defensa", "15", "", ""],
-  ["Nombre del jugador 08", "centrocampista", "6", "", ""],
-  ["Nombre del jugador 09", "centrocampista", "8", "", ""],
-  ["Nombre del jugador 10", "centrocampista", "10", "", ""],
-  ["Nombre del jugador 11", "centrocampista", "14", "", ""],
-  ["Nombre del jugador 12", "centrocampista", "16", "", ""],
-  ["Nombre del jugador 13", "delantero", "7", "", ""],
-  ["Nombre del jugador 14", "delantero", "9", "", ""],
-  ["Nombre del jugador 15", "delantero", "11", "", ""]
-].map((p, i) => ({
-  name: p[0],
-  position: p[1],
-  number: p[2],
-  age: p[3],
-  photo: p[4] || "",
-  label: {
-    portero: "Portero",
-    defensa: "Defensa",
-    centrocampista: "Centrocampista",
-    delantero: "Delantero"
-  }[p[1]],
-  id: equipo + "-" + (i + 1)
-}));
+  <section class="squad-section" aria-labelledby="team-title">
+    <div class="squad-section__heading">
+      <div>
+        <span class="squad-kicker">NUESTROS EQUIPOS</span>
+        <h2 id="team-title">Elige tu <span>categoría</span></h2>
+      </div>
+      <p class="squad-section__intro">
+        Selecciona un equipo para consultar su plantilla.
+      </p>
+    </div>
+
+    <div class="team-selector">
+      <label for="team-select">EQUIPO</label>
+      <div class="team-selector__control">
+        <select id="team-select" aria-label="Seleccionar equipo">
+          <option value="primer">KAIZER F.C. — Primer Equipo</option>
+          <option value="filial-b">KAIZER F.C. B — Filial</option>
+          <option value="filial-c">KAIZER F.C. C — Filial</option>
+          <option value="filial-d">KAIZER F.C. D — Filial</option>
+          <option value="academy-a">KAIZER F.C. Academy A</option>
+          <option value="academy-b">KAIZER F.C. Academy B</option>
+          <option value="baby-a">KAIZER F.C. Baby A</option>
+          <option value="baby-b">KAIZER F.C. Baby B</option>
+        </select>
+        <span class="team-selector__arrow" aria-hidden="true">⌄</span>
+      </div>
+
+      <p class="team-selector__note">
+        Puedes editar el nombre, la fotografía, la posición, el dorsal y la edad
+        de cada jugador en los datos del final de este archivo.
+      </p>
+    </div>
+
+    <div class="team-overview">
+      <div class="team-overview__crest">
+        <img src="LOGO KAIZER F.C.png" alt="Escudo de KAIZER F.C." id="team-crest">
+      </div>
+
+      <div class="team-overview__text">
+        <span class="team-overview__eyebrow" id="team-category">PRIMER EQUIPO</span>
+        <h2 id="team-name">KAIZER F.C.</h2>
+        <p id="team-description">La máxima representación deportiva del club.</p>
+      </div>
+
+      <div class="team-overview__count">
+        <strong id="player-count">15</strong>
+        <span>JUGADORES<br>EN PLANTILLA</span>
+      </div>
+    </div>
+
+    <div class="squad-filters" aria-label="Filtrar jugadores por posición">
+      <button class="position-filter is-active" type="button" data-position="todos" aria-pressed="true">Todos</button>
+      <button class="position-filter" type="button" data-position="portero" aria-pressed="false">Porteros</button>
+      <button class="position-filter" type="button" data-position="defensa" aria-pressed="false">Defensas</button>
+      <button class="position-filter" type="button" data-position="centrocampista" aria-pressed="false">Centrocampistas</button>
+      <button class="position-filter" type="button" data-position="delantero" aria-pressed="false">Delanteros</button>
+    </div>
+
+    <div class="players-grid" id="players-grid" aria-live="polite"></div>
+
+    <p class="squad-empty" id="squad-empty" hidden>
+      No hay jugadores en esta posición para el equipo seleccionado.
+    </p>
+
+    <div class="squad-disclaimer">
+      <span class="squad-disclaimer__icon" aria-hidden="true">i</span>
+      <p>
+        <strong>Plantilla editable.</strong>
+        Los nombres son espacios de referencia y no representan futbolistas confirmados.
+        Sustituye los datos por la información oficial de cada jugador.
+      </p>
+    </div>
+  </section>
+
+  <section class="squad-manifesto">
+    <div class="squad-manifesto__mark" aria-hidden="true">K</div>
+    <div class="squad-manifesto__content">
+      <span class="squad-kicker">NUESTRO ADN</span>
+      <h2>Una camiseta.<br><span>Una familia.</span></h2>
+      <p>
+        Cada jugador representa un compromiso con el escudo, el respeto
+        por el equipo y las ganas de crecer dentro y fuera del campo.
+      </p>
+    </div>
+    <div class="squad-manifesto__signature">
+      <span>KAIZER F.C.</span>
+      <strong>LA MANADA</strong>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand__link" aria-label="KAIZER F.C. — Inicio">
+        <img src="KAIZER F.C (LOGO PRIN).png" alt="Escudo oficial de KAIZER F.C." class="footer-logo">
+      </a>
+      <div class="footer-brand__text">
+        <strong>KAIZER F.C.</strong>
+        <span>FÚTBOL · FORMACIÓN · IDENTIDAD</span>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Navegación del pie de página">
+      <a href="index.html">Inicio</a>
+      <a href="kaizer.html">El club</a>
+      <a href="filiales.html">Categorías</a>
+      <a href="plantilla.html">Plantilla</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="calendario.html">Calendario</a>
+    </nav>
+
+    <div class="footer-bottom">
+      <span>© <span id="current-year">2026</span> KAIZER F.C.</span>
+      <span class="footer-slogan">Más que un club, somos una manada.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/*
+==========================================================
+CÓMO EDITAR LOS JUGADORES
+Cada jugador tiene estos cinco campos:
+["Nombre del jugador", "posición", "dorsal", "edad", "ruta/foto.jpg"]
+
+Posiciones admitidas:
+"portero", "defensa", "centrocampista", "delantero"
+
+Ejemplo:
+["Juan Pérez", "portero", "1", "18", "imagenes/jugadores/juan.jpg"]
+
+Si no tienes la fotografía, deja el último campo vacío: "".
+Los nombres, dorsales y posiciones iniciales son provisionales.
+==========================================================
+*/
+
+const labelsPosicion = {
+  portero: "Portero",
+  defensa: "Defensa",
+  centrocampista: "Centrocampista",
+  delantero: "Delantero"
+};
+
+/*
+Cada equipo tiene su propia lista.
+Edita los datos dentro de cada bloque sin cambiar el orden
+de los cinco campos de cada jugador.
+*/
 
 const teamData = {
   "primer": {
     name: "KAIZER F.C.",
     category: "PRIMER EQUIPO",
     description: "La máxima representación deportiva del club.",
-    players: crearJugadores("primer")
+    players: [
+      ["Nombre del jugador 01", "portero", "1", "", ""],
+      ["Nombre del jugador 02", "portero", "12", "", ""],
+      ["Nombre del jugador 03", "defensa", "2", "", ""],
+      ["Nombre del jugador 04", "defensa", "3", "", ""],
+      ["Nombre del jugador 05", "defensa", "4", "", ""],
+      ["Nombre del jugador 06", "defensa", "5", "", ""],
+      ["Nombre del jugador 07", "defensa", "15", "", ""],
+      ["Nombre del jugador 08", "centrocampista", "6", "", ""],
+      ["Nombre del jugador 09", "centrocampista", "8", "", ""],
+      ["Nombre del jugador 10", "centrocampista", "10", "", ""],
+      ["Nombre del jugador 11", "centrocampista", "14", "", ""],
+      ["Nombre del jugador 12", "centrocampista", "16", "", ""],
+      ["Nombre del jugador 13", "delantero", "7", "", ""],
+      ["Nombre del jugador 14", "delantero", "9", "", ""],
+      ["Nombre del jugador 15", "delantero", "11", "", ""]
+    ]
   },
+
   "filial-b": {
     name: "KAIZER F.C. B",
     category: "EQUIPO FILIAL",
     description: "Equipo filial del proyecto deportivo Kaizer F.C.",
-    players: crearJugadores("filial-b")
+    players: [
+      ["Nombre del jugador 01", "portero", "1", "", ""],
+      ["Nombre del jugador 02", "portero", "12", "", ""],
+      ["Nombre del jugador 03", "defensa", "2", "", ""],
+      ["Nombre del jugador 04", "defensa", "3", "", ""],
+      ["Nombre del jugador 05", "defensa", "4", "", ""],
+      ["Nombre del jugador 06", "defensa", "5", "", ""],
+      ["Nombre del jugador 07", "defensa", "15", "", ""],
+      ["Nombre del jugador 08", "centrocampista", "6", "", ""],
+      ["Nombre del jugador 09", "centrocampista", "8", "", ""],
+      ["Nombre del jugador 10", "centrocampista", "10", "", ""],
+      ["Nombre del jugador 11", "delantero", "7", "", ""],
+      ["Nombre del jugador 12", "delantero", "9", "", ""]
+    ]
   },
+
   "filial-c": {
     name: "KAIZER F.C. C",
     category: "EQUIPO FILIAL",
     description: "Equipo filial del proyecto deportivo Kaizer F.C.",
-    players: crearJugadores("filial-c")
+    players: [
+      ["Nombre del jugador 01", "portero", "1", "", ""],
+      ["Nombre del jugador 02", "portero", "12", "", ""],
+      ["Nombre del jugador 03", "defensa", "2", "", ""],
+      ["Nombre del jugador 04", "defensa", "3", "", ""],
+      ["Nombre del jugador 05", "defensa", "4", "", ""],
+      ["Nombre del jugador 06", "defensa", "5", "", ""],
+      ["Nombre del jugador 07", "defensa", "15", "", ""],
+      ["Nombre del jugador 08", "centrocampista", "6", "", ""],
+      ["Nombre del jugador 09", "centrocampista", "8", "", ""],
+      ["Nombre del jugador 10", "centrocampista", "10", "", ""],
+      ["Nombre del jugador 11", "delantero", "7", "", ""],
+      ["Nombre del jugador 12", "delantero", "9", "", ""]
+    ]
   },
+
   "filial-d": {
     name: "KAIZER F.C. D",
     category: "EQUIPO FILIAL",
     description: "Equipo filial del proyecto deportivo Kaizer F.C.",
-    players: crearJugadores("filial-d")
+    players: [
+      ["Nombre del jugador 01", "portero", "1", "", ""],
+      ["Nombre del jugador 02", "portero", "12", "", ""],
+      ["Nombre del jugador 03", "defensa", "2", "", ""],
+      ["Nombre del jugador 04", "defensa", "3", "", ""],
+      ["Nombre del jugador 05", "defensa", "4", "", ""],
+      ["Nombre del jugador 06", "defensa", "5", "", ""],
+      ["Nombre del jugador 07", "defensa", "15", "", ""],
+      ["Nombre del jugador 08", "centrocampista", "6", "", ""],
+      ["Nombre del jugador 09", "centrocampista", "8", "", ""],
+      ["Nombre del jugador 10", "centrocampista", "10", "", ""],
+      ["Nombre del jugador 11", "delantero", "7", "", ""],
+      ["Nombre del jugador 12", "delantero", "9", "", ""]
+    ]
   },
+
   "academy-a": {
     name: "KAIZER F.C. Academy A",
     category: "ACADEMY",
     description: "Formación y desarrollo de jóvenes futbolistas.",
-    players: crearJugadores("academy-a")
+    players: [
+      ["Nombre del jugador 01", "portero", "1", "", ""],
+      ["Nombre del jugador 02", "portero", "12", "", ""],
+      ["Nombre del jugador 03", "defensa", "2", "", ""],
+      ["Nombre del jugador 04", "defensa", "3", "", ""],
+      ["Nombre del jugador 05", "defensa", "4", "", ""],
+      ["Nombre del jugador 06", "defensa", "5", "", ""],
+      ["Nombre del jugador 07", "defensa", "15", "", ""],
+      ["Nombre del jugador 08", "centrocampista", "6", "", ""],
+      ["Nombre del jugador 09", "centrocampista", "8", "", ""],
+      ["Nombre del jugador 10", "centrocampista", "10", "", ""],
+      ["Nombre del jugador 11", "delantero", "7", "", ""],
+      ["Nombre del jugador 12", "delantero", "9", "", ""]
+    ]
   },
+
   "academy-b": {
     name: "KAIZER F.C. Academy B",
     category: "ACADEMY",
     description: "Formación y desarrollo de jóvenes futbolistas.",
-    players: crearJugadores("academy-b")
+    players: [
+      ["Nombre del jugador 01", "portero", "1", "", ""],
+      ["Nombre del jugador 02", "portero", "12", "", ""],
+      ["Nombre del jugador 03", "defensa", "2", "", ""],
+      ["Nombre del jugador 04", "defensa", "3", "", ""],
+      ["Nombre del jugador 05", "defensa", "4", "", ""],
+      ["Nombre del jugador 06", "defensa", "5", "", ""],
+      ["Nombre del jugador 07", "defensa", "15", "", ""],
+      ["Nombre del jugador 08", "centrocampista", "6", "", ""],
+      ["Nombre del jugador 09", "centrocampista", "8", "", ""],
+      ["Nombre del jugador 10", "centrocampista", "10", "", ""],
+      ["Nombre del jugador 11", "delantero", "7", "", ""],
+      ["Nombre del jugador 12", "delantero", "9", "", ""]
+    ]
   },
+
   "baby-a": {
     name: "KAIZER F.C. Baby A",
     category: "BABY KAIZER",
     description: "Iniciación deportiva y formación futbolística.",
-    players: crearJugadores("baby-a")
+    players: [
+      ["Nombre del jugador 01", "portero", "1", "", ""],
+      ["Nombre del jugador 02", "portero", "12", "", ""],
+      ["Nombre del jugador 03", "defensa", "2", "", ""],
+      ["Nombre del jugador 04", "defensa", "3", "", ""],
+      ["Nombre del jugador 05", "defensa", "4", "", ""],
+      ["Nombre del jugador 06", "defensa", "5", "", ""],
+      ["Nombre del jugador 07", "defensa", "15", "", ""],
+      ["Nombre del jugador 08", "centrocampista", "6", "", ""],
+      ["Nombre del jugador 09", "centrocampista", "8", "", ""],
+      ["Nombre del jugador 10", "centrocampista", "10", "", ""],
+      ["Nombre del jugador 11", "delantero", "7", "", ""],
+      ["Nombre del jugador 12", "delantero", "9", "", ""]
+    ]
   },
+
   "baby-b": {
     name: "KAIZER F.C. Baby B",
     category: "BABY KAIZER",
     description: "Iniciación deportiva y formación futbolística.",
-    players: crearJugadores("baby-b")
+    players: [
+      ["Nombre del jugador 01", "portero", "1", "", ""],
+      ["Nombre del jugador 02", "portero", "12", "", ""],
+      ["Nombre del jugador 03", "defensa", "2", "", ""],
+      ["Nombre del jugador 04", "defensa", "3", "", ""],
+      ["Nombre del jugador 05", "defensa", "4", "", ""],
+      ["Nombre del jugador 06", "defensa", "5", "", ""],
+      ["Nombre del jugador 07", "defensa", "15", "", ""],
+      ["Nombre del jugador 08", "centrocampista", "6", "", ""],
+      ["Nombre del jugador 09", "centrocampista", "8", "", ""],
+      ["Nombre del jugador 10", "centrocampista", "10", "", ""],
+      ["Nombre del jugador 11", "delantero", "7", "", ""],
+      ["Nombre del jugador 12", "delantero", "9", "", ""]
+    ]
   }
 };
+
+// Convertir los datos editables en objetos para las tarjetas.
+Object.values(teamData).forEach((team, teamIndex) => {
+  team.players = team.players.map((player, index) => ({
+    name: player[0],
+    position: player[1],
+    number: player[2],
+    age: player[3],
+    photo: player[4],
+    label: labelsPosicion[player[1]] || player[1],
+    id: teamIndex + "-" + index
+  }));
+});
+
+const teamSelect = document.getElementById("team-select");
+const teamName = document.getElementById("team-name");
+const teamCategory = document.getElementById("team-category");
+const teamDescription = document.getElementById("team-description");
+const playerCount = document.getElementById("player-count");
+const playersGrid = document.getElementById("players-grid");
+const squadEmpty = document.getElementById("squad-empty");
+const positionFilters = document.querySelectorAll(".position-filter");
+
+let activePosition = "todos";
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, character => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[character]);
+}
+
+function renderPlayers() {
+  const team = teamData[teamSelect.value] || teamData.primer;
+
+  const filteredPlayers = team.players.filter(player =>
+    activePosition === "todos" || player.position === activePosition
+  );
+
+  teamName.textContent = team.name;
+  teamCategory.textContent = team.category;
+  teamDescription.textContent = team.description;
+  playerCount.textContent = String(team.players.length).padStart(2, "0");
+
+  playersGrid.innerHTML = filteredPlayers.map(player => {
+    const hasPhoto = player.photo && player.photo.trim() !== "";
+
+    const photo = hasPhoto
+      ? `<img class="player-card__photo"
+          src="${escapeHTML(player.photo)}"
+          alt="Fotografía de ${escapeHTML(player.name)}"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.hidden=false;">`
+      : "";
+
+    const placeholder = `
+      <div class="player-card__portrait-placeholder" ${hasPhoto ? "hidden" : ""}>
+        <span class="player-card__placeholder-number">${escapeHTML(player.number || "00")}</span>
+        <span class="player-card__placeholder-label">KAIZER F.C.</span>
+      </div>`;
+
+    return `
+      <article class="player-card" data-position="${escapeHTML(player.position)}">
+        <div class="player-card__portrait">
+          ${photo}
+          ${placeholder}
+          <span class="player-card__number">${escapeHTML(player.number || "—")}</span>
+        </div>
+        <div class="player-card__info">
+          <span class="player-card__position">${escapeHTML(player.label)}</span>
+          <h3 class="player-card__name">${escapeHTML(player.name)}</h3>
+          <div class="player-card__meta">
+            <span>EDAD</span>
+            <strong>${player.age ? escapeHTML(player.age) + " años" : "Por definir"}</strong>
+          </div>
+        </div>
+      </article>`;
+  }).join("");
+
+  squadEmpty.hidden = filteredPlayers.length > 0;
+  squadEmpty.textContent = team.players.length === 0
+    ? "La plantilla de este equipo todavía no tiene jugadores añadidos."
+    : "No hay jugadores en esta posición para el equipo seleccionado.";
+}
+
+teamSelect.addEventListener("change", () => {
+  activePosition = "todos";
+
+  positionFilters.forEach(button => {
+    const selected = button.dataset.position === "todos";
+    button.classList.toggle("is-active", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+
+  renderPlayers();
+});
+
+positionFilters.forEach(button => {
+  button.addEventListener("click", () => {
+    activePosition = button.dataset.position;
+
+    positionFilters.forEach(filter => {
+      const selected = filter === button;
+      filter.classList.toggle("is-active", selected);
+      filter.setAttribute("aria-pressed", String(selected));
+    });
+
+    renderPlayers();
+  });
+});
+
+const yearElement = document.getElementById("current-year");
+if (yearElement) yearElement.textContent = new Date().getFullYear();
+
+renderPlayers();
 </script>
 
 </body>
