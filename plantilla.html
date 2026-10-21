@@ -242,186 +242,89 @@
       Las edades también son ilustrativas.
     */
 
-    const teamData = {
-      "primer": {
-        name: "KAIZER F.C.",
-        category: "PRIMER EQUIPO",
-        description: "La máxima representación deportiva del club.",
-        players: [
-          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
-          { number: "04", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
-          { number: "08", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
-          { number: "09", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
-        ]
-      },
+   <script>
+const crearJugadores = (equipo) => [
+  ["Nombre del jugador 01", "portero", "1", "", ""],
+  ["Nombre del jugador 02", "portero", "12", "", ""],
+  ["Nombre del jugador 03", "defensa", "2", "", ""],
+  ["Nombre del jugador 04", "defensa", "3", "", ""],
+  ["Nombre del jugador 05", "defensa", "4", "", ""],
+  ["Nombre del jugador 06", "defensa", "5", "", ""],
+  ["Nombre del jugador 07", "defensa", "15", "", ""],
+  ["Nombre del jugador 08", "centrocampista", "6", "", ""],
+  ["Nombre del jugador 09", "centrocampista", "8", "", ""],
+  ["Nombre del jugador 10", "centrocampista", "10", "", ""],
+  ["Nombre del jugador 11", "centrocampista", "14", "", ""],
+  ["Nombre del jugador 12", "centrocampista", "16", "", ""],
+  ["Nombre del jugador 13", "delantero", "7", "", ""],
+  ["Nombre del jugador 14", "delantero", "9", "", ""],
+  ["Nombre del jugador 15", "delantero", "11", "", ""]
+].map((p, i) => ({
+  name: p[0],
+  position: p[1],
+  number: p[2],
+  age: p[3],
+  photo: p[4] || "",
+  label: {
+    portero: "Portero",
+    defensa: "Defensa",
+    centrocampista: "Centrocampista",
+    delantero: "Delantero"
+  }[p[1]],
+  id: equipo + "-" + (i + 1)
+}));
 
-      "filial-b": {
-        name: "KAIZER F.C. B",
-        category: "FILIAL B",
-        description: "Un espacio para competir, crecer y dar el siguiente paso.",
-        players: [
-          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
-          { number: "03", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
-          { number: "06", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
-          { number: "11", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
-        ]
-      },
-
-      "filial-c": {
-        name: "KAIZER F.C. C",
-        category: "FILIAL C",
-        description: "Trabajo colectivo y evolución constante dentro de la manada.",
-        players: [
-          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
-          { number: "02", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
-          { number: "07", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
-          { number: "10", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
-        ]
-      },
-
-      "filial-d": {
-        name: "KAIZER F.C. D",
-        category: "FILIAL D",
-        description: "Más oportunidades para desarrollar el talento y competir.",
-        players: [
-          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
-          { number: "05", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
-          { number: "08", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
-          { number: "09", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
-        ]
-      },
-
-      "academy-a": {
-        name: "KAIZER F.C. Academy A",
-        category: "ACADEMY A",
-        description: "Formación futbolística y desarrollo de jóvenes talentos.",
-        players: [
-          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
-          { number: "02", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
-          { number: "06", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
-          { number: "09", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
-        ]
-      },
-
-      "academy-b": {
-        name: "KAIZER F.C. Academy B",
-        category: "ACADEMY B",
-        description: "Aprendizaje, técnica y valores desde las primeras etapas.",
-        players: [
-          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
-          { number: "03", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
-          { number: "07", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
-          { number: "10", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
-        ]
-      },
-
-      "baby-a": {
-        name: "KAIZER F.C. Baby A",
-        category: "BABY A",
-        description: "Primeros pasos en el fútbol, con diversión y compañerismo.",
-        players: [
-          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
-          { number: "02", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
-          { number: "06", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
-          { number: "09", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
-        ]
-      },
-
-      "baby-b": {
-        name: "KAIZER F.C. Baby B",
-        category: "BABY B",
-        description: "Una base de aprendizaje para descubrir y disfrutar el fútbol.",
-        players: [
-          { number: "01", name: "Jugador de ejemplo 01", position: "portero", label: "Portero", age: "Edad por confirmar" },
-          { number: "04", name: "Jugador de ejemplo 02", position: "defensa", label: "Defensa", age: "Edad por confirmar" },
-          { number: "08", name: "Jugador de ejemplo 03", position: "centrocampista", label: "Centrocampista", age: "Edad por confirmar" },
-          { number: "10", name: "Jugador de ejemplo 04", position: "delantero", label: "Delantero", age: "Edad por confirmar" }
-        ]
-      }
-    };
-
-    const teamSelect = document.getElementById("team-select");
-    const teamName = document.getElementById("team-name");
-    const teamCategory = document.getElementById("team-category");
-    const teamDescription = document.getElementById("team-description");
-    const playerCount = document.getElementById("player-count");
-    const playersGrid = document.getElementById("players-grid");
-    const squadEmpty = document.getElementById("squad-empty");
-    const positionButtons = document.querySelectorAll(".position-filter");
-
-    let activePosition = "todos";
-
-    function renderPlayers() {
-      const team = teamData[teamSelect.value];
-
-      teamName.textContent = team.name;
-      teamCategory.textContent = team.category;
-      teamDescription.textContent = team.description;
-
-      const filteredPlayers = team.players.filter(player =>
-        activePosition === "todos" || player.position === activePosition
-      );
-
-      playerCount.textContent = String(filteredPlayers.length).padStart(2, "0");
-
-      playersGrid.innerHTML = filteredPlayers.map(player => `
-        <article class="player-card">
-          <div class="player-card__top">
-            <span class="player-card__demo">EJEMPLO</span>
-            <span class="player-card__number">${player.number}</span>
-          </div>
-
-          <div class="player-card__portrait" aria-hidden="true">
-            <div class="player-card__portrait-ring"></div>
-            <div class="player-card__silhouette">
-              <div class="player-card__head"></div>
-              <div class="player-card__body"></div>
-            </div>
-            <span class="player-card__initial">K</span>
-            <span class="player-card__portrait-label">FOTO DEL JUGADOR</span>
-          </div>
-
-          <div class="player-card__info">
-            <span class="player-card__position">${player.label}</span>
-            <h3>${player.name}</h3>
-            <div class="player-card__details">
-              <span>DORSAL <strong>${player.number}</strong></span>
-              <span>${player.age}</span>
-            </div>
-          </div>
-
-          <div class="player-card__bottom">
-            <span>KAIZER F.C.</span>
-            <span class="player-card__arrow" aria-hidden="true">↗</span>
-          </div>
-        </article>
-      `).join("");
-
-      squadEmpty.hidden = filteredPlayers.length !== 0;
-      playersGrid.hidden = filteredPlayers.length === 0;
-    }
-
-    teamSelect.addEventListener("change", renderPlayers);
-
-    positionButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        activePosition = button.dataset.position;
-
-        positionButtons.forEach(item => {
-          const isActive = item === button;
-          item.classList.toggle("is-active", isActive);
-          item.setAttribute("aria-pressed", String(isActive));
-        });
-
-        renderPlayers();
-      });
-    });
-
-    document.getElementById("current-year").textContent =
-      new Date().getFullYear();
-
-    renderPlayers();
-  </script>
+const teamData = {
+  "primer": {
+    name: "KAIZER F.C.",
+    category: "PRIMER EQUIPO",
+    description: "La máxima representación deportiva del club.",
+    players: crearJugadores("primer")
+  },
+  "filial-b": {
+    name: "KAIZER F.C. B",
+    category: "EQUIPO FILIAL",
+    description: "Equipo filial del proyecto deportivo Kaizer F.C.",
+    players: crearJugadores("filial-b")
+  },
+  "filial-c": {
+    name: "KAIZER F.C. C",
+    category: "EQUIPO FILIAL",
+    description: "Equipo filial del proyecto deportivo Kaizer F.C.",
+    players: crearJugadores("filial-c")
+  },
+  "filial-d": {
+    name: "KAIZER F.C. D",
+    category: "EQUIPO FILIAL",
+    description: "Equipo filial del proyecto deportivo Kaizer F.C.",
+    players: crearJugadores("filial-d")
+  },
+  "academy-a": {
+    name: "KAIZER F.C. Academy A",
+    category: "ACADEMY",
+    description: "Formación y desarrollo de jóvenes futbolistas.",
+    players: crearJugadores("academy-a")
+  },
+  "academy-b": {
+    name: "KAIZER F.C. Academy B",
+    category: "ACADEMY",
+    description: "Formación y desarrollo de jóvenes futbolistas.",
+    players: crearJugadores("academy-b")
+  },
+  "baby-a": {
+    name: "KAIZER F.C. Baby A",
+    category: "BABY KAIZER",
+    description: "Iniciación deportiva y formación futbolística.",
+    players: crearJugadores("baby-a")
+  },
+  "baby-b": {
+    name: "KAIZER F.C. Baby B",
+    category: "BABY KAIZER",
+    description: "Iniciación deportiva y formación futbolística.",
+    players: crearJugadores("baby-b")
+  }
+};
+</script>
 
 </body>
 </html>
