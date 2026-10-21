@@ -1,249 +1,482 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Calendario 2026 | Kaizer F.C.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="calendario.css">
-    <link rel="Icon" href="LOGO KAIZER F.C.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Consulta el calendario de partidos y los resultados oficiales de KAIZER F.C.">
+  <title>Calendario | KAIZER F.C.</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="calendario.css">
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header class="header">
-    <div class="container header-content">
-        <h1 class="logo">KAIZER F.C.</h1>
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="elclub.html">El Club</a>
-            <li><a href="calendario.html">Calendario</a></li>
-            <a href="equipos.html">Equipos</a>
-            
-            <a href="calendario.html">Calendario</a>
-        </nav>
+  <!-- CABECERA GLOBAL -->
+  <header class="site-header">
+    <a href="index.html" class="brand" aria-label="KAIZER F.C. - Inicio">
+      <img src="LOGO KAIZER F.C.png" alt="Escudo oficial de KAIZER F.C." class="brand-logo">
+      <span class="brand-name">KAIZER <strong>F.C.</strong></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="kaizer.html">El club</a>
+      <a href="filiales.html">Categorías</a>
+      <a href="plantilla.html">Plantilla</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="calendario.html" class="active" aria-current="page">Calendario</a>
+      <a href="tienda.html">Equipación</a>
+    </nav>
+  </header>
+
+  <main class="calendar-page">
+
+    <!-- PORTADA -->
+    <section class="calendar-hero">
+      <div class="calendar-hero__content">
+        <span class="calendar-eyebrow">
+          <span class="calendar-eyebrow__line"></span>
+          TEMPORADA 2026
+        </span>
+
+        <h1>EL CAMINO<br>SE JUEGA <span>EN LA CANCHA.</span></h1>
+
+        <p>
+          Cada partido es una oportunidad para demostrar quiénes somos.
+          Consulta los encuentros y sigue el camino de nuestra manada.
+        </p>
+
+        <a href="#partidos" class="calendar-button">
+          VER CALENDARIO
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+      <div class="calendar-hero__visual" aria-hidden="true">
+        <div class="calendar-hero__number">90</div>
+        <div class="calendar-hero__label">MINUTOS · UNA MANADA</div>
+        <div class="calendar-hero__stripe"></div>
+      </div>
+
+      <div class="calendar-hero__bottom">
+        <span>KAIZER F.C.</span>
+        <span>MÁS QUE UN CLUB, SOMOS UNA MANADA.</span>
+      </div>
+    </section>
+
+    <!-- RESUMEN -->
+    <section class="calendar-overview" aria-label="Resumen del calendario">
+      <article class="overview-card">
+        <span class="overview-card__icon" aria-hidden="true">◷</span>
+        <div>
+          <p>Próximos encuentros</p>
+          <strong id="upcoming-count">0</strong>
+        </div>
+      </article>
+
+      <article class="overview-card">
+        <span class="overview-card__icon" aria-hidden="true">✓</span>
+        <div>
+          <p>Partidos disputados</p>
+          <strong id="played-count">0</strong>
+        </div>
+      </article>
+
+      <article class="overview-card">
+        <span class="overview-card__icon" aria-hidden="true">♜</span>
+        <div>
+          <p>Equipos del club</p>
+          <strong>8</strong>
+        </div>
+      </article>
+    </section>
+
+    <!-- CALENDARIO Y FILTROS -->
+    <section class="calendar-section" id="partidos">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">LA TEMPORADA</span>
+          <h2>Calendario <span>de partidos</span></h2>
+          <p>Encuentros, horarios y resultados de nuestras categorías.</p>
+        </div>
+
+        <div class="season-tag">
+          <span class="season-tag__dot"></span>
+          TEMPORADA 2026
+        </div>
+      </div>
+
+      <div class="calendar-filters">
+        <div class="filter-field">
+          <label for="team-filter">Categoría</label>
+          <select id="team-filter">
+            <option value="all">Todas las categorías</option>
+            <option value="Primer Equipo">KAIZER F.C. · Primer Equipo</option>
+            <option value="KAIZER F.C. B">KAIZER F.C. B</option>
+            <option value="KAIZER F.C. C">KAIZER F.C. C</option>
+            <option value="KAIZER F.C. D">KAIZER F.C. D</option>
+            <option value="KAIZER F.C. Academy A">Academy A</option>
+            <option value="KAIZER F.C. Academy B">Academy B</option>
+            <option value="KAIZER F.C. Baby A">Baby A</option>
+            <option value="KAIZER F.C. Baby B">Baby B</option>
+          </select>
+        </div>
+
+        <div class="filter-field">
+          <label for="status-filter">Estado del partido</label>
+          <select id="status-filter">
+            <option value="all">Todos los partidos</option>
+            <option value="upcoming">Próximos encuentros</option>
+            <option value="played">Resultados</option>
+          </select>
+        </div>
+
+        <button type="button" class="filter-reset" id="reset-filters">
+          Restablecer filtros
+        </button>
+      </div>
+
+      <div class="calendar-list-heading">
+        <h3>Partidos de la manada</h3>
+        <span id="match-total">0 encuentros</span>
+      </div>
+
+      <div class="match-list" id="match-list" aria-live="polite">
+        <!-- Los encuentros se generan desde el arreglo matches -->
+      </div>
+
+      <div class="calendar-note">
+        <span class="calendar-note__icon" aria-hidden="true">i</span>
+        <p>
+          Los horarios, escenarios y rivales se publicarán cuando estén
+          confirmados oficialmente por el club.
+        </p>
+      </div>
+    </section>
+
+    <!-- IDENTIDAD DEL CLUB -->
+    <section class="calendar-identity">
+      <div class="calendar-identity__mark" aria-hidden="true">K</div>
+      <div>
+        <span class="section-kicker">NUESTRO COMPROMISO</span>
+        <h2>Un escudo. Una familia. <span>Una manada.</span></h2>
+        <p>Más que un club, somos una manada.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE GLOBAL -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="KAIZER F.C. - Inicio">
+          <img
+            src="KAIZER F.C (LOGO PRIN).png"
+            alt="Escudo de KAIZER F.C."
+            class="footer-logo"
+          >
+        </a>
+        <p>Más que un club, somos una manada.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Explora</h3>
+        <a href="index.html">Inicio</a>
+        <a href="kaizer.html">El club</a>
+        <a href="filiales.html">Categorías</a>
+        <a href="plantilla.html">Plantilla</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Actualidad</h3>
+        <a href="noticias.html">Noticias</a>
+        <a href="calendario.html">Calendario</a>
+        <a href="tienda.html">Equipación</a>
+      </div>
+
+      <div class="footer-social">
+        <h3>Síguenos</h3>
+        <p>Forma parte de nuestra manada.</p>
+        <a
+          href="https://www.instagram.com/kaizerf.c/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram de KAIZER F.C."
+        >Instagram ↗</a>
+      </div>
     </div>
-</header>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="container">
-        <h2>Calendario Oficial 2026</h2>
-        <p>Partidos de todas las categorías · Sábados</p>
+    <div class="footer-bottom">
+      <span>© <span id="footer-year"></span> KAIZER F.C.</span>
+      <span>MÁS QUE UN CLUB, SOMOS UNA MANADA.</span>
     </div>
-</section>
+  </footer>
 
-<!-- CALENDARIO -->
-<section class="section">
-    <div class="container">
+  <script>
+    /*
+      CALENDARIO EDITABLE
+      Añade los encuentros reales dentro del arreglo matches.
 
-        <!-- MES -->
-        <div class="month">
-            <h3>ENERO - PRIMERA C</h3>
-            
-               <!-- PARTIDO 1 -->
-          <div class="match">
-        <span class="day">Sábado</span>
+      status:
+      "upcoming" = partido pendiente
+      "played"   = partido disputado
 
-        <div class="teams">
-            <span class="home">Kaizer F.C. (Local)</span>
-            <strong class="score">0 - 0</strong>
-            <span class="away"> Atlético Norte (Visitante)</span>
-        </div>
+      Los registros de ejemplo están marcados como confirmados: false.
+      Sustituye sus datos por información oficial antes de publicar.
+    */
 
-        <div class="details">
-            <p></p><span class="category">Torneo nacional primera C</span></p>
-            <span class="time">'Por definir'</span>
-            <span class="place">Cúcuta</span>
-        </div>
-    </div>
-</div>
-        <!-- PARTIDO 2 -->
-          <div class="match">
-        <span class="day">Sábado</span>
+    const matches = [
+      {
+        id: 1,
+        date: "2026-10-24",
+        time: "",
+        team: "Primer Equipo",
+        home: "KAIZER F.C.",
+        away: "Rival por confirmar",
+        venue: "Escenario por confirmar",
+        status: "upcoming",
+        homeScore: null,
+        awayScore: null,
+        confirmed: false
+      },
+      {
+        id: 2,
+        date: "2026-10-31",
+        time: "",
+        team: "KAIZER F.C. B",
+        home: "KAIZER F.C. B",
+        away: "Rival por confirmar",
+        venue: "Escenario por confirmar",
+        status: "upcoming",
+        homeScore: null,
+        awayScore: null,
+        confirmed: false
+      },
+      {
+        id: 3,
+        date: "2026-11-07",
+        time: "",
+        team: "KAIZER F.C. C",
+        home: "Rival por confirmar",
+        away: "KAIZER F.C. C",
+        venue: "Escenario por confirmar",
+        status: "upcoming",
+        homeScore: null,
+        awayScore: null,
+        confirmed: false
+      },
+      {
+        id: 4,
+        date: "2026-11-14",
+        time: "",
+        team: "KAIZER F.C. D",
+        home: "KAIZER F.C. D",
+        away: "Rival por confirmar",
+        venue: "Escenario por confirmar",
+        status: "upcoming",
+        homeScore: null,
+        awayScore: null,
+        confirmed: false
+      },
+      {
+        id: 5,
+        date: "2026-11-21",
+        time: "",
+        team: "KAIZER F.C. Academy A",
+        home: "KAIZER F.C. Academy A",
+        away: "Rival por confirmar",
+        venue: "Escenario por confirmar",
+        status: "upcoming",
+        homeScore: null,
+        awayScore: null,
+        confirmed: false
+      },
+      {
+        id: 6,
+        date: "2026-11-28",
+        time: "",
+        team: "KAIZER F.C. Academy B",
+        home: "Rival por confirmar",
+        away: "KAIZER F.C. Academy B",
+        venue: "Escenario por confirmar",
+        status: "upcoming",
+        homeScore: null,
+        awayScore: null,
+        confirmed: false
+      },
+      {
+        id: 7,
+        date: "2026-12-05",
+        time: "",
+        team: "KAIZER F.C. Baby A",
+        home: "KAIZER F.C. Baby A",
+        away: "Rival por confirmar",
+        venue: "Escenario por confirmar",
+        status: "upcoming",
+        homeScore: null,
+        awayScore: null,
+        confirmed: false
+      },
+      {
+        id: 8,
+        date: "2026-12-12",
+        time: "",
+        team: "KAIZER F.C. Baby B",
+        home: "Rival por confirmar",
+        away: "KAIZER F.C. Baby B",
+        venue: "Escenario por confirmar",
+        status: "upcoming",
+        homeScore: null,
+        awayScore: null,
+        confirmed: false
+      }
+    ];
 
-        <div class="teams">
-            <span class="home">Kaizer F.C. (Local)</span>
-            <strong class="score">0 - 0</strong>
-            <span class="away">Atlético Norte (Visitante)</span>
-        </div>
+    const matchList = document.getElementById("match-list");
+    const teamFilter = document.getElementById("team-filter");
+    const statusFilter = document.getElementById("status-filter");
+    const matchTotal = document.getElementById("match-total");
 
-        <div class="details">
-            <span class="category">Torneo nacional primera C</span>
-            <span class="time">'Por definir'</span>
-            <span class="place">Cúcuta</span>
-        </div>
-    </div>
-</div>
-</section>
+    const teamNames = {
+      "Primer Equipo": "PRIMER EQUIPO",
+      "KAIZER F.C. B": "FILIAL B",
+      "KAIZER F.C. C": "FILIAL C",
+      "KAIZER F.C. D": "FILIAL D",
+      "KAIZER F.C. Academy A": "ACADEMY A",
+      "KAIZER F.C. Academy B": "ACADEMY B",
+      "KAIZER F.C. Baby A": "BABY A",
+      "KAIZER F.C. Baby B": "BABY B"
+    };
 
-    <!-- CALENDARIO -->
-<section class="section">
-    <div class="container">
+    function formatDate(dateString) {
+      const date = new Date(dateString + "T12:00:00");
 
-        <!-- MES -->
-        <div class="month">
-            <h3>ENERO - SUB 20</h3>
-            
-               <!-- PARTIDO 1 -->
-          <div class="match">
-        <span class="day">Sábado</span>
+      return {
+        day: new Intl.DateTimeFormat("es-CO", {
+          day: "2-digit"
+        }).format(date),
+        month: new Intl.DateTimeFormat("es-CO", {
+          month: "short"
+        }).format(date).replace(".", "").toUpperCase(),
+        weekday: new Intl.DateTimeFormat("es-CO", {
+          weekday: "long"
+        }).format(date)
+      };
+    }
 
-        <div class="teams">
-            <span class="home">Kaizer F.C. (Local)</span>
-            <strong class="score">0 - 0</strong>
-            <span class="away">Atlético Norte (Visitante)</span>
-        </div>
+    function escapeHTML(value) {
+      return String(value ?? "").replace(/[&<>"']/g, character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[character]);
+    }
 
-        <div class="details">
-            <span class="category">Sub-20</span>
-            <span class="time">2:00 PM</span>
-            <span class="place">Cúcuta</span>
-        </div>
-    </div>
-</div>
-        <!-- PARTIDO 2 -->
-          <div class="match">
-        <span class="day">Sábado</span>
+    function renderMatches() {
+      const selectedTeam = teamFilter.value;
+      const selectedStatus = statusFilter.value;
 
-        <div class="teams">
-            <span class="home">Kaizer F.C. (Local)</span>
-            <strong class="score">0 - 0</strong>
-            <span class="away">Atlético Norte (Visitante)</span>
-        </div>
+      const filteredMatches = matches
+        .filter(match => selectedTeam === "all" || match.team === selectedTeam)
+        .filter(match => selectedStatus === "all" || match.status === selectedStatus)
+        .sort((a, b) => a.date.localeCompare(b.date));
 
-        <div class="details">
-            <span class="category">Sub-20</span>
-            <span class="time">2:00 PM</span>
-            <span class="place">Cúcuta</span>
-        </div>
-    </div>
-</div>
-</section>
+      const upcoming = matches.filter(match => match.status === "upcoming").length;
+      const played = matches.filter(match => match.status === "played").length;
 
+      document.getElementById("upcoming-count").textContent = upcoming;
+      document.getElementById("played-count").textContent = played;
 
-    <!-- CALENDARIO -->
-<section class="section">
-    <div class="container">
+      matchTotal.textContent =
+        filteredMatches.length +
+        (filteredMatches.length === 1 ? " encuentro" : " encuentros");
 
-        <!-- MES -->
-        <div class="month">
-            <h3>ENERO - MICROFUTBOL</h3>
-            
-               <!-- PARTIDO 1 -->
-          <div class="match">
-        <span class="day">Sábado</span>
+      if (filteredMatches.length === 0) {
+        matchList.innerHTML = `
+          <div class="calendar-empty">
+            <span class="calendar-empty__symbol">K</span>
+            <h3>No hay partidos para mostrar</h3>
+            <p>Pronto publicaremos más información de nuestros encuentros.</p>
+          </div>
+        `;
+        return;
+      }
 
-        <div class="teams">
-            <span class="home">Kaizer F.C. (Local)</span>
-            <strong class="score">0 - 0</strong>
-            <span class="away">Atlético Norte (Visitante)</span>
-        </div>
+      matchList.innerHTML = filteredMatches.map(match => {
+        const date = formatDate(match.date);
+        const played = match.status === "played";
+        const result = played &&
+          Number.isFinite(match.homeScore) &&
+          Number.isFinite(match.awayScore);
 
-        <div class="details">
-            <span class="category">Sub-20</span>
-            <span class="time">2:00 PM</span>
-            <span class="place">Cúcuta</span>
-        </div>
-    </div>
-</div>
-        <!-- PARTIDO 2 -->
-          <div class="match">
-        <span class="day">Sábado</span>
+        const statusText = played ? "FINALIZADO" : "POR CONFIRMAR";
 
-        <div class="teams">
-            <span class="home">Kaizer F.C. (Local)</span>
-            <strong class="score">0 - 0</strong>
-            <span class="away">Atlético Norte (Visitante)</span>
-        </div>
-
-        <div class="details">
-            <span class="category">Sub-20</span>
-            <span class="time">2:00 PM</span>
-            <span class="place">Cúcuta</span>
-        </div>
-    </div>
-</div>
-</section>
-
-
-    <section class="fixture-section">
-    <div class="container">
-
-        <h1 class="fixture-title">FIXTURE OFICIAL 2026</h1>
-        <h2 class="fixture-subtitle">Primera C</h2>
-
-        <div class="fixture-grid">
-
-            <!-- FECHA 1 -->
-            <div class="fixture-card">
-                <span class="fecha">Fecha 1 · Sábado</span>
-
-                <div class="match-row">
-                    <div class="team local">
-                        <img src="img/kaizer-logo.png" alt="Kaizer FC">
-                        <span>Kaizer F.C.</span>
-                    </div>
-
-                    <div class="vs">
-                        <strong>0 - 0</strong>
-                        <small>VS</small>
-                    </div>
-
-                    <div class="team visitante">
-                        <img src="img/rival.png" alt="Rival">
-                        <span>Rival FC</span>
-                    </div>
-                </div>
-
-                <div class="info">
-                    <span>3:00 PM</span>
-                    <span>Cúcuta</span>
-                </div>
+        return `
+          <article class="match-card ${played ? "match-card--played" : ""}">
+            <div class="match-date">
+              <span class="match-date__day">${escapeHTML(date.day)}</span>
+              <span class="match-date__month">${escapeHTML(date.month)}</span>
+              <span class="match-date__weekday">${escapeHTML(date.weekday)}</span>
             </div>
 
-            <!-- FECHA 2 -->
-            <div class="fixture-card">
-                <span class="fecha">Fecha 2 · Sábado</span>
-
-                <div class="match-row">
-                    <div class="team local">
-                        <img src="img/rival.png" alt="Rival">
-                        <span>Rival FC</span>
-                    </div>
-
-                    <div class="vs">
-                        <strong>0 - 0</strong>
-                        <small>VS</small>
-                    </div>
-
-                    <div class="team visitante">
-                        <img src="img/kaizer-logo.png" alt="Kaizer FC">
-                        <span>Kaizer F.C.</span>
-                    </div>
+            <div class="match-info">
+              <span class="match-category">
+                ${escapeHTML(teamNames[match.team] || match.team)}
+              </span>
+              <div class="match-teams">
+                <div class="match-team match-team--home">
+                  <span class="match-team__crest">K</span>
+                  <span>${escapeHTML(match.home)}</span>
                 </div>
 
-                <div class="info">
-                    <span>4:00 PM</span>
-                    <span>Cúcuta</span>
+                <div class="match-score ${result ? "match-score--final" : ""}">
+                  ${
+                    result
+                      ? `${match.homeScore} <span>:</span> ${match.awayScore}`
+                      : `<span class="match-score__versus">VS</span>`
+                  }
                 </div>
+
+                <div class="match-team match-team--away">
+                  <span class="match-team__crest match-team__crest--away">?</span>
+                  <span>${escapeHTML(match.away)}</span>
+                </div>
+              </div>
+
+              <div class="match-details">
+                <span>◷ ${escapeHTML(match.time || "Hora por confirmar")}</span>
+                <span>⌖ ${escapeHTML(match.venue || "Lugar por confirmar")}</span>
+              </div>
             </div>
 
-        </div>
+            <div class="match-status">
+              <span class="match-status__dot ${played ? "match-status__dot--played" : ""}"></span>
+              ${statusText}
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
 
-    </div>
-</section>
+    teamFilter.addEventListener("change", renderMatches);
+    statusFilter.addEventListener("change", renderMatches);
 
+    document.getElementById("reset-filters").addEventListener("click", () => {
+      teamFilter.value = "all";
+      statusFilter.value = "all";
+      renderMatches();
+    });
 
+    document.getElementById("footer-year").textContent = new Date().getFullYear();
 
-
-
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="container">
-        <p>© 2026 Kaizer Fútbol Club</p>
-        <p>Cúcuta, Norte de Santander – Colombia</p>
-    </div>
-</footer>
+    renderMatches();
+  </script>
 
 </body>
 </html>
