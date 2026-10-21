@@ -49,12 +49,6 @@ html {
     font: inherit;
 }
 
-.tienda button,
-.tienda a,
-.tienda select {
-    -webkit-tap-highlight-color: transparent;
-}
-
 .tienda a:focus-visible,
 .tienda button:focus-visible,
 .tienda input:focus-visible,
@@ -143,8 +137,7 @@ html {
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 1px;
-    transition: background 0.25s, color 0.25s,
-                transform 0.25s;
+    transition: background 0.25s, color 0.25s, transform 0.25s;
 }
 
 .tienda-boton span {
@@ -269,7 +262,8 @@ html {
     line-height: 1.12;
 }
 
-.tienda-intro h2 span {
+.tienda-intro h2 span,
+.tienda-cierre h2 span {
     color: #777777;
 }
 
@@ -282,7 +276,7 @@ html {
 }
 
 /* =====================================================
-   03. NAVEGACIÓN POR CATEGORÍAS
+   03. CATEGORÍAS
    ===================================================== */
 
 .tienda-categorias {
@@ -330,7 +324,7 @@ html {
 }
 
 /* =====================================================
-   04. CATÁLOGO
+   04. PRODUCTOS
    ===================================================== */
 
 .tienda-productos {
@@ -533,7 +527,7 @@ html {
 }
 
 /* =====================================================
-   05. BLOQUES DE PRÓXIMOS PRODUCTOS
+   05. PRÓXIMAMENTE
    ===================================================== */
 
 .tienda-extra {
@@ -636,17 +630,6 @@ html {
     font-size: clamp(36px, 5vw, 58px);
 }
 
-.tienda-cierre h2 span {
-    color: #777777;
-}
-
-.tienda-cierre > p {
-    margin: 22px 0 30px;
-    color: #666666;
-    font-size: 14px;
-    line-height: 1.8;
-}
-
 .tienda-cierre__boton {
     display: inline-flex;
     min-height: 50px;
@@ -664,6 +647,13 @@ html {
 .tienda-cierre__boton:hover {
     background: var(--tienda-dorado);
     color: var(--tienda-negro) !important;
+}
+
+.tienda-cierre > p {
+    margin: 22px 0 30px;
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 /* =====================================================
