@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta con KAIZER F.C. o solicita información para unirte a la manada.">
+  <title>Contacto y Únete a la manada | KAIZER F.C.</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+
+  <!-- CABECERA -->
+  <header class="contact-header">
+    <a class="brand" href="index.html" aria-label="Inicio de KAIZER F.C.">
+      <!-- Cambia esta ruta por la ruta real del escudo que ya usa tu web -->
+      <img src="logo-kaizer.png" alt="Escudo oficial de KAIZER F.C.">
+      <span>
+        <strong>KAIZER F.C.</strong>
+        <small>MÁS QUE UN CLUB</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+      ☰
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Inicio</a>
+      <a href="kaizer.html">El club</a>
+      <a href="filiales.html">Filiales</a>
+      <a href="plantilla.html">Plantilla</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="calendario.html">Calendario</a>
+      <a href="tienda.html">Tienda</a>
+      <a class="nav-active" href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PORTADA -->
+    <section class="contact-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="eyebrow">KAIZER F.C. · CÚCUTA, COLOMBIA</span>
+        <h1>ÚNETE A LA<br><span>MANADA</span></h1>
+        <p>
+          El próximo capítulo de nuestra historia puede comenzar contigo.
+          Queremos conocer a los jugadores, familias y personas que desean
+          formar parte de KAIZER F.C.
+        </p>
+        <a class="btn btn-gold" href="#inscripcion">Quiero unirme</a>
+      </div>
+      <div class="hero-motto">
+        MÁS QUE UN CLUB, SOMOS UNA MANADA.
+      </div>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="section-intro">
+      <span class="section-kicker">ESTAMOS PARA ESCUCHARTE</span>
+      <h2>Construyamos algo grande juntos</h2>
+      <p>
+        Si eres jugador, familiar, representante o deseas comunicarte con
+        nuestro club, aquí encontrarás el canal adecuado para dar el primer paso.
+      </p>
+    </section>
+
+    <!-- OPCIONES -->
+    <section class="contact-options">
+      <article class="option-card">
+        <div class="option-icon" aria-hidden="true">⚽</div>
+        <span class="card-label">JUGADORES</span>
+        <h3>Únete a la manada</h3>
+        <p>
+          Déjanos tus datos y cuéntanos en qué categoría te gustaría jugar.
+          Nuestro equipo podrá orientarte sobre los siguientes pasos.
+        </p>
+        <a href="#inscripcion" class="text-link">Solicitar información <span>↗</span></a>
+      </article>
+
+      <article class="option-card option-card-dark">
+        <div class="option-icon" aria-hidden="true">✉</div>
+        <span class="card-label">CONTACTO GENERAL</span>
+        <h3>Hablemos</h3>
+        <p>
+          ¿Tienes una consulta, representas a otro club o quieres hablar
+          con KAIZER F.C.? Escríbenos y cuéntanos cómo podemos ayudarte.
+        </p>
+        <a href="#contacto-general" class="text-link">Contactar con el club <span>↗</span></a>
+      </article>
+    </section>
+
+    <!-- FORMULARIO DE INSCRIPCIÓN -->
+    <section class="form-section" id="inscripcion">
+      <div class="form-heading">
+        <span class="section-kicker">FORMULARIO DE INTERÉS</span>
+        <h2>Da el primer paso</h2>
+        <p>
+          Completa la información. Al enviar el formulario se abrirá WhatsApp
+          para que puedas revisar y enviar tu solicitud.
+        </p>
+      </div>
+
+      <form id="playerForm" class="club-form">
+        <div class="form-grid">
+          <div class="field">
+            <label for="playerName">Nombre completo del jugador *</label>
+            <input type="text" id="playerName" name="playerName"
+              placeholder="Nombre y apellidos" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="birthDate">Fecha de nacimiento *</label>
+            <input type="date" id="birthDate" name="birthDate" required>
+          </div>
+
+          <div class="field">
+            <label for="category">Categoría de interés *</label>
+            <select id="category" name="category" required>
+              <option value="">Selecciona una categoría</option>
+              <option value="Primer Equipo">Primer Equipo</option>
+              <option value="KAIZER F.C. B">KAIZER F.C. B</option>
+              <option value="KAIZER F.C. C">KAIZER F.C. C</option>
+              <option value="KAIZER F.C. D">KAIZER F.C. D</option>
+              <option value="KAIZER F.C. Academy A">KAIZER F.C. Academy A</option>
+              <option value="KAIZER F.C. Academy B">KAIZER F.C. Academy B</option>
+              <option value="KAIZER F.C. Baby A">KAIZER F.C. Baby A</option>
+              <option value="KAIZER F.C. Baby B">KAIZER F.C. Baby B</option>
+              <option value="No estoy seguro">Necesito orientación</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="city">Ciudad o municipio *</label>
+            <input type="text" id="city" name="city"
+              placeholder="Ej. Cúcuta" autocomplete="address-level2" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Teléfono de contacto *</label>
+            <input type="tel" id="phone" name="phone"
+              placeholder="Número con WhatsApp" autocomplete="tel" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Correo electrónico (opcional)</label>
+            <input type="email" id="email" name="email"
+              placeholder="correo@ejemplo.com" autocomplete="email">
+          </div>
+
+          <div class="field field-full">
+            <label for="guardian">Nombre del padre, madre o representante</label>
+            <input type="text" id="guardian" name="guardian"
+              placeholder="Obligatorio si el jugador es menor de edad"
+              autocomplete="off">
+          </div>
+
+          <div class="field field-full">
+            <label for="playerMessage">Cuéntanos algo más (opcional)</label>
+            <textarea id="playerMessage" name="playerMessage" rows="4"
+              placeholder="Experiencia deportiva, posición en la que juegas o preguntas..."></textarea>
+          </div>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" id="privacyConsent" required>
+          <span>
+            Confirmo que la información proporcionada es correcta y autorizo
+            su uso para responder a esta solicitud. Si el jugador es menor de
+            edad, el envío debe realizarlo o autorizarlo su representante legal.
+          </span>
+        </label>
+
+        <button type="submit" class="btn btn-dark">
+          Continuar por WhatsApp <span>↗</span>
+        </button>
+        <p class="form-note">
+          Este formulario no envía datos automáticamente ni los guarda en esta web.
+          WhatsApp se abrirá para que revises el mensaje y lo envíes.
+        </p>
+      </form>
+    </section>
+
+    <!-- CONTACTO GENERAL -->
+    <section class="general-contact" id="contacto-general">
+      <div class="general-contact-copy">
+        <span class="section-kicker">CONTACTO OFICIAL</span>
+        <h2>¿Tienes algo que proponernos?</h2>
+        <p>
+          Estamos abiertos a consultas, propuestas deportivas, comunicación
+          con otros clubes y mensajes de las familias.
+        </p>
+        <p class="contact-highlight">
+          Más que un club, somos una manada.
+        </p>
+      </div>
+
+      <form id="generalForm" class="club-form general-form">
+        <div class="field">
+          <label for="contactName">Tu nombre *</label>
+          <input type="text" id="contactName" required placeholder="Nombre completo">
+        </div>
+
+        <div class="field">
+          <label for="contactReason">Motivo de contacto *</label>
+          <select id="contactReason" required>
+            <option value="">Selecciona un motivo</option>
+            <option value="Consulta general">Consulta general</option>
+            <option value="Información deportiva">Información deportiva</option>
+            <option value="Familias y representantes">Familias y representantes</option>
+            <option value="Contacto entre clubes">Contacto entre clubes</option>
+            <option value="Propuesta de colaboración">Propuesta de colaboración</option>
+            <option value="Otro asunto">Otro asunto</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="contactPhone">Teléfono de contacto (opcional)</label>
+          <input type="tel" id="contactPhone" placeholder="Tu número de teléfono">
+        </div>
+
+        <div class="field">
+          <label for="contactMessage">Mensaje *</label>
+          <textarea id="contactMessage" rows="5" required
+            placeholder="Escribe aquí tu consulta..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold">
+          Enviar consulta por WhatsApp <span>↗</span>
+        </button>
+      </form>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="closing-banner">
+      <span class="closing-star" aria-hidden="true">★</span>
+      <h2>EL FUTURO SE CONSTRUYE EN EQUIPO.</h2>
+      <p>KAIZER F.C. · Más que un club, somos una manada.</p>
+      <a href="index.html" class="btn btn-outline">Volver al inicio</a>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="contact-footer">
+    <a href="index.html" class="footer-brand">KAIZER <span>F.C.</span></a>
+    <p>Más que un club, somos una manada.</p>
+    <nav aria-label="Enlaces del pie de página">
+      <a href="kaizer.html">El club</a>
+      <a href="filiales.html">Filiales</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <small>© <span id="currentYear"></span> KAIZER F.C. · Todos los derechos reservados.</small>
+  </footer>
+
+  <script>
+    /*
+      IMPORTANTE:
+      Este debe ser el número de WhatsApp que recibe las solicitudes del club.
+      Se usa el formato internacional: 57 + número colombiano, sin espacios.
+    */
+    const CLUB_WHATSAPP = "573132865766";
+
+    function openWhatsApp(message) {
+      const url = "https://wa.me/" + CLUB_WHATSAPP +
+        "?text=" + encodeURIComponent(message);
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    document.getElementById("playerForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      if (!this.reportValidity()) return;
+
+      const playerName = document.getElementById("playerName").value.trim();
+      const birthDate = document.getElementById("birthDate").value;
+      const category = document.getElementById("category").value;
+      const city = document.getElementById("city").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const guardian = document.getElementById("guardian").value.trim();
+      const playerMessage = document.getElementById("playerMessage").value.trim();
+
+      const message = [
+        "⚽ *SOLICITUD PARA UNIRSE A KAIZER F.C.*",
+        "",
+        "*Nombre del jugador:* " + playerName,
+        "*Fecha de nacimiento:* " + birthDate,
+        "*Categoría de interés:* " + category,
+        "*Ciudad:* " + city,
+        "*Teléfono de contacto:* " + phone,
+        "*Correo:* " + (email || "No indicado"),
+        "*Padre, madre o representante:* " + (guardian || "No indicado"),
+        "*Información adicional:* " + (playerMessage || "No indicada"),
+        "",
+        "Más que un club, somos una manada."
+      ].join("\n");
+
+      openWhatsApp(message);
+    });
+
+    document.getElementById("generalForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      if (!this.reportValidity()) return;
+
+      const name = document.getElementById("contactName").value.trim();
+      const reason = document.getElementById("contactReason").value;
+      const phone = document.getElementById("contactPhone").value.trim();
+      const messageText = document.getElementById("contactMessage").value.trim();
+
+      const message = [
+        "📩 *CONTACTO GENERAL - KAIZER F.C.*",
+        "",
+        "*Nombre:* " + name,
+        "*Motivo:* " + reason,
+        "*Teléfono:* " + (phone || "No indicado"),
+        "*Mensaje:*",
+        messageText,
+        "",
+        "Más que un club, somos una manada."
+      ].join("\n");
+
+      openWhatsApp(message);
+    });
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function() {
+      const isOpen = mainNav.classList.toggle("is-open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+    });
+  </script>
+</body>
+</html>
