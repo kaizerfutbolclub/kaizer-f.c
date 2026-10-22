@@ -950,6 +950,14 @@ p {
   box-sizing: border-box;
 }
 
+.kc-sponsor-logo {
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  height: 75px;
+  object-fit: contain;
+}
+
 .kc-sponsors__inner {
   width: 100%;
   max-width: 1160px;
